@@ -1,3 +1,5 @@
+import {CustomHTMLElement} from "./customHTMLElement.js";
+
 const headerTemplate = document.createElement('template');
 headerTemplate.innerHTML = `
 <!-- As a heading -->
@@ -8,19 +10,9 @@ headerTemplate.innerHTML = `
 </nav>
 `
 
-class Header extends HTMLElement {
+class Header extends CustomHTMLElement {
     constructor() {
-        super();
-    }
-
-    connectedCallback() {
-        const bootstrap = document.querySelector('link[href*="bootstrap"]');
-        const shadowRoot = this.attachShadow({mode: 'open'});
-
-        if (bootstrap) {
-            shadowRoot.appendChild(bootstrap.cloneNode());
-        }
-        shadowRoot.appendChild(headerTemplate.content);
+        super(headerTemplate);
     }
 }
 
