@@ -6,7 +6,7 @@ uploadFileTemplate.innerHTML = `
     <div class="col-1"></div>
     <div class="col-10">
       <div>
-          <label for="formFile" class="mb-3 form-label">Upload the logging files in .json format generated for your agents:</label>
+          <label for="formFile" class="mb-3 form-label">Upload the logging files in .json format generated for your multi-agent system:</label>
           <input class="form-control" type="file" id="formFile" accept=".json" multiple required lang="en">
       </div>
       
