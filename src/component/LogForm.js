@@ -2,7 +2,6 @@
 import Form from 'react-bootstrap/Form';
 import {Button, Col, Row} from "react-bootstrap";
 import React, {useState} from "react";
-import {Link} from "react-router-dom";
 
 function LogForm(props) {
 
