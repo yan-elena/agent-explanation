@@ -1,3 +1,4 @@
+import './App.css';
 import {Route, Routes, useNavigate} from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import UploadLogPage from "./pages/UploadLogPage";
@@ -6,24 +7,41 @@ import {useEffect, useState} from "react";
 
 function App() {
     const navigate = useNavigate();
-    const [logFiles, setLogFiles] = useState(JSON.parse(sessionStorage.getItem('logFiles')));
+    // const [agents, setAgents] = useState(JSON.parse(sessionStorage.getItem('agents')));
+    const [agents, setAgents] = useState([]);
+    const [files, setFiles] = useState([]);
 
     useEffect(() => {
-        sessionStorage.setItem("logFiles", JSON.stringify(logFiles));
-    }, [logFiles]);
+        // sessionStorage.setItem("agents", JSON.stringify(agents));
+        if (files.length !== 0 && agents.length === Array.from(files).length) {
+            navigate("/agents");
+        }
+    }, [agents, files, navigate]);
 
-    function updateLogFiles(files) {
-        console.log("App: " + files);
-        setLogFiles(files);
-        navigate("/agents");
+    function setLogFiles(files) {
+        setFiles(files);
+        Array.from(files).forEach(async file => {
+            let result = await new Promise((resolve) => {
+                let fileReader = new FileReader();
+                fileReader.onload = (e) => resolve(fileReader.result);
+                fileReader.readAsText(file);
+            });
+
+            console.log("setAgents " + file.name)
+            setAgents(agents => ([
+                ...agents,
+                {name: file.name.replace(".json", ""), log: JSON.parse(result.toString())}
+                ])
+            );
+        });
     }
 
     return (
       <div className="flex-container">
           <NavBar/>
           <Routes className="content">
-            <Route path="/" element={<UploadLogPage setLogFiles={updateLogFiles}/>}/>
-            <Route path="/agents" element={<HomePage/>}/>
+            <Route path="/" element={<UploadLogPage setLogFiles={setLogFiles}/>}/>
+            <Route path="/agents" element={<HomePage agents={agents}/>}/>
           </Routes>
       </div>
     );

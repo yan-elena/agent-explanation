@@ -9,7 +9,6 @@ function LogForm(props) {
 
     function SubmitHandler(event) {
         event.preventDefault();
-        console.log(selectedFile);
         props.setLogFiles(selectedFile);
     }
 

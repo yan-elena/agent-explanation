@@ -1,8 +1,14 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import Agent from "../component/Agent";
 
-function HomePage() {
+function HomePage(props) {
+
     return (
-        <p>HomePage</p>
+        <div>
+            {Array.from(props.agents).map(agent => (
+                <Agent name={agent.name} log={agent.log} key={agent.name}/>
+            ))}
+        </div>
     )
 }
 
