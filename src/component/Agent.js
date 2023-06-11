@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import {Col, ListGroup, ListGroupItem, Row} from "react-bootstrap";
 
 function Agent(props) {

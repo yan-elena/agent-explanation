@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Agent from "../component/Agent";
 
 function HomePage(props) {
