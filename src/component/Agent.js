@@ -14,7 +14,7 @@ function Agent(props) {
                 </div>
             </Col>
 
-            <Col xs={2} className="mt-5 ms-3">
+            <Col className="mt-5 ms-3">
                 <ListGroup>
                     <ListGroupItem  href={"/events"} action>All</ListGroupItem >
                     <ListGroupItem  href={"/beliefs"} action>Beliefs</ListGroupItem >

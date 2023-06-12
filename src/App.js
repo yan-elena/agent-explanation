@@ -19,11 +19,12 @@ function App() {
     }, [agents, files, navigate]);
 
     function setLogFiles(files) {
+        setAgents([]);
         setFiles(files);
         Array.from(files).forEach(async file => {
             let result = await new Promise((resolve) => {
                 let fileReader = new FileReader();
-                fileReader.onload = (e) => resolve(fileReader.result);
+                fileReader.onload = _ => resolve(fileReader.result);
                 fileReader.readAsText(file);
             });
 
