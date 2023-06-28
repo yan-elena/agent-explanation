@@ -16,12 +16,12 @@ function Agent(props) {
 
             <Col className="mt-5 ms-3">
                 <ListGroup>
-                    <ListGroupItem  href={"/events"} action>All</ListGroupItem >
-                    <ListGroupItem  href={"/beliefs"} action>Beliefs</ListGroupItem >
-                    <ListGroupItem  href={"/plans"} action>Plans</ListGroupItem >
-                    <ListGroupItem  href={"/intentions"} action>Intentions</ListGroupItem >
-                    <ListGroupItem  href={"/goals"} action>Goals</ListGroupItem >
-                    <ListGroupItem  href={"/messages"} action>Messages</ListGroupItem >
+                    <ListGroupItem  href={"/events"} onClick={() => props.loadAgentLog(props.name)} action>All</ListGroupItem >
+                    <ListGroupItem  href={"/beliefs"} onClick={() => props.loadAgentLog(props.name)} action>Beliefs</ListGroupItem >
+                    <ListGroupItem  href={"/plans"} onClick={() => props.loadAgentLog(props.name)} action>Plans</ListGroupItem >
+                    <ListGroupItem  href={"/intentions"} onClick={() => props.loadAgentLog(props.name)} action>Intentions</ListGroupItem >
+                    <ListGroupItem  href={"/goals"} onClick={() => props.loadAgentLog(props.name)} action>Goals</ListGroupItem >
+                    <ListGroupItem  href={"/messages"} onClick={() => props.loadAgentLog(props.name)} action>Messages</ListGroupItem >
                 </ListGroup>
             </Col>
         </Row>

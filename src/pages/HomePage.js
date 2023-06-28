@@ -6,9 +6,9 @@ function HomePage(props) {
 
     return (
         <Row>
-            {Array.from(props.agents).map(agent => (
+            {Array.from(props.files).map(file => (
                 <Col xs={12} md={4} lg={3}>
-                    <Agent name={agent.name} log={agent.log} key={agent.name}/>
+                    <Agent name={file.name.replace(".json", "")} key={file.name} loadAgentLog={props.loadAgentLog}/>
                 </Col>
             ))}
         </Row>

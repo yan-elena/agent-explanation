@@ -2,47 +2,62 @@ import './App.css';
 import {Route, Routes, useNavigate} from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import UploadLogPage from "./pages/UploadLogPage";
+import AgentEventsPage from "./pages/AgentEventsPage";
 import NavBar from "./component/NavBar";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 function App() {
     const navigate = useNavigate();
     // const [agents, setAgents] = useState(JSON.parse(sessionStorage.getItem('agents')));
-    const [agents, setAgents] = useState([]);
+    // const [agents, setAgents] = useState([]);
     const [files, setFiles] = useState([]);
+    const [selectedAgent, setSelectedAgent] = useState(null);
 
-    useEffect(() => {
-        // sessionStorage.setItem("agents", JSON.stringify(agents));
-        if (files.length !== 0 && agents.length === Array.from(files).length) {
-            navigate("/agents");
-        }
-    }, [agents, files, navigate]);
+    // useEffect(() => {
+    //     // sessionStorage.setItem("agents", JSON.stringify(agents));
+    //
+    // }, [navigate, selectedAgent]);
 
     function setLogFiles(files) {
-        setAgents([]);
+        // setAgents([]);
         setFiles(files);
-        Array.from(files).forEach(async file => {
-            let result = await new Promise((resolve) => {
-                let fileReader = new FileReader();
-                fileReader.onload = _ => resolve(fileReader.result);
-                fileReader.readAsText(file);
-            });
+        navigate("/agents");
+        // Array.from(files).forEach(async file => {
+        //     let result = await new Promise((resolve) => {
+        //         let fileReader = new FileReader();
+        //         fileReader.onload = _ => resolve(fileReader.result);
+        //         fileReader.readAsText(file);
+        //     });
+        //
+        //     console.log("setAgents " + file.name)
+        //     setAgents(agents => ([
+        //         ...agents,
+        //         {name: file.name.replace(".json", ""), log: JSON.parse(result.toString())}
+        //         ])
+        //     );
+        // });
+    }
 
-            console.log("setAgents " + file.name)
-            setAgents(agents => ([
-                ...agents,
-                {name: file.name.replace(".json", ""), log: JSON.parse(result.toString())}
-                ])
-            );
+    async function loadAgentLog(agent) {
+        console.log("loadAgentLog: " + agent)
+        const file = Array.from(files).find(f => f.name === agent + ".json");
+        let result = await new Promise((resolve) => {
+            let fileReader = new FileReader();
+            fileReader.onload = _ => resolve(fileReader.result);
+            fileReader.readAsText(file);
         });
+
+        setSelectedAgent({name: file.name.replace(".json", ""), log: JSON.parse(result.toString())})
+        console.log({name: file.name.replace(".json", ""), log: JSON.parse(result.toString())})
     }
 
     return (
       <div className="flex-container">
           <NavBar/>
           <Routes className="content">
-            <Route path="/" element={<UploadLogPage setLogFiles={setLogFiles}/>}/>
-            <Route path="/agents" element={<HomePage agents={agents}/>}/>
+              <Route path="/agents" element={<HomePage files={files} loadAgentLog={loadAgentLog}/>}/>
+              <Route path="/events" element={<AgentEventsPage agent={selectedAgent}/>}/>
+              <Route path="/" exact element={<UploadLogPage setLogFiles={setLogFiles}/>}/>
           </Routes>
       </div>
     );
