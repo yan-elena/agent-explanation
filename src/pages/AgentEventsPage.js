@@ -1,7 +1,7 @@
 import React from "react";
 
 function AgentEventsPage(props) {
-    console.log("AgentEventsPage")
+    console.log(props)
 
     return (
         <p>AgentEventsPage</p>

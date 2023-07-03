@@ -21,25 +21,10 @@ function App() {
     function setLogFiles(files) {
         // setAgents([]);
         setFiles(files);
-        navigate("/agents");
-        // Array.from(files).forEach(async file => {
-        //     let result = await new Promise((resolve) => {
-        //         let fileReader = new FileReader();
-        //         fileReader.onload = _ => resolve(fileReader.result);
-        //         fileReader.readAsText(file);
-        //     });
-        //
-        //     console.log("setAgents " + file.name)
-        //     setAgents(agents => ([
-        //         ...agents,
-        //         {name: file.name.replace(".json", ""), log: JSON.parse(result.toString())}
-        //         ])
-        //     );
-        // });
+        navigate("agents");
     }
 
     async function loadAgentLog(agent) {
-        console.log("loadAgentLog: " + agent)
         const file = Array.from(files).find(f => f.name === agent + ".json");
         let result = await new Promise((resolve) => {
             let fileReader = new FileReader();
@@ -56,7 +41,7 @@ function App() {
           <NavBar/>
           <Routes className="content">
               <Route path="/agents" element={<HomePage files={files} loadAgentLog={loadAgentLog}/>}/>
-              <Route path="/events" element={<AgentEventsPage agent={selectedAgent}/>}/>
+              <Route path="/agents/:agentName/" element={<AgentEventsPage agent={selectedAgent}/>}/>
               <Route path="/" exact element={<UploadLogPage setLogFiles={setLogFiles}/>}/>
           </Routes>
       </div>
