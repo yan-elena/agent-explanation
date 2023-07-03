@@ -16,7 +16,7 @@ function Agent(props) {
 
             <Col className="mt-5 ms-3">
                 <ListGroup>
-                    <ListGroupItem  href={"/agents/" + props.name} onClick={() => props.loadAgentLog(props.name)} action>All</ListGroupItem >
+                    <ListGroupItem  href={"#/agents/" + props.name} onClick={() => props.loadAgentLog(props.name)} action>All</ListGroupItem >
                     <ListGroupItem  href={"/beliefs"} onClick={() => props.loadAgentLog(props.name)} action>Beliefs</ListGroupItem >
                     <ListGroupItem  href={"/plans"} onClick={() => props.loadAgentLog(props.name)} action>Plans</ListGroupItem >
                     <ListGroupItem  href={"/intentions"} onClick={() => props.loadAgentLog(props.name)} action>Intentions</ListGroupItem >
