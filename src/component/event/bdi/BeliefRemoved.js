@@ -1,12 +1,13 @@
 import React from "react";
+import Event from "../../Event";
 
 function BDIBeliefRemoved(props) {
+
+    const type = "Belief Removed";
+    const description = "I no longer believe in " + props.event.message.event.beliefInfo.literal
+
     return (
-        <div>
-            <h5 className="fw-bold">Belief Removed</h5>
-            <p className="text-muted fw-bold">I no longer believe in {props.event.message.event.beliefInfo.literal}</p>
-            <p className="text-muted my-1">Timestamp: {props.event.timestamp}</p>
-        </div>
+        <Event type={type} description={description} timestamp={props.event.timestamp}/>
     )
 }
 

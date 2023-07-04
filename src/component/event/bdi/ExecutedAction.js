@@ -1,30 +1,25 @@
 import React from "react";
+import Event from "../../Event";
 
 function ExecutedAction(props) {
 
-    const type = props.event.message.type
+    const type = "Executed action"
+    let description = "I executed action "
+    let info = "Type: "
 
-    if (type === "InternalActionFinished") {
+    if (props.event.message.type === "InternalActionFinished") {
         const action = props.event.message.event.action
-        return (
-            <div>
-                <h5 className="fw-bold">Executed action</h5>
-                <p className="text-muted fw-bold">I executed action {action.term}</p>
-                <p className="text-muted my-1">Type: {action.type}</p>
-                <p className="text-muted my-1">Timestamp: {props.event.timestamp}</p>
-            </div>
-        )
+        description = description + action.term
+        info = info + action.type
     } else {
         const deed = props.event.message.event.deedInfo
-        return (
-            <div>
-                <h5 className="fw-bold">Executed action</h5>
-                <p className="text-muted fw-bold">I executed action {deed.term}</p>
-                <p className="text-muted my-1">Type: {(type === "ExternalActionFinished" ? "external " : "") + deed.type}</p>
-                <p className="text-muted my-1">Timestamp: {props.event.timestamp}</p>
-            </div>
-        )
+        description = description + deed.term
+        info = info + (type === "ExternalActionFinished" ? "external " : "") + deed.type
     }
+
+    return (
+        <Event type={type} description={description} info={info} timestamp={props.event.timestamp}/>
+    )
 }
 
 export default ExecutedAction;

@@ -4,7 +4,7 @@ import Event from "../../../Event";
 function ExternalActionFinished(props) {
     return (
         <div>
-            <Event event={props.event}/>
+            <Event type={props.event.message.type.replace(/\B([A-Z])\B/g, ' $1')} description={props.event.message.log} timestamp={props.event.timestamp}/>
         </div>
     )
 }

@@ -1,8 +1,10 @@
 import React from "react";
+import Event from "../../Event";
 
 function NewBelief(props) {
 
     const type = props.event.message.type
+    const eventType = "New Belief"
     let belief = ""
     let reason = ""
 
@@ -23,12 +25,10 @@ function NewBelief(props) {
         reason = " because artifact " + props.event.message.event.signalInfo.source + " sent me a signal"
     }
 
+    const description = "I believe " + belief + reason
+
     return (
-        <div>
-            <h5 className="fw-bold">New Belief</h5>
-            <p className="text-muted fw-bold">I believe {belief + reason}</p>
-            <p className="text-muted my-1">Timestamp: {props.event.timestamp}</p>
-        </div>
+        <Event type={eventType} description={description} timestamp={props.event.timestamp}/>
     )
 }
 
