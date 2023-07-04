@@ -1,10 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import Form from 'react-bootstrap/Form';
 import {Col} from "react-bootstrap";
 
 function ControlForm(props) {
-
-    const [selectedLevel, setSelectedLevel] = useState("JASON");
 
     return (
         <Form.Group className="row m-4" controlId="formBasicSelect">
@@ -23,7 +21,7 @@ function ControlForm(props) {
             <Col sm={1}/>
             <Col sm={5}>
                 <Form.Label>Select the level:</Form.Label>
-                <Form.Select value={selectedLevel} onChange={e => setSelectedLevel(e.target.value)}>
+                <Form.Select value={props.level} onChange={e => props.selectLevel(e.target.value)}>
                     <option value="JASON">Jason Level</option>
                     <option value="BDI">BDI Level</option>
                 </Form.Select>
