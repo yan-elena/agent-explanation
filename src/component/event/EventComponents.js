@@ -32,13 +32,14 @@ import DesireRemoved from "./bdi/DesireRemoved";
 import FoundMean from "./bdi/FoundMean";
 import ExecutedAction from "./bdi/ExecutedAction";
 import BDIBeliefRemoved from "./bdi/BeliefRemoved";
+import NewBelief from "./bdi/NewBelief";
 
 const EventComponents = {
     ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedAction/>},
     ExternalActionFinished: {JASON: <ExternalActionFinished/>, BDI: <ExecutedAction/>},
     ExternalActionTriggered: {JASON: <ExternalActionTriggered/>, BDI: <></>},
     InternalActionFinished: {JASON: <InternalActionFinished/>, BDI: <ExecutedAction/>},
-    BeliefAdded: {JASON: <BeliefAdded/>, BDI: <BeliefAdded/>},
+    BeliefAdded: {JASON: <BeliefAdded/>, BDI: <NewBelief/>},
     BeliefFromSrcAdded: {JASON: <BeliefFromSrcAdded/>, BDI: <></>},
     BeliefFromSrcRemoved: {JASON: <BeliefFromSrcRemoved/>, BDI: <></>},
     BeliefRemoved: {JASON: <BeliefRemoved/>, BDI: <BDIBeliefRemoved/>},
@@ -51,16 +52,16 @@ const EventComponents = {
     IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <></>},
     IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <></>},
     IntentionWaiting: {JASON: <IntentionWaiting/>, BDI: <></>},
-    NewPercept: {JASON: <NewPercept/>, BDI: <NewPercept/>},
+    NewPercept: {JASON: <NewPercept/>, BDI: <NewBelief/>},
     PlanAdded: {JASON: <PlanAdded/>, BDI: <></>},
     PlanRemoved: {JASON: <PlanRemoved/>, BDI: <></>},
     SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <></>},
     ReasoningCycleStarted: {JASON: <ReasoningCycleStarted/>, BDI:  <></>},
-    NewAgentSignal: {JASON: <NewAgentSignal/>, BDI: <NewAgentSignal/>},
-    NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <NewArtifactSignal/>},
-    MailBoxMessages: {JASON: <MailBoxMessages/>, BDI: <MailBoxMessages/>},
-    NewSpeechActMessage: {JASON: <NewSpeechActMessage/>, BDI: <NewSpeechActMessage/>},
-    SelectedMessage: {JASON: <SelectedMessage/>, BDI: <SelectedMessage/>},
+    NewAgentSignal: {JASON: <NewAgentSignal/>, BDI: <NewBelief/>},
+    NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <NewBelief/>},
+    MailBoxMessages: {JASON: <MailBoxMessages/>, BDI: <></>},
+    NewSpeechActMessage: {JASON: <NewSpeechActMessage/>, BDI: <NewBelief/>},
+    SelectedMessage: {JASON: <SelectedMessage/>, BDI: <></>},
     SendMessage: {JASON: <SendMessage/>, BDI: <SendMessage/>}
 };
 
