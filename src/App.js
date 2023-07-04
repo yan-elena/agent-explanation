@@ -4,19 +4,20 @@ import HomePage from "./pages/HomePage";
 import UploadLogPage from "./pages/UploadLogPage";
 import AgentEventsPage from "./pages/AgentEventsPage";
 import NavBar from "./component/NavBar";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 function App() {
     const navigate = useNavigate();
-    // const [agents, setAgents] = useState(JSON.parse(sessionStorage.getItem('agents')));
-    // const [agents, setAgents] = useState([]);
-    const [files, setFiles] = useState([]);
-    const [selectedAgent, setSelectedAgent] = useState(null);
+    const [files, setFiles] = useState(JSON.parse(sessionStorage.getItem('files')));
+    const [selectedAgent, setSelectedAgent] = useState(JSON.parse(sessionStorage.getItem('selectedAgent')));
 
-    // useEffect(() => {
-    //     // sessionStorage.setItem("agents", JSON.stringify(agents));
-    //
-    // }, [navigate, selectedAgent]);
+    useEffect(() => {
+        sessionStorage.setItem("selectedAgent", JSON.stringify(selectedAgent));
+    }, [selectedAgent]);
+
+    useEffect(() => {
+        sessionStorage.setItem("files", JSON.stringify(files));
+    }, [files]);
 
     function setLogFiles(files) {
         // setAgents([]);
