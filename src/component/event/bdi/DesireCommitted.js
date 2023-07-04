@@ -6,7 +6,7 @@ function DesireCommitted(props) {
 
     return (
         <div>
-            <h5 className="fw-bold">Desire {desire} committed</h5>
+            <h5 className="fw-bold">Desire committed</h5>
             <p className="text-muted fw-bold">I committed to desire {desire}, and it became a new intention</p>
             <p className="text-muted my-1">Timestamp: {props.event.timestamp}</p>
         </div>

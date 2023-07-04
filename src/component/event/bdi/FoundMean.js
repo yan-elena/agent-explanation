@@ -8,7 +8,7 @@ function FoundMean(props) {
 
     return (
         <div>
-            <h5 className="fw-bold">Found mean for {functor}</h5>
+            <h5 className="fw-bold">Found mean</h5>
             <p className="text-muted fw-bold">I improve the means to pursue the intention {functor + (reason ? " by selecting plan " + reason.terms.value : "")} </p>
             <p className="text-muted my-1">State: {state}</p>
             <p className="text-muted my-1">Timestamp: {props.event.timestamp}</p>

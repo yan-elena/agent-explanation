@@ -8,8 +8,8 @@ function DesireRemoved(props) {
     if (result === "achieved") {
         return (
             <div>
-                <h5 className="fw-bold">Desire {functor} satisfied</h5>
-                <p className="text-muted fw-bold">I have my desire {functor}</p>
+                <h5 className="fw-bold">Desire satisfied</h5>
+                <p className="text-muted fw-bold">I have satisfied my desire {functor}</p>
                 <p className="text-muted my-1">Result: {result}, state: {state}</p>
                 <p className="text-muted my-1">Timestamp: {props.event.timestamp}</p>
             </div>
