@@ -26,6 +26,7 @@ import NewSpeechActMessage from "./jason/speechActMessageEvent/NewSpeechActMessa
 import SelectedMessage from "./jason/speechActMessageEvent/SelectedMessage";
 import SendMessage from "./jason/speechActMessageEvent/SendMessage";
 import PlanSelected from "./jason/goalEvent/PlanSelected";
+import NewDesire from "./bdi/NewDesire";
 
 const EventComponents = {
     ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedDeed/>},
@@ -36,7 +37,7 @@ const EventComponents = {
     BeliefFromSrcAdded: {JASON: <BeliefFromSrcAdded/>, BDI: <BeliefFromSrcAdded/>},
     BeliefFromSrcRemoved: {JASON: <BeliefFromSrcRemoved/>, BDI: <BeliefFromSrcRemoved/>},
     BeliefRemoved: {JASON: <BeliefRemoved/>, BDI: <BeliefRemoved/>},
-    GoalCreated: {JASON: <GoalCreated/>, BDI: <GoalCreated/>},
+    GoalCreated: {JASON: <GoalCreated/>, BDI: <NewDesire/>},
     GoalRemoved: {JASON: <GoalRemoved/>, BDI: <GoalRemoved/>},
     GoalSuspended: {JASON: <GoalSuspended/>, BDI: <GoalSuspended/>},
     PlanSelected: {JASON: <PlanSelected/>, BDI: <PlanSelected/>},
@@ -46,10 +47,10 @@ const EventComponents = {
     IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <IntentionUpdated/>},
     IntentionWaiting: {JASON: <IntentionWaiting/>, BDI: <IntentionWaiting/>},
     NewPercept: {JASON: <NewPercept/>, BDI: <NewPercept/>},
-    PlanAdded: {JASON: <PlanAdded/>, BDI: <PlanAdded/>},
+    PlanAdded: {JASON: <PlanAdded/>, BDI: <></>},
     PlanRemoved: {JASON: <PlanRemoved/>, BDI: <PlanRemoved/>},
     SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <SelectPlanEvent/>},
-    ReasoningCycleStarted: {JASON: <ReasoningCycleStarted/>, BDI: <ReasoningCycleStarted/>},
+    ReasoningCycleStarted: {JASON: <ReasoningCycleStarted/>, BDI:  <></>},
     NewAgentSignal: {JASON: <NewAgentSignal/>, BDI: <NewAgentSignal/>},
     NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <NewArtifactSignal/>},
     MailBoxMessages: {JASON: <MailBoxMessages/>, BDI: <MailBoxMessages/>},
