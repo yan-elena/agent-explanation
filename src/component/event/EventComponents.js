@@ -29,6 +29,7 @@ import PlanSelected from "./jason/goalEvent/PlanSelected";
 import NewDesire from "./bdi/NewDesire";
 import DesireCommitted from "./bdi/DesireCommitted";
 import DesireRemoved from "./bdi/DesireRemoved";
+import FoundMean from "./bdi/FoundMean";
 
 const EventComponents = {
     ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedDeed/>},
@@ -36,22 +37,22 @@ const EventComponents = {
     ExternalActionTriggered: {JASON: <ExternalActionTriggered/>, BDI: <ExternalActionTriggered/>},
     InternalActionFinished: {JASON: <InternalActionFinished/>, BDI: <InternalActionFinished/>},
     BeliefAdded: {JASON: <BeliefAdded/>, BDI: <BeliefAdded/>},
-    BeliefFromSrcAdded: {JASON: <BeliefFromSrcAdded/>, BDI: <BeliefFromSrcAdded/>},
-    BeliefFromSrcRemoved: {JASON: <BeliefFromSrcRemoved/>, BDI: <BeliefFromSrcRemoved/>},
+    BeliefFromSrcAdded: {JASON: <BeliefFromSrcAdded/>, BDI: <></>},
+    BeliefFromSrcRemoved: {JASON: <BeliefFromSrcRemoved/>, BDI: <></>},
     BeliefRemoved: {JASON: <BeliefRemoved/>, BDI: <BeliefRemoved/>},
     GoalCreated: {JASON: <GoalCreated/>, BDI: <NewDesire/>},
     GoalRemoved: {JASON: <GoalRemoved/>, BDI: <DesireRemoved/>},
-    GoalSuspended: {JASON: <GoalSuspended/>, BDI: <GoalSuspended/>},
-    PlanSelected: {JASON: <PlanSelected/>, BDI: <PlanSelected/>},
+    GoalSuspended: {JASON: <GoalSuspended/>, BDI: <></>},
+    PlanSelected: {JASON: <PlanSelected/>, BDI: <FoundMean/>},
     IntentionCreated: {JASON: <IntentionCreated/>, BDI: <DesireCommitted/>},
-    IntentionRemoved: {JASON: <IntentionRemoved/>, BDI: <IntentionRemoved/>},
-    IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <IntentionSuspended/>},
-    IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <IntentionUpdated/>},
-    IntentionWaiting: {JASON: <IntentionWaiting/>, BDI: <IntentionWaiting/>},
+    IntentionRemoved: {JASON: <IntentionRemoved/>, BDI: <></>},
+    IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <></>},
+    IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <></>},
+    IntentionWaiting: {JASON: <IntentionWaiting/>, BDI: <></>},
     NewPercept: {JASON: <NewPercept/>, BDI: <NewPercept/>},
     PlanAdded: {JASON: <PlanAdded/>, BDI: <></>},
-    PlanRemoved: {JASON: <PlanRemoved/>, BDI: <PlanRemoved/>},
-    SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <SelectPlanEvent/>},
+    PlanRemoved: {JASON: <PlanRemoved/>, BDI: <></>},
+    SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <></>},
     ReasoningCycleStarted: {JASON: <ReasoningCycleStarted/>, BDI:  <></>},
     NewAgentSignal: {JASON: <NewAgentSignal/>, BDI: <NewAgentSignal/>},
     NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <NewArtifactSignal/>},
