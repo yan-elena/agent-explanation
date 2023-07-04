@@ -2,9 +2,14 @@ import React from "react";
 import Event from "../../Event";
 
 function InternalActionFinished(props) {
+    const type = "Internal Action Finished"
+    const action = props.event.message.event.action
+    let description = "Internal action " + action.term + " finished"
+    let info = "Type: " + action.type
+
     return (
         <div>
-            <Event type={props.event.message.type.replace(/\B([A-Z])\B/g, ' $1')} description={props.event.message.log} timestamp={props.event.timestamp} filter={props.filter}/>
+            <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
         </div>
     )
 }

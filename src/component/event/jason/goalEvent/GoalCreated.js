@@ -2,9 +2,17 @@ import React from "react";
 import Event from "../../Event";
 
 function GoalCreated(props) {
+    const type = "Goal Created"
+    const functor = props.event.message.event.goalInfo.goalFunctor
+    const state = props.event.message.event.goalInfo.goalStates
+    // const intention = props.event.message.event.intention.value
+    const info = "State: " + state
+
+    let description = "Goal " + functor + " created"
+
     return (
         <div>
-            <Event type={props.event.message.type.replace(/\B([A-Z])\B/g, ' $1')} description={props.event.message.log} timestamp={props.event.timestamp} filter={props.filter}/>
+            <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
         </div>
     )
 }
