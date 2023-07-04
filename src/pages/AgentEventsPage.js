@@ -21,8 +21,8 @@ function AgentEventsPage(props) {
             <ControlForm filterEvents={filterEvents} level={selectedLevel} selectLevel={setSelectedLevel}/>
             <MDBContainer xs={12} className="my-5">
                 <ul className="timeline">
-                    {props.agent && filteredEvents.map(event => (
-                        <li className="timeline-item mb-5">
+                    {props.agent && filteredEvents.map((event, i) => (
+                        <li className="timeline-item mb-5" key={i}>
                             {React.cloneElement(EventComponents[event.message.type][selectedLevel], {event: event})}
                         </li>
                     ))}
