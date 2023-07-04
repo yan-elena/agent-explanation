@@ -27,6 +27,7 @@ import SelectedMessage from "./jason/speechActMessageEvent/SelectedMessage";
 import SendMessage from "./jason/speechActMessageEvent/SendMessage";
 import PlanSelected from "./jason/goalEvent/PlanSelected";
 import NewDesire from "./bdi/NewDesire";
+import DesireCommitted from "./bdi/DesireCommitted";
 
 const EventComponents = {
     ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedDeed/>},
@@ -41,7 +42,7 @@ const EventComponents = {
     GoalRemoved: {JASON: <GoalRemoved/>, BDI: <GoalRemoved/>},
     GoalSuspended: {JASON: <GoalSuspended/>, BDI: <GoalSuspended/>},
     PlanSelected: {JASON: <PlanSelected/>, BDI: <PlanSelected/>},
-    IntentionCreated: {JASON: <IntentionCreated/>, BDI: <IntentionCreated/>},
+    IntentionCreated: {JASON: <IntentionCreated/>, BDI: <DesireCommitted/>},
     IntentionRemoved: {JASON: <IntentionRemoved/>, BDI: <IntentionRemoved/>},
     IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <IntentionSuspended/>},
     IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <IntentionUpdated/>},

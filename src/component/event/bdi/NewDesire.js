@@ -2,9 +2,6 @@ import React from "react";
 import Event from "../../Event";
 
 function NewDesire(props) {
-    console.log("New Desire")
-    console.log(props.event.message.type)
-
     const type = props.event.message.type
     const functor = props.event.message.event.goalInfo.goalFunctor
     const state = props.event.message.event.goalInfo.goalStates
