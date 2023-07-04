@@ -1,27 +1,23 @@
 import React, {useState} from "react";
 import Form from 'react-bootstrap/Form';
-import {Button, Col} from "react-bootstrap";
+import {Col} from "react-bootstrap";
 
 function ControlForm(props) {
 
-    const [searchEvent, setSearchEvent] = useState("");
     const [selectedLevel, setSelectedLevel] = useState("JASON");
 
     return (
         <Form.Group className="row m-4" controlId="formBasicSelect">
             <Col sm={5}>
-                <Form.Label>Search an event:</Form.Label>
+                <Form.Label>Filter events:</Form.Label>
                 <Form className="d-flex">
                     <Form.Control
                         type="search"
                         placeholder="Event"
                         className="me-2"
                         aria-label="Event"
-                        onChange={e => setSearchEvent}
+                        onChange={e =>{ props.filterEvents(e)}}
                     />
-                    <Button>
-                        Search
-                    </Button>
                 </Form>
             </Col>
             <Col sm={1}/>
