@@ -1,5 +1,5 @@
 import React from "react";
-import Event from "../../Event";
+import Event from "../Event";
 
 function DesireRemoved(props) {
     const functor = props.event.message.event.goalInfo.goalFunctor

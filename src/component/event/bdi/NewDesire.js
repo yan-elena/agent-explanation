@@ -1,5 +1,5 @@
 import React from "react";
-import Event from "../../Event";
+import Event from "../Event";
 
 function NewDesire(props) {
     const type = props.event.message.type
