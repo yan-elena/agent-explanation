@@ -19,7 +19,7 @@ function DesireRemoved(props) {
     }
 
     return (
-        <Event type={type} description={description} info={info} timestamp={props.event.timestamp}/>
+        <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
     )
 }
 

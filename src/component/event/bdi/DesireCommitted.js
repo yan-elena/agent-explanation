@@ -8,7 +8,7 @@ function DesireCommitted(props) {
     const description = "I committed to desire " + desire + ", and it became a new intention"
 
     return (
-        <Event type={type} description={description} timestamp={props.event.timestamp}/>
+        <Event type={type} description={description} timestamp={props.event.timestamp} filter={props.filter}/>
     )
 }
 

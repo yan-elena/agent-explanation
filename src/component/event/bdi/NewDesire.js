@@ -20,7 +20,7 @@ function NewDesire(props) {
     }
 
     return (
-        <Event type={eventType} description={description} info={info} timestamp={props.event.timestamp}/>
+        <Event type={eventType} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
     )
 }
 

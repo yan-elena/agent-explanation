@@ -14,7 +14,7 @@ function ControlForm(props) {
                         placeholder="Event"
                         className="me-2"
                         aria-label="Event"
-                        onChange={e =>{ props.filterEvents(e)}}
+                        onChange={e =>{ props.filterEvents(e.target.value)}}
                     />
                 </Form>
             </Col>

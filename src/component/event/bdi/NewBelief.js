@@ -28,7 +28,7 @@ function NewBelief(props) {
     const description = "I believe " + belief + reason
 
     return (
-        <Event type={eventType} description={description} timestamp={props.event.timestamp}/>
+        <Event type={eventType} description={description} timestamp={props.event.timestamp} filter={props.filter}/>
     )
 }
 

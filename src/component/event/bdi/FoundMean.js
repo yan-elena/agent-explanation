@@ -9,7 +9,7 @@ function FoundMean(props) {
     const info = "State: " + props.event.message.event.goalInfo.goalStates
 
     return (
-        <Event type={type} description={description} info={info} timestamp={props.event.timestamp}/>
+        <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
     )
 }
 

@@ -7,7 +7,7 @@ function BDIBeliefRemoved(props) {
     const description = "I no longer believe in " + props.event.message.event.beliefInfo.literal
 
     return (
-        <Event type={type} description={description} timestamp={props.event.timestamp}/>
+        <Event type={type} description={description} timestamp={props.event.timestamp} filter={props.filter}/>
     )
 }
 
