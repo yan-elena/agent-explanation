@@ -31,6 +31,7 @@ import DesireCommitted from "./bdi/DesireCommitted";
 import DesireRemoved from "./bdi/DesireRemoved";
 import FoundMean from "./bdi/FoundMean";
 import ExecutedAction from "./bdi/ExecutedAction";
+import BDIBeliefRemoved from "./bdi/BeliefRemoved";
 
 const EventComponents = {
     ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedAction/>},
@@ -40,7 +41,7 @@ const EventComponents = {
     BeliefAdded: {JASON: <BeliefAdded/>, BDI: <BeliefAdded/>},
     BeliefFromSrcAdded: {JASON: <BeliefFromSrcAdded/>, BDI: <></>},
     BeliefFromSrcRemoved: {JASON: <BeliefFromSrcRemoved/>, BDI: <></>},
-    BeliefRemoved: {JASON: <BeliefRemoved/>, BDI: <BeliefRemoved/>},
+    BeliefRemoved: {JASON: <BeliefRemoved/>, BDI: <BDIBeliefRemoved/>},
     GoalCreated: {JASON: <GoalCreated/>, BDI: <NewDesire/>},
     GoalRemoved: {JASON: <GoalRemoved/>, BDI: <DesireRemoved/>},
     GoalSuspended: {JASON: <GoalSuspended/>, BDI: <></>},
