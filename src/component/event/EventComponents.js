@@ -30,12 +30,13 @@ import NewDesire from "./bdi/NewDesire";
 import DesireCommitted from "./bdi/DesireCommitted";
 import DesireRemoved from "./bdi/DesireRemoved";
 import FoundMean from "./bdi/FoundMean";
+import ExecutedAction from "./bdi/ExecutedAction";
 
 const EventComponents = {
-    ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedDeed/>},
-    ExternalActionFinished: {JASON: <ExternalActionFinished/>, BDI: <ExternalActionFinished/>},
-    ExternalActionTriggered: {JASON: <ExternalActionTriggered/>, BDI: <ExternalActionTriggered/>},
-    InternalActionFinished: {JASON: <InternalActionFinished/>, BDI: <InternalActionFinished/>},
+    ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedAction/>},
+    ExternalActionFinished: {JASON: <ExternalActionFinished/>, BDI: <ExecutedAction/>},
+    ExternalActionTriggered: {JASON: <ExternalActionTriggered/>, BDI: <></>},
+    InternalActionFinished: {JASON: <InternalActionFinished/>, BDI: <ExecutedAction/>},
     BeliefAdded: {JASON: <BeliefAdded/>, BDI: <BeliefAdded/>},
     BeliefFromSrcAdded: {JASON: <BeliefFromSrcAdded/>, BDI: <></>},
     BeliefFromSrcRemoved: {JASON: <BeliefFromSrcRemoved/>, BDI: <></>},
