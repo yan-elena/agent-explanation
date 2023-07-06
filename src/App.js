@@ -43,6 +43,11 @@ function App() {
           <Routes className="content">
               <Route path="/agents" element={<HomePage files={files} loadAgentLog={loadAgentLog}/>}/>
               <Route path="/agents/:agentName/" element={<AgentEventsPage agent={selectedAgent}/>}/>
+              <Route path="/agents/:agentName/beliefs" element={<AgentEventsPage agent={selectedAgent}/>}/>
+              <Route path="/agents/:agentName/plans" element={<AgentEventsPage agent={selectedAgent}/>}/>
+              <Route path="/agents/:agentName/intentions" element={<AgentEventsPage agent={selectedAgent}/>}/>
+              <Route path="/agents/:agentName/goals" element={<AgentEventsPage agent={selectedAgent}/>}/>
+              <Route path="/agents/:agentName/messages" element={<AgentEventsPage agent={selectedAgent}/>}/>
               <Route path="/" exact element={<UploadLogPage setLogFiles={setLogFiles}/>}/>
           </Routes>
       </div>

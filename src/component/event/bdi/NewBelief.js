@@ -16,7 +16,7 @@ function NewBelief(props) {
     } else if (type === "NewSpeechActMessage") {
         const message = props.event.message.event.message
         belief = message.message
-        reason = " because " + message.sender + " told"
+        reason = " because " + message.sender + " told me"
     } else if (type === "NewArtifactSignal") {
         belief = props.event.message.event.signalInfo.functor
         reason = " because artifact " + props.event.message.event.signalInfo.artifactName + " sent me a signal"

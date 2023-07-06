@@ -10,7 +10,7 @@ function AgentEventsPage(props) {
 
     return (
         <div>
-            <h2 className="m-4">{props.agent ? "Agent " + props.agent.name : ""}</h2>
+            <h2 className="m-4">{props.agent && props.agent.name}</h2>
             <ControlForm filterEvents={setFilter} level={selectedLevel} selectLevel={setSelectedLevel}/>
             <MDBContainer xs={12} className="my-5">
                 <ul className="timeline">
