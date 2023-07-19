@@ -6,7 +6,7 @@ function NavBar() {
     return (
         <Navbar bg="light">
             <Container className="m-0 w-100">
-                <Navbar.Brand href="/">Agent Explanation</Navbar.Brand>
+                <Navbar.Brand href="/">BDI Multi-Agent Systems Explanation</Navbar.Brand>
             </Container>
         </Navbar>
     )
