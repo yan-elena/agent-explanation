@@ -5,7 +5,7 @@ function Event(props) {
     const string = (props.type + " " + props.description + " " + props.info + " " + props.timestamp).toLowerCase()
     const filter = props.filter.toLowerCase()
 
-    if (string.includes(filter)) {
+    if (string.includes(filter) && props.type) {
         return (
             <div>
                 <h5 className="fw-bold">{props.description}</h5>
