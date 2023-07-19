@@ -29,7 +29,6 @@ import PlanSelected from "./jason/goalEvent/PlanSelected";
 import NewDesire from "./bdi/NewDesire";
 import DesireCommitted from "./bdi/DesireCommitted";
 import DesireRemoved from "./bdi/DesireRemoved";
-import FoundMean from "./bdi/FoundMean";
 import ExecutedAction from "./bdi/ExecutedAction";
 import BDIBeliefRemoved from "./bdi/BeliefRemoved";
 import NewBelief from "./bdi/NewBelief";
