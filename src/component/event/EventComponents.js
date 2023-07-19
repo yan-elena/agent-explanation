@@ -46,7 +46,7 @@ const EventComponents = {
     GoalCreated: {JASON: <GoalCreated/>, BDI: <NewDesire/>},
     GoalRemoved: {JASON: <GoalRemoved/>, BDI: <DesireRemoved/>},
     GoalSuspended: {JASON: <GoalSuspended/>, BDI: <></>},
-    PlanSelected: {JASON: <PlanSelected/>, BDI: <FoundMean/>},
+    PlanSelected: {JASON: <PlanSelected/>, BDI: <></>},
     IntentionCreated: {JASON: <IntentionCreated/>, BDI: <DesireCommitted/>},
     IntentionRemoved: {JASON: <IntentionRemoved/>, BDI: <></>},
     IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <></>},
