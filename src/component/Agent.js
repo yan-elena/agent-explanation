@@ -18,10 +18,8 @@ function Agent(props) {
                 <ListGroup>
                     <ListGroupItem  href={"#/agents/" + props.name} onClick={() => props.loadAgentLog(props.name)} action>All</ListGroupItem >
                     <ListGroupItem  href={"#/agents/" + props.name + "/beliefs"} onClick={() => props.loadAgentLog(props.name)} action>Beliefs</ListGroupItem >
-                    <ListGroupItem  href={"#/agents/" + props.name + "/plans"} onClick={() => props.loadAgentLog(props.name)} action>Plans</ListGroupItem >
+                    <ListGroupItem  href={"#/agents/" + props.name + "/desires"} onClick={() => props.loadAgentLog(props.name)} action>Desires</ListGroupItem >
                     <ListGroupItem  href={"#/agents/" + props.name + "/intentions"} onClick={() => props.loadAgentLog(props.name)} action>Intentions</ListGroupItem >
-                    <ListGroupItem  href={"#/agents/" + props.name + "/goals"} onClick={() => props.loadAgentLog(props.name)} action>Goals</ListGroupItem >
-                    <ListGroupItem  href={"#/agents/" + props.name + "/messages"} onClick={() => props.loadAgentLog(props.name)} action>Messages</ListGroupItem >
                 </ListGroup>
             </Col>
         </Row>
