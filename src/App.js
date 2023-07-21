@@ -34,7 +34,6 @@ function App() {
         });
 
         setSelectedAgent({name: file.name.replace(".json", ""), log: JSON.parse(result.toString())})
-        console.log({name: file.name.replace(".json", ""), log: JSON.parse(result.toString())})
     }
 
     return (
