@@ -17,12 +17,6 @@ function NewBelief(props) {
         const message = props.event.message.event.message
         belief = message.message
         reason = " because " + message.sender + " told me"
-    } else if (type === "NewArtifactSignal") {
-        belief = props.event.message.event.signalInfo.functor
-        reason = " because artifact " + props.event.message.event.signalInfo.artifactName + " sent me a signal"
-    } else if (type === "NewAgentSignal") {
-        belief = props.event.message.event.signalInfo.functor
-        reason = " because artifact " + props.event.message.event.signalInfo.source + " sent me a signal"
     }
 
     const description = "I believe " + belief + reason
