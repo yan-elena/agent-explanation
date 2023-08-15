@@ -45,8 +45,8 @@ const EventComponents = {
     GoalCreated: {JASON: <GoalCreated/>, BDI: <NewDesire/>},
     GoalRemoved: {JASON: <GoalRemoved/>, BDI: <DesireRemoved/>},
     GoalSuspended: {JASON: <GoalSuspended/>, BDI: <></>},
-    PlanSelected: {JASON: <PlanSelected/>, BDI: <></>},
-    IntentionCreated: {JASON: <IntentionCreated/>, BDI: <DesireCommitted/>},
+    PlanSelected: {JASON: <PlanSelected/>, BDI: <></>}, //todo
+    IntentionCreated: {JASON: <IntentionCreated/>, BDI: <DesireCommitted/>}, //todo: merge with plan selected
     IntentionRemoved: {JASON: <IntentionRemoved/>, BDI: <></>},
     IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <></>},
     IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <></>},

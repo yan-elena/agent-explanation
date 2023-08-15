@@ -16,7 +16,7 @@ function AgentEventsPage(props) {
                 <ul className="timeline">
                     {props.agent && props.agent.log.map((event, i) => (
                         <li className="timeline-item mb-5" key={i}>
-                            {React.cloneElement(EventComponents[event.message.type][selectedLevel], {event: event, filter: filter})}
+                            {React.cloneElement(EventComponents[event.message.type][selectedLevel], {log: props.agent.log, event: event, filter: filter})}
                         </li>
                     ))}
                 </ul>
