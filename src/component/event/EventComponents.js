@@ -51,7 +51,7 @@ const EventComponents = {
     IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <></>},
     IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <></>},
     IntentionWaiting: {JASON: <IntentionWaiting/>, BDI: <></>},
-    NewPercept: {JASON: <NewPercept/>, BDI: <NewBelief/>},
+    NewPercept: {JASON: <NewPercept/>, BDI: <></>},
     PlanAdded: {JASON: <PlanAdded/>, BDI: <></>},
     PlanRemoved: {JASON: <PlanRemoved/>, BDI: <></>},
     SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <></>},
@@ -59,7 +59,7 @@ const EventComponents = {
     NewAgentSignal: {JASON: <NewAgentSignal/>, BDI: <></>},
     NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <></>},
     MailBoxMessages: {JASON: <MailBoxMessages/>, BDI: <></>},
-    NewSpeechActMessage: {JASON: <NewSpeechActMessage/>, BDI: <NewBelief/>},
+    NewSpeechActMessage: {JASON: <NewSpeechActMessage/>, BDI: <></>},
     SelectedMessage: {JASON: <SelectedMessage/>, BDI: <></>},
     SendMessage: {JASON: <SendMessage/>, BDI: <SendMessage/>}
 };

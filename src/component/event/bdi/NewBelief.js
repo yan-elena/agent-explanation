@@ -3,20 +3,25 @@ import Event from "../Event";
 
 function NewBelief(props) {
 
-    const type = props.event.message.type
     const eventType = "New Belief"
-    let belief = ""
-    let reason = ""
+    const beliefEvent = props.event.message.event.beliefInfo
+    const belief = beliefEvent.literal
+    const source = beliefEvent.source.value ? beliefEvent.source.value : ""
+    let reason
 
-    if (type === "BeliefAdded") {
-        belief = props.event.message.event.beliefInfo.literal
-    } else if (type === "NewPercept") {
-        belief = props.event.message.event.perceptInfo.functor
-        reason = " because I perceived from " + props.event.message.event.perceptInfo.artifactName
-    } else if (type === "NewSpeechActMessage") {
-        const message = props.event.message.event.message
-        belief = message.message
-        reason = " because " + message.sender + " told me"
+    switch (String(source)) {
+        case "self":
+            reason = " because I noted it in my mind for future reference"
+            break;
+        case "percept":
+            reason = " because I perceived it"
+            break;
+        case "":
+            reason = ""
+            break;
+        default:
+            reason = " because " + source + " told me"
+            break;
     }
 
     const description = "I believe " + belief + reason
