@@ -45,8 +45,8 @@ const EventComponents = {
     GoalCreated: {JASON: <GoalCreated/>, BDI: <NewDesire/>},
     GoalRemoved: {JASON: <GoalRemoved/>, BDI: <DesireRemoved/>},
     GoalSuspended: {JASON: <GoalSuspended/>, BDI: <></>},
-    PlanSelected: {JASON: <PlanSelected/>, BDI: <></>}, //todo
-    IntentionCreated: {JASON: <IntentionCreated/>, BDI: <DesireCommitted/>}, //todo: merge with plan selected
+    PlanSelected: {JASON: <PlanSelected/>, BDI: <></>},
+    IntentionCreated: {JASON: <IntentionCreated/>, BDI: <></>},
     IntentionRemoved: {JASON: <IntentionRemoved/>, BDI: <></>},
     IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <></>},
     IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <></>},
@@ -54,7 +54,7 @@ const EventComponents = {
     NewPercept: {JASON: <NewPercept/>, BDI: <></>},
     PlanAdded: {JASON: <PlanAdded/>, BDI: <></>},
     PlanRemoved: {JASON: <PlanRemoved/>, BDI: <></>},
-    SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <></>},
+    SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <DesireCommitted/>},
     ReasoningCycleStarted: {JASON: <ReasoningCycleStarted/>, BDI:  <></>},
     NewAgentSignal: {JASON: <NewAgentSignal/>, BDI: <></>},
     NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <></>},
