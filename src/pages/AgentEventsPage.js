@@ -2,11 +2,14 @@ import React, {useState} from "react";
 import { MDBContainer } from "mdb-react-ui-kit";
 import EventComponents from "../component/event/EventComponents";
 import ControlForm from "../component/ControlForm";
+import {resetState} from "../model/agentState";
 
 function AgentEventsPage(props) {
 
     const [filter, setFilter] = useState(props.filter);
     const [selectedLevel, setSelectedLevel] = useState(props.level);
+
+    resetState()
 
     return (
         <div>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Event from "../Event";
+import {agentState} from "../../../model/agentState";
 
 function DesireCommitted(props) { //todo plans
 
@@ -11,10 +12,21 @@ function DesireCommitted(props) { //todo plans
     const context = selectedPlan.context ? " because I believe " + selectedPlan.context.replace("&", "and").replace("|", "or") : ""
 
     const description = "I committed to desire " + desire + context + ", and it became a new intention"
+    const [updated, setUpdated] = useState(false)
 
-    return (
-        <Event type={type} description={description} info={parentDesire} timestamp={props.event.timestamp} filter={props.filter}/>
-    )
+    useEffect(() => {
+        if (!agentState.intention.includes(desire)) {
+            agentState.intention.push(desire)
+            setUpdated(true)
+        }
+    }, [])
+
+    if (updated) {
+        return (
+            <Event type={type} description={description} info={parentDesire} timestamp={props.event.timestamp}
+                   filter={props.filter}/>
+        )
+    }
 }
 
 export default DesireCommitted;
