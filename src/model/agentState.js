@@ -1,11 +1,7 @@
 export const agentState = {
-    desire: [],
-    intention: [],
-    action: []
+    intention: {}
 }
 
 export function resetState() {
-    agentState.desire = []
-    agentState.intention = []
-    agentState.action = []
+    agentState.intention = {}
 }

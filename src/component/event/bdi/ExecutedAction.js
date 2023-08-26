@@ -1,33 +1,62 @@
 import React from "react";
 import Event from "../Event";
+import {agentState} from "../../../model/agentState";
 
 function ExecutedAction(props) {
 
     const type = "Executed action"
-    let description = "I executed action "
-    let info = "Type: "
     const intentionInfo = props.event.message.event.intentionInfo
-    const intention =  "intention " + (intentionInfo.intendedMeansInfo[0] ? intentionInfo.intendedMeansInfo[0].trigger + "/" +  intentionInfo.id : intentionInfo.id)
-    let reason = " because of " + intention
+    let description
+    let info = "Type: "
+    let intentionTrigger
+    let intentionId
+    let intention
+    let deed
 
-    if (props.event.message.type === "InternalActionFinished") {
-        const action = props.event.message.event.action
-        description = description + action.term
-        info = info + action.type
+    if (intentionInfo.value) {
+        intentionId = intentionInfo.value.id
+        intentionTrigger = intentionInfo.value.intendedMeansInfo[0] ? intentionInfo.value.intendedMeansInfo[0].trigger : (agentState.intention[intentionId] ? agentState.intention[intentionId] : "")
     } else {
-        const deed = props.event.message.event.deedInfo
-        if (deed.type === "achieve") {
-            description = "I am executing my desire " + deed.term //todo
-        } else {
-            description = description + deed.term
-        }
-        info = info + (type === "ExternalActionFinished" ? "external " : "") + deed.type
+        intentionTrigger = props.event.message.event.goalInfo.goalFunctor
+        intentionId = Object.keys(agentState.intention).find(key => agentState.intention[key] === intentionTrigger)
     }
 
-    return (
-        <Event type={type} description={description + reason} info={info} timestamp={props.event.timestamp}
-               filter={props.filter}/>
-    )
+    if (props.event.message.type === "InternalActionFinished") {
+        deed = props.event.message.event.action
+    } else {
+        deed = props.event.message.event.deedInfo
+    }
+    switch (deed.type) {
+        case "addBel":
+            description = "I added belief "
+            break;
+        case "delBel":
+            description = "I deleted belief "
+            break;
+        case "test":
+            description = "I executed test goal "
+            break;
+        case "internalAction":
+            description = "I executed internal action "
+            break;
+        case "constraint":
+            description = "I evaluated expression "
+            break;
+        default:
+            description = "I executed action "
+            break;
+    }
+
+    intention = "intention " + intentionTrigger + "/" + intentionId
+    description = description + deed.term + " because of " + intention
+    info = info + (type === "ExternalActionFinished" ? "external " : "") + deed.type
+
+    if (deed.type !== "achieve") {
+        return (
+            <Event type={type} description={description} info={info} timestamp={props.event.timestamp}
+                   filter={props.filter}/>
+        )
+    }
 }
 
 export default ExecutedAction;
