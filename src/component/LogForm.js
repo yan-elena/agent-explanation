@@ -18,13 +18,12 @@ function LogForm(props) {
                 <Col md={1} lg={2}></Col>
                 <Col xs={12} md={10} lg={8}>
                     <Form.Group controlId="formFileMultiple" className="mb-3">
-                        <Form.Label>Upload the logging files in .json format generated for your multi-agent system:</Form.Label>
+                        <Form.Label>Upload the log files in .json format generated for the multi-agent system:</Form.Label>
                         <Form.Control type="file" accept=".json" required multiple onChange={(e) => setSelectedFile(e.target.files)}/>
                     </Form.Group>
 
                     <div className="col-10 mt-5" id="items"></div>
 
-                    {/*<div className="mt-5 d-flex justify-content-center align-items-center">*/}
                     <Button className="mt-2" variant="primary" id="continue" type="submit">Continue</Button>
                 </Col>
                 <Col md={1} lg={2}></Col>

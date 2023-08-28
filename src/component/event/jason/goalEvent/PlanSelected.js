@@ -5,7 +5,7 @@ function PlanSelected(props) {
 
     const type = "Plan Selected"
     const description = "Plan " + props.event.message.event.goalInfo.goalFunctor + " selected"
-    const info = "State: " + props.event.message.event.goalInfo.goalStates
+    const info = "State: " + props.event.message.event.goalStates
 
     return (
         <div>
