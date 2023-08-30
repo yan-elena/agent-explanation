@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+mark{
+  padding: 0;
+  margin: 0;
+}
+
 /* Main Container -  this controls the size of the circle */
 .circle_container
 {
