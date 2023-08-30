@@ -9,17 +9,19 @@ function DesireRemoved(props) {
     const result = props.event.message.event.result
     const info = "Result: " + result + ", state: " + state
 
-    let intentionInfo
-    let id
+    let id = Object.keys(agentState.intention).find(key => agentState.intention[key].includes(functor))
+    let intentionInfo = "intention " + functor + "/" + id
+    let parentDesire = []
+    let im
     let type
     let description
 
-    if (intention && intention.id) {
-        id = intention.id
-        intentionInfo = "intention " + (intention.intendedMeansInfo[0] ? intention.intendedMeansInfo[0].trigger : functor) + "/" + id
-    } else {
-        id = Object.keys(agentState.intention).find(key => agentState.intention[key] === functor)
-        intentionInfo = "intention " + functor + "/" + id
+    if (intention) {
+        im = intention.intendedMeansInfo
+
+        if (im[0] && im[0].trigger !== functor) {
+            parentDesire = ["Intention " + functor + "/" + id + " is an intention created from intention " + im[0].trigger + "/" + id, <br/>]
+        }
     }
 
     if (result === "achieved") {
@@ -31,7 +33,7 @@ function DesireRemoved(props) {
     }
 
     return (
-        <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
+        <Event type={type} description={description} info={[...parentDesire, info]} timestamp={props.event.timestamp} filter={props.filter}/>
     )
 }
 
