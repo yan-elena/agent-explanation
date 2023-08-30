@@ -10,7 +10,6 @@ function Event(props) {
         if (text && matchingText) {
             const matchRegex = RegExp(matchingText, 'ig');
 
-            // Matches array needed to maintain the correct letter casing
             if (text.matchAll?.(matchRegex)) {
                 const matches = [...text.matchAll?.(matchRegex)];
 
@@ -40,7 +39,7 @@ function Event(props) {
             <div>
                 <h6 className="fw-bold">{description}</h6>
                 <p className="text-muted fw-bold my-2">{highlightMatchingText("Event type: " + props.type, filter)}</p>
-                <p className="text-muted my-1">{props.info && highlightMatchingText(props.info, filter)}</p>
+                <p className="text-muted my-1">{props.info && (Array.isArray(props.info) ? [props.info.map(info => highlightMatchingText(info, filter))] : highlightMatchingText(props.info, filter))}</p>
                 <p className="text-muted my-1">{highlightMatchingText("Timestamp: " + props.timestamp, filter)}</p>
             </div>
         )
