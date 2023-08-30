@@ -1,6 +1,5 @@
 import React from "react";
 import Event from "../Event";
-import {agentState} from "../../../model/agentState";
 
 function ExecutedAction(props) {
 
@@ -15,10 +14,11 @@ function ExecutedAction(props) {
 
     if (intentionInfo) {
         intentionId = intentionInfo.id
-        intentionTrigger = intentionInfo.intendedMeansInfo[0] ? intentionInfo.intendedMeansInfo[0].trigger : (agentState.intention[intentionId] ? agentState.intention[intentionId].slice(-1)[0] : "")
+        intentionTrigger = intentionInfo.intendedMeansInfo[0].trigger
     } else {
-        intentionTrigger = props.event.message.event.goalInfo.goalFunctor
-        intentionId = Object.keys(agentState.intention).find(key => agentState.intention[key] === intentionTrigger)
+        const intention = props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(deed.term)).message.event.intentionInfo;
+        intentionId = intention.id
+        intentionTrigger = intention.intendedMeansInfo[0].trigger
     }
 
     switch (deed.type) {
