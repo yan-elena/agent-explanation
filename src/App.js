@@ -20,7 +20,6 @@ function App() {
     }, [files]);
 
     function setLogFiles(files) {
-        // setAgents([]);
         setFiles(files);
         navigate("agents");
     }
