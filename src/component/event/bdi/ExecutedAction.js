@@ -5,7 +5,7 @@ import {agentState} from "../../../model/agentState";
 function ExecutedAction(props) {
 
     const type = "Executed action"
-    const intentionInfo = props.event.message.event.intentionInfo
+    const intentionInfo = props.event.message.event.intentionInfo.value
     const deed = props.event.message.event.deedInfo
     let description
     let info = "Type: "
@@ -13,9 +13,9 @@ function ExecutedAction(props) {
     let intentionId
     let intention
 
-    if (intentionInfo.value) {
-        intentionId = intentionInfo.value.id
-        intentionTrigger = intentionInfo.value.intendedMeansInfo[0] ? intentionInfo.value.intendedMeansInfo[0].trigger : (agentState.intention[intentionId] ? agentState.intention[intentionId] : "")
+    if (intentionInfo) {
+        intentionId = intentionInfo.id
+        intentionTrigger = intentionInfo.intendedMeansInfo[0] ? intentionInfo.intendedMeansInfo[0].trigger : (agentState.intention[intentionId] ? agentState.intention[intentionId].slice(-1)[0] : "")
     } else {
         intentionTrigger = props.event.message.event.goalInfo.goalFunctor
         intentionId = Object.keys(agentState.intention).find(key => agentState.intention[key] === intentionTrigger)
