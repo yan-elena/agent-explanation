@@ -6,12 +6,12 @@ function ExecutedAction(props) {
 
     const type = "Executed action"
     const intentionInfo = props.event.message.event.intentionInfo
+    const deed = props.event.message.event.deedInfo
     let description
     let info = "Type: "
     let intentionTrigger
     let intentionId
     let intention
-    let deed
 
     if (intentionInfo.value) {
         intentionId = intentionInfo.value.id
@@ -21,11 +21,6 @@ function ExecutedAction(props) {
         intentionId = Object.keys(agentState.intention).find(key => agentState.intention[key] === intentionTrigger)
     }
 
-    if (props.event.message.type === "InternalActionFinished") {
-        deed = props.event.message.event.action
-    } else {
-        deed = props.event.message.event.deedInfo
-    }
     switch (deed.type) {
         case "addBel":
             description = "I added belief "
@@ -49,7 +44,7 @@ function ExecutedAction(props) {
 
     intention = "intention " + intentionTrigger + "/" + intentionId
     description = description + deed.term + " because of " + intention
-    info = info + (type === "ExternalActionFinished" ? "external " : "") + deed.type
+    info = info + deed.type
 
     if (deed.type !== "achieve") {
         return (
