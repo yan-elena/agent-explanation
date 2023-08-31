@@ -31,9 +31,6 @@ function NewDesire(props) {
         reason = " created from another agent by an achieved message"
     }
 
-
-    console.log(agentState.speechAct)
-
     return (
         <Event type={eventType} description={description + reason} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
     )
