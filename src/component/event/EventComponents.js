@@ -57,9 +57,9 @@ const EventComponents = {
     SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <DesireCommitted/>},
     ReasoningCycleStarted: {JASON: <ReasoningCycleStarted/>, BDI:  <></>},
     NewAgentSignal: {JASON: <NewAgentSignal/>, BDI: <></>},
-    NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <></>},
+    NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <NewArtifactSignal/>},
     MailBoxMessages: {JASON: <MailBoxMessages/>, BDI: <></>},
-    NewSpeechActMessage: {JASON: <NewSpeechActMessage/>, BDI: <></>},
+    NewSpeechActMessage: {JASON: <NewSpeechActMessage/>, BDI: <NewSpeechActMessage/>},
     SelectedMessage: {JASON: <SelectedMessage/>, BDI: <></>},
     SendMessage: {JASON: <SendMessage/>, BDI: <SendMessage/>}
 };

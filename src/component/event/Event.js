@@ -8,7 +8,7 @@ function Event(props) {
     const description = [];
     const highlightMatchingText = (text, matchingText) => {
         if (text && matchingText) {
-            const matchRegex = RegExp(matchingText, 'ig');
+            const matchRegex = RegExp(matchingText.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), 'ig');
 
             if (text.matchAll?.(matchRegex)) {
                 const matches = [...text.matchAll?.(matchRegex)];
