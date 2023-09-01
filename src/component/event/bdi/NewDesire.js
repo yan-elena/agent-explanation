@@ -28,7 +28,7 @@ function NewDesire(props) {
             }
         }
     } else if (agentState.speechAct.achieve.includes(functor)) {
-        reason = " created from another agent by an achieved message"
+        reason = " created from another agent by an achieved message "
     }
 
     return (

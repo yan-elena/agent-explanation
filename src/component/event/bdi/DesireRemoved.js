@@ -30,10 +30,10 @@ function DesireRemoved(props) {
     intentionInfo = intentionInfo + "/" + id
     if (result === "achieved") {
         type = "Desire satisfied";
-        description = "I have satisfied my desire " + functor + " because " + intentionInfo + " finished"
+        description = "I have satisfied my desire " + functor + " because its " + intentionInfo + " has finished"
     } else if (result === "failed") {
         type = "Desire failed";
-        description = "I gave up desire " + functor + "  because " + intentionInfo + " failed"
+        description = "I gave up desire " + functor + "  because its " + intentionInfo + " failed"
     }
 
     return (
