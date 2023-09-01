@@ -28,6 +28,9 @@ function ExecutedAction(props) {
         case "delBel":
             description = "I deleted belief "
             break;
+        case "delAddBel":
+            description = "I updated belief "
+            break;
         case "test":
             description = "I executed test goal "
             break;
