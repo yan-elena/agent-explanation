@@ -1,34 +1,45 @@
 import React from "react";
 import Event from "../Event";
+import {agentState} from "../../../model/agentState";
 
 function NewBelief(props) {
 
-    const type = props.event.message.type
     const eventType = "New Belief"
-    let belief = ""
-    let reason = ""
+    const beliefEvent = props.event.message.event.beliefInfo
+    const functor= beliefEvent.functor
+    const belief = beliefEvent.literal
+    const source = beliefEvent.source.value ? beliefEvent.source.value : ""
+    let reason
+    let info
 
-    if (type === "BeliefAdded") {
-        belief = props.event.message.event.beliefInfo.literal
-    } else if (type === "NewPercept") {
-        belief = props.event.message.event.perceptInfo.functor
-        reason = " because I perceived from " + props.event.message.event.perceptInfo.artifactName
-    } else if (type === "NewSpeechActMessage") {
-        const message = props.event.message.event.message
-        belief = message.message
-        reason = " because " + message.sender + " told me"
-    } else if (type === "NewArtifactSignal") {
-        belief = props.event.message.event.signalInfo.functor
-        reason = " because artifact " + props.event.message.event.signalInfo.artifactName + " sent me a signal"
-    } else if (type === "NewAgentSignal") {
-        belief = props.event.message.event.signalInfo.functor
-        reason = " because artifact " + props.event.message.event.signalInfo.source + " sent me a signal"
+    switch (String(source)) {
+        case "self":
+            reason = " because I noted it in my mind for future reference"
+            agentState.belief.self.push(functor)
+            break;
+        case "percept":
+            const percept = props.log.slice(props.log.indexOf(props.event)).find(e => e.message.type === "NewPercept" && e.message.event.perceptInfo.functor === belief).message.event.perceptInfo;
+            reason = " because I perceived it from " +  percept.artifactName
+            info = "Percept type: " + percept.perceptType
+            agentState.belief.percept.push(functor)
+            break;
+        case "":
+            reason = ""
+            break;
+        default:
+            reason = " because " + source + " told me"
+            if (agentState.belief.others[source]) {
+                agentState.belief.others[source].push(functor)
+            } else {
+                agentState.belief.others[source] = [functor]
+            }
+            break;
     }
 
     const description = "I believe " + belief + reason
 
     return (
-        <Event type={eventType} description={description} timestamp={props.event.timestamp} filter={props.filter}/>
+        <Event type={eventType} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
     )
 }
 

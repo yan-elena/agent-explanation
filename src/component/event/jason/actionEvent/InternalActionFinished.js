@@ -3,7 +3,7 @@ import Event from "../../Event";
 
 function InternalActionFinished(props) {
     const type = "Internal Action Finished"
-    const action = props.event.message.event.action
+    const action = props.event.message.event.deedInfo
     let description = "Internal action " + action.term + " finished"
     let info = "Type: " + action.type
 

@@ -5,6 +5,7 @@ import UploadLogPage from "./pages/UploadLogPage";
 import AgentEventsPage from "./pages/AgentEventsPage";
 import NavBar from "./component/NavBar";
 import {useEffect, useState} from "react";
+import PageLocation from "./component/PageLocation";
 
 function App() {
     const navigate = useNavigate();
@@ -20,7 +21,6 @@ function App() {
     }, [files]);
 
     function setLogFiles(files) {
-        // setAgents([]);
         setFiles(files);
         navigate("agents");
     }
@@ -34,18 +34,18 @@ function App() {
         });
 
         setSelectedAgent({name: file.name.replace(".json", ""), log: JSON.parse(result.toString())})
-        console.log({name: file.name.replace(".json", ""), log: JSON.parse(result.toString())})
     }
 
     return (
       <div className="flex-container">
           <NavBar/>
+          <PageLocation agent={selectedAgent}/>
           <Routes className="content">
               <Route path="/agents" element={<HomePage files={files} loadAgentLog={loadAgentLog}/>}/>
-              <Route path="/agents/:agentName/" element={<AgentEventsPage agent={selectedAgent} filter={""} level={"JASON"}/>}/>
-              <Route path="/agents/:agentName/beliefs" element={<AgentEventsPage agent={selectedAgent} filter={"belief"} level={"BDI"}/>}/>
-              <Route path="/agents/:agentName/desires" element={<AgentEventsPage agent={selectedAgent} filter={"desire"} level={"BDI"}/>}/>
-              <Route path="/agents/:agentName/intentions" element={<AgentEventsPage agent={selectedAgent} filter={"intention"} level={"BDI"}/>}/>
+              <Route path="/agents/:agentName/" exact element={<AgentEventsPage agent={selectedAgent} filter={""} level={"JASON"}/>}/>
+              <Route path="/agents/:agentName/beliefs" exact element={<AgentEventsPage agent={selectedAgent} filter={"belief"} level={"BDI"}/>}/>
+              <Route path="/agents/:agentName/desires" exact element={<AgentEventsPage agent={selectedAgent} filter={"desire"} level={"BDI"}/>}/>
+              <Route path="/agents/:agentName/intentions" exact element={<AgentEventsPage agent={selectedAgent} filter={"intention"} level={"BDI"}/>}/>
               <Route path="/" exact element={<UploadLogPage setLogFiles={setLogFiles}/>}/>
           </Routes>
       </div>
