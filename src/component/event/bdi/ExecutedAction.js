@@ -23,10 +23,10 @@ function ExecutedAction(props) {
 
     switch (deed.type) {
         case "addBel":
-            description = "I added belief "
+            description = "I believe "
             break;
         case "delBel":
-            description = "I deleted belief "
+            description = "I no longer believe in "
             break;
         case "delAddBel":
             description = "I updated belief "
