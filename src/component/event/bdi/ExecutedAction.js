@@ -49,7 +49,7 @@ function ExecutedAction(props) {
     description = description + deed.term + " because of " + intention
     info = info + deed.type
 
-    if (deed.type !== "achieve") {
+    if (deed.type !== "achieve" && !deed.type.includes("Bel")) {
         return (
             <Event type={type} description={description} info={info} timestamp={props.event.timestamp}
                    filter={props.filter}/>
