@@ -32,7 +32,7 @@ function DesireRemoved(props) {
         type = "Desire satisfied";
         description = "I have satisfied my desire " + functor + " because its " + intentionInfo + " has finished"
     } else if (result === "failed") {
-        type = "Desire failed";
+        type = "Desire dropped";
         description = "I gave up desire " + functor + "  because its " + intentionInfo + " failed"
     }
 
