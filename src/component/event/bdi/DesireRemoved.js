@@ -13,7 +13,7 @@ function DesireRemoved(props) {
     let description
     let parentDesire = []
 
-    let intentionInfo = "intention " + functor
+
 
     if (intention) {
         id = intention.id
@@ -27,7 +27,7 @@ function DesireRemoved(props) {
         id = Object.keys(agentState.intention).find(key => agentState.intention[key].includes(functor))
     }
 
-    intentionInfo = intentionInfo + "/" + id
+    let intentionInfo = "intention " + functor.split('(')[0] + "/" + id
     if (result === "achieved") {
         type = "Desire satisfied";
         description = "I have satisfied my desire " + functor + " because its " + intentionInfo + " has finished"
