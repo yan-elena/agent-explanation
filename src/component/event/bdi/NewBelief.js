@@ -28,7 +28,7 @@ function NewBelief(props) {
                 }
                 reason = " because of intention " + intention
                 if (beliefDeed.message.event.deedInfo.type === "delAddBel") {
-                    description = "I updated belief " + functor + " to " + belief + " " + reason
+                    description = "I updated the belief " + functor + " to " + belief + " " + reason
                 }
             } else {
                 reason = " because I noted it in my mind for future reference"
