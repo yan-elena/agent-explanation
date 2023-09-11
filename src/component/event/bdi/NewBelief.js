@@ -37,8 +37,8 @@ function NewBelief(props) {
             break;
         case "percept":
             const percept = props.log.slice(props.log.indexOf(props.event)).find(e => e.message.type === "NewPercept" && e.message.event.perceptInfo.functor === belief).message.event.perceptInfo;
-            reason = " because I perceived it from " +  percept.artifactName
-            info = "Percept type: " + percept.perceptType
+            reason = " because I perceived it" + (percept.artifactName ? " from " +  percept.artifactName : "")
+            info = percept.perceptType ? "Percept type: " + percept.perceptType : ""
             agentState.belief.percept.push(functor)
             break;
         case "":
