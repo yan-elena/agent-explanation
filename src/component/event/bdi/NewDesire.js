@@ -4,9 +4,11 @@ import {agentState} from "../../../model/agentState";
 
 function NewDesire(props) {
     const eventType = "New Desire"
-    const functor = props.event.message.event.goalInfo.goalFunctor
-    const intention = props.event.message.event.goalInfo.intention.value
+    const goalInfo = props.event.message.event.goalInfo
+    const functor = goalInfo.goalFunctor
+    const intention = goalInfo.intention.value
     const state = props.event.message.event.goalStates
+    const source = goalInfo.source.value
     const info = "State: " + state
 
     let description = "I have a new desire " + functor
@@ -18,7 +20,7 @@ function NewDesire(props) {
             if (agentState.speechAct.signal.includes(parent)) {
                 reason = " because it is created from the signal " + parent
             } else if (agentState.speechAct.tell.includes(parent)) {
-                reason = " because it is created from " + parent + " message"
+                reason = " because it is created from " + parent + " tell message"
             } else if (agentState.belief.self.includes(parent)) {
                 reason = " because it is formed on the addition of a belief " + parent
             } else if (agentState.belief.percept.includes(parent)) {
@@ -27,8 +29,8 @@ function NewDesire(props) {
                 reason = " because it is created from " + parent
             }
         }
-    } else if (agentState.speechAct.achieve.includes(functor)) {
-        reason = " created from another agent by an achieved message "
+    } else if (source && source !== "self" && agentState.speechAct.achieve.includes(functor)) {
+        reason = " created from agent " + source + " by an achieved message "
     }
 
     return (
