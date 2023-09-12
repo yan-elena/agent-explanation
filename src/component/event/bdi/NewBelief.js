@@ -9,7 +9,7 @@ function NewBelief(props) {
     const functor= beliefEvent.functor
     const belief = beliefEvent.literal
     const source = beliefEvent.source.value ? beliefEvent.source.value : ""
-    const beliefDeed = props.log.slice(props.log.indexOf(props.event)).find(e => e.message.type === "ExecutedDeed" && e.message.event.deedInfo.type.includes("Bel") && e.message.event.deedInfo.term === belief);
+    const beliefDeed = props.log.slice(props.log.indexOf(props.event)).find(e => e.message.type === "ExecutedDeed" && e.message.event.deedInfo.type.includes("Bel") && e.message.event.deedInfo.term.includes(functor));
 
     let description
     let reason
