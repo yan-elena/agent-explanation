@@ -1,20 +1,21 @@
 import React from "react";
 import Event from "../Event";
-import {agentState} from "../../../model/agentState";
+import {agentState, getCycleEvents} from "../../../model/agentState";
 
 function NewBelief(props) {
 
-    const eventType = "New Belief"
     const beliefEvent = props.event.message.event.beliefInfo
     const functor= beliefEvent.functor
     const belief = beliefEvent.literal
     const source = beliefEvent.source.value ? beliefEvent.source.value : ""
-    const beliefDeed = props.log.slice(props.log.indexOf(props.event)).find(e => e.message.type === "ExecutedDeed" && e.message.event.deedInfo.type.includes("Bel") && e.message.event.deedInfo.term.includes(functor));
-
+    const cycleEvents = getCycleEvents(props.log, props.log.indexOf(props.event))
+    const beliefDeed = cycleEvents.find(e => e.message.type === "ExecutedDeed" && e.message.event.deedInfo.type.includes("Bel") && e.message.event.deedInfo.term.includes(functor));
+    let eventType = "New Belief"
     let description
     let reason
     let info
     let intention
+
 
     switch (String(source)) {
         case "self":
@@ -28,7 +29,9 @@ function NewBelief(props) {
                 }
                 reason = " because of intention " + intention
                 if (beliefDeed.message.event.deedInfo.type === "delAddBel") {
-                    description = "I updated the belief " + functor + " to " + belief + " " + reason
+                    let beliefRemoved = cycleEvents.find(e => e.message.type === "BeliefRemoved" && e.message.event.beliefInfo.functor === functor).message.event.beliefInfo;
+                    eventType = "Belief Updated"
+                    description = "I updated the belief " + beliefRemoved.literal + " to " + belief + " " + reason
                 }
             } else {
                 reason = " because I noted it in my mind for future reference"
