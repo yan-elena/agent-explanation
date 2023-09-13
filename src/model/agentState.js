@@ -39,3 +39,9 @@ export function getIntentionReason(desire, intentionInfo) {
     }
     return reason
 }
+
+export function getCycleEvents(log, index) {
+    const cycleStartedIdx = log.indexOf(log.slice(0, index).findLast(e => e.message.type === "ReasoningCycleStarted"))
+    const cycleEndIdx = log.indexOf(log.slice(index).find(e => e.message.type === "ReasoningCycleStarted"))
+    return log.slice(cycleStartedIdx, cycleEndIdx)
+}
