@@ -28,11 +28,6 @@ function NewBelief(props) {
                     intention = intentionEvent.intendedMeansInfo[0].trigger + "/" + intentionEvent.id
                 }
                 reason = " because of intention " + intention
-                if (beliefDeed.message.event.deedInfo.type === "delAddBel") {
-                    let beliefRemoved = cycleEvents.find(e => e.message.type === "BeliefRemoved" && e.message.event.beliefInfo.functor === functor).message.event.beliefInfo;
-                    eventType = "Belief Updated"
-                    description = "I updated the belief " + beliefRemoved.literal + " to " + belief + " " + reason
-                }
             } else {
                 reason = " because I noted it in my mind for future reference"
             }
@@ -55,6 +50,12 @@ function NewBelief(props) {
                 agentState.belief.others[source] = [functor]
             }
             break;
+    }
+
+    let beliefRemoved = cycleEvents.find(e => e.message.type === "BeliefRemoved" && e.message.event.beliefInfo.functor === functor);
+    if (beliefRemoved) {
+        eventType = "Belief Updated"
+        description = "I updated the belief " + beliefRemoved.message.event.beliefInfo.literal + " to " + belief + " " + reason
     }
 
     if (!description) {
