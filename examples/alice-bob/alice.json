@@ -1,0 +1,1294 @@
+[
+  {
+    "timestamp": 1694706272062,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__24",
+          "trigger": "sayHello",
+          "context": "",
+          "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+        }
+      },
+      "log": "Plan sayHello added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272065,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__25",
+          "trigger": "achieveHello",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan achieveHello added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272071,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__26",
+          "trigger": "jcm::focus_env_art([],_29)",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan jcm::focus_env_art([],_29) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272072,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__27",
+          "trigger": "jcm::focus_env_art(L,0)",
+          "context": "",
+          "body": ".print(\"Error handling \",L,\" (to join a workspace or focus on an artifact)\")"
+        }
+      },
+      "log": "Plan jcm::focus_env_art(L,0) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272079,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "lf_env_art",
+          "trigger": "jcm::focus_env_art([H|T],Try)",
+          "context": "",
+          "body": "!jcm::focus_env_art(H,Try); !jcm::focus_env_art(T,Try)"
+        }
+      },
+      "log": "Plan jcm::focus_env_art([H|T],Try) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272081,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__28",
+          "trigger": "jcm::focus_env_art(art_env(W,\"\",_30),Try)",
+          "context": "",
+          "body": ".concat(\"/main/\",W,FullW); joinWorkspace(FullW,_31); .print(\"join workspace \",FullW,\": done\")"
+        }
+      },
+      "log": "Plan jcm::focus_env_art(art_env(W,\"\",_30),Try) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272084,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__29",
+          "trigger": "jcm::focus_env_art(art_env(W,A,NS),Try)",
+          "context": "",
+          "body": ".concat(\"/main/\",W,FullW); .print(\"focusing on artifact \",A,\" (at workspace \",FullW,\") using namespace \",NS); joinWorkspace(FullW,WId); lookupArtifact(A,AId)[wid(WId)]; NS::focus(AId)[wid(WId)]; .print(\"focus on \",A,\": done\")"
+        }
+      },
+      "log": "Plan jcm::focus_env_art(art_env(W,A,NS),Try) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272089,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__30",
+          "trigger": "jcm::focus_env_art(L,Try)",
+          "context": "",
+          "body": ".print(\"waiting a bit to join/focus -- \",L,\" -- try #\",Try); .wait(200); !jcm::focus_env_art(L,(Try-1))"
+        }
+      },
+      "log": "Plan jcm::focus_env_art(L,Try) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272095,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "l_focus_on_my_scheme",
+          "trigger": "schemes(L)[artifact_name(GroupName),workspace(_35,W)]",
+          "context": "",
+          "body": ".foreach(.member(S,L),lookupArtifact(S,ArtId)[wid(W)]; focus(ArtId)[wid(W)]; .concat(GroupName,\".\",S,NBName); lookupArtifact(NBName,NBId)[wid(W)]; focus(NBId)[wid(W)])"
+        }
+      },
+      "log": "Plan schemes(L)[artifact_name(GroupName),workspace(_35,W)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272096,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__31",
+          "trigger": "jcm::initial_roles([],_36)",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan jcm::initial_roles([],_36) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272098,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__32",
+          "trigger": "jcm::initial_roles(L,0)",
+          "context": "",
+          "body": ".print(\"Error with initial role \",L)"
+        }
+      },
+      "log": "Plan jcm::initial_roles(L,0) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272100,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "l_focus_org_art",
+          "trigger": "jcm::initial_roles([H|T],Try)",
+          "context": "",
+          "body": "!jcm::initial_roles(H,Try); !jcm::initial_roles(T,Try)"
+        }
+      },
+      "log": "Plan jcm::initial_roles([H|T],Try) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272103,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__33",
+          "trigger": "jcm::initial_roles(role(O,G,R),Try)",
+          "context": "",
+          "body": ".concat(\"/main/\",O,FullO); joinWorkspace(FullO,WId); !jcm::focus_orgBoard(O,WId); lookupArtifact(G,GId)[wid(WId)]; focus(GId)[wid(WId)]; adoptRole(R)[artifact_id(GId)]"
+        }
+      },
+      "log": "Plan jcm::initial_roles(role(O,G,R),Try) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272104,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__34",
+          "trigger": "jcm::initial_roles(L,Try)",
+          "context": "",
+          "body": ".wait(200); !jcm::initial_roles(L,(Try-1))"
+        }
+      },
+      "log": "Plan jcm::initial_roles(L,Try) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272106,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__35",
+          "trigger": "jcm::focus_orgBoard(O,WId)",
+          "context": "focused(_37,O,_38)",
+          "body": ""
+        }
+      },
+      "log": "Plan jcm::focus_orgBoard(O,WId)focused(_37,O,_38) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272108,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__36",
+          "trigger": "jcm::focus_orgBoard(O,WId)",
+          "context": "",
+          "body": "lookupArtifact(O,OId)[wid(WId)]; focus(OId)[wid(WId)]"
+        }
+      },
+      "log": "Plan jcm::focus_orgBoard(O,WId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272111,
+    "message": {
+      "type": "GoalCreated",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "sayHello",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "pending",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal sayHello created"
+    }
+  },
+  {
+    "timestamp": 1694706272113,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellStructure",
+          "trigger": "kqml_received(Sender,tell,NS::Content,_39)",
+          "context": "(.literal(Content) \u0026 (.ground(Content) \u0026 (not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))))",
+          "body": "++NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tell,NS::Content,_39)(.literal(Content) \u0026 (.ground(Content) \u0026 (not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)))) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272115,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList",
+          "trigger": "kqml_received(Sender,tell,Content,_40)",
+          "context": ".list(Content)",
+          "body": "!add_all_kqml_received(Sender,Content)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tell,Content,_40).list(Content) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272117,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList1",
+          "trigger": "add_all_kqml_received(_41,[])",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan add_all_kqml_received(_41,[]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272120,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList2",
+          "trigger": "add_all_kqml_received(Sender,[NS::H|T])",
+          "context": "(.literal(H) \u0026 .ground(H))",
+          "body": ".add_nested_source(H,Sender,CA); ++NS::CA; !add_all_kqml_received(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_received(Sender,[NS::H|T])(.literal(H) \u0026 .ground(H)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272122,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList3",
+          "trigger": "add_all_kqml_received(Sender,[_42|T])",
+          "context": "",
+          "body": "!add_all_kqml_received(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_received(Sender,[_42|T]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272124,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnTell",
+          "trigger": "kqml_received(Sender,untell,NS::Content,_43)",
+          "context": ".add_nested_source(Content,Sender,CA)",
+          "body": "--NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,untell,NS::Content,_43).add_nested_source(Content,Sender,CA) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272126,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieve",
+          "trigger": "kqml_received(Sender,achieve,NS::Content,_44)",
+          "context": "(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))",
+          "body": "!!NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,achieve,NS::Content,_44)(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272128,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList",
+          "trigger": "kqml_received(Sender,achieve,Content,_45)",
+          "context": ".list(Content)",
+          "body": "!add_all_kqml_achieve(Sender,Content)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,achieve,Content,_45).list(Content) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272130,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList1",
+          "trigger": "add_all_kqml_achieve(_46,[])",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan add_all_kqml_achieve(_46,[]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272132,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList2",
+          "trigger": "add_all_kqml_achieve(Sender,[NS::H|T])",
+          "context": "",
+          "body": ".add_nested_source(H,Sender,CA); !!NS::CA; !add_all_kqml_achieve(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_achieve(Sender,[NS::H|T]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272133,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnAchieve",
+          "trigger": "kqml_received(_47,unachieve,NS::Content,_48)",
+          "context": "",
+          "body": ".drop_desire(NS::Content)"
+        }
+      },
+      "log": "Plan kqml_received(_47,unachieve,NS::Content,_48) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272135,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne1d",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)",
+          "context": "kqml::bel_no_source_self(NS,Content,Ans)",
+          "body": ".send(Sender,tell,NS::Ans,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId)kqml::bel_no_source_self(NS,Content,Ans) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272137,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne1c",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)",
+          "context": "",
+          "body": ".add_nested_source(Content,Sender,CA); ?NS::CA; .remove_source_annot(CA,CA2); .send(Sender,tell,NS::CA2,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272139,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne2",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)[error(test_goal_failed)]",
+          "context": "",
+          "body": ".send(Sender,untell,NS::Content,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId)[error(test_goal_failed)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272141,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskAll2",
+          "trigger": "kqml_received(Sender,askAll,NS::Content,MsgId)",
+          "context": "",
+          "body": ".findall(NS::Ans,kqml::bel_no_source_self(NS,Content,Ans),List); .send(Sender,tell,List,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askAll,NS::Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272143,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellHow",
+          "trigger": "kqml_received(Sender,tellHow,Content,_50)",
+          "context": "",
+          "body": ".remove_source_annot(Content,ContentAn); .add_plan(ContentAn,Sender)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tellHow,Content,_50) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272145,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnTellHow",
+          "trigger": "kqml_received(Sender,untellHow,Content,_51)",
+          "context": "",
+          "body": ".remove_plan(Content,Sender)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,untellHow,Content,_51) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272147,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskHow",
+          "trigger": "kqml_received(Sender,askHow,Content,MsgId)",
+          "context": "",
+          "body": ".relevant_plans(Content,ListOfPlans); .remove_source_annot(ListOfPlans,ListOfPlansAn); .send(Sender,tellHow,ListOfPlansAn,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askHow,Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272150,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedSignal",
+          "trigger": "kqml_received(Sender,signal,NS::Content,_52)",
+          "context": "(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))",
+          "body": ".signal({ +NS::CA },type_signal)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,signal,NS::Content,_52)(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272154,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlError",
+          "trigger": "kqml_received(_53_Sender,_54_Per,_55_Content,_56_MsgId)[error(EID),error_msg(EMsg)]",
+          "context": "",
+          "body": ".print(\"Communication error -- \",EID,\": \",EMsg)"
+        }
+      },
+      "log": "Plan kqml_received(_53_Sender,_54_Per,_55_Content,_56_MsgId)[error(EID),error_msg(EMsg)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694706272156,
+    "message": {
+      "type": "BeliefFromSrcAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "kqml::clear_source_self([],[])",
+          "functor": "clear_source_self",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "[]",
+              "[]"
+            ]
+          }
+        }
+      },
+      "log": "Added belief kqml::clear_source_self([],[]) from source: [self]"
+    }
+  },
+  {
+    "timestamp": 1694706272158,
+    "message": {
+      "type": "BeliefAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "kqml::clear_source_self([],[])",
+          "functor": "clear_source_self",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "[]",
+              "[]"
+            ]
+          }
+        }
+      },
+      "log": "Added belief kqml::clear_source_self([],[])"
+    }
+  },
+  {
+    "timestamp": 1694706272180,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 1
+      },
+      "log": "New reasoning cycle started: 1"
+    }
+  },
+  {
+    "timestamp": 1694706272189,
+    "message": {
+      "type": "BeliefFromSrcAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "joinedWsp(cobj_0,main,\"/main\")",
+          "functor": "joinedWsp",
+          "operator": "+",
+          "perceptType": {
+            "value": [
+              "obs_prop"
+            ]
+          },
+          "source": {
+            "value": [
+              "percept"
+            ]
+          },
+          "terms": {
+            "value": [
+              "cobj_0",
+              "main",
+              "\"/main\""
+            ]
+          }
+        }
+      },
+      "log": "Added belief joinedWsp(cobj_0,main,\"/main\") from source: [percept]"
+    }
+  },
+  {
+    "timestamp": 1694706272194,
+    "message": {
+      "type": "BeliefAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "joinedWsp(cobj_0,main,\"/main\")",
+          "functor": "joinedWsp",
+          "operator": "+",
+          "perceptType": {
+            "value": [
+              "obs_prop"
+            ]
+          },
+          "source": {
+            "value": [
+              "percept"
+            ]
+          },
+          "terms": {
+            "value": [
+              "cobj_0",
+              "main",
+              "\"/main\""
+            ]
+          }
+        }
+      },
+      "log": "Added belief joinedWsp(cobj_0,main,\"/main\")"
+    }
+  },
+  {
+    "timestamp": 1694706272200,
+    "message": {
+      "type": "NewPercept",
+      "event": {
+        "perceptInfo": {
+          "functor": "joinedWsp(cobj_0,main,\"/main\")",
+          "artifactId": "cobj_1",
+          "artifactName": "session_alice",
+          "perceptType": "obs_prop"
+        }
+      },
+      "log": "New obs_prop percept from session_alice: joinedWsp(cobj_0,main,\"/main\")"
+    }
+  },
+  {
+    "timestamp": 1694706272211,
+    "message": {
+      "type": "SelectPlanEvent",
+      "event": {
+        "event": "sayHello[source(self)]",
+        "planOptions": [
+          {
+            "label": "p__24",
+            "trigger": "sayHello",
+            "context": "",
+            "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+          }
+        ],
+        "selectedPlan": {
+          "label": "p__24",
+          "trigger": "sayHello",
+          "context": "",
+          "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+        }
+      },
+      "log": "Plan options for sayHello[source(self)] are: \n\tsayHello \u003c- .print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello).\nThe plan selected for sayHello[source(self)] is \tsayHello \u003c- .print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)."
+    }
+  },
+  {
+    "timestamp": 1694706272229,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "sayHello",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Plan sayHello selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1694706272249,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "sayHello",
+              "type": "achieve",
+              "plan": {
+                "label": "p__24",
+                "trigger": "sayHello",
+                "context": "",
+                "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 sayHello created, state: undefined\n\tcurrent step: .print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+    }
+  },
+  {
+    "timestamp": 1694706272254,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "sayHello",
+              "type": "achieve",
+              "plan": {
+                "label": "p__24",
+                "trigger": "sayHello",
+                "context": "",
+                "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": ".send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 sayHello created, state: undefined\n\tcurrent step: .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+    }
+  },
+  {
+    "timestamp": 1694706272267,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".print(\"say hello to bob\")",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/alice.asl:4"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "undefined",
+            "intendedMeansInfo": [
+              {
+                "trigger": "sayHello",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__24",
+                  "trigger": "sayHello",
+                  "context": "",
+                  "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+                },
+                "unifier": "{}",
+                "currentStep": {
+                  "value": ".send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .print(\"say hello to bob\") finished"
+    }
+  },
+  {
+    "timestamp": 1694706272279,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 2
+      },
+      "log": "New reasoning cycle started: 2"
+    }
+  },
+  {
+    "timestamp": 1694706272289,
+    "message": {
+      "type": "SendMessage",
+      "event": {
+        "messageInfo": {
+          "id": "mid1",
+          "type": "signal",
+          "sender": "alice",
+          "receiver": "bob",
+          "message": "signalHello"
+        }
+      },
+      "log": "Send signal message to bob: signalHello"
+    }
+  },
+  {
+    "timestamp": 1694706272294,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "sayHello",
+              "type": "achieve",
+              "plan": {
+                "label": "p__24",
+                "trigger": "sayHello",
+                "context": "",
+                "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": ".send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 sayHello created, state: running\n\tcurrent step: .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+    }
+  },
+  {
+    "timestamp": 1694706272298,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".send(bob,signal,signalHello)",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/alice.asl:5"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "sayHello",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__24",
+                  "trigger": "sayHello",
+                  "context": "",
+                  "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+                },
+                "unifier": "{}",
+                "currentStep": {
+                  "value": ".send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .send(bob,signal,signalHello) finished"
+    }
+  },
+  {
+    "timestamp": 1694706272303,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 3
+      },
+      "log": "New reasoning cycle started: 3"
+    }
+  },
+  {
+    "timestamp": 1694706272309,
+    "message": {
+      "type": "SendMessage",
+      "event": {
+        "messageInfo": {
+          "id": "mid2",
+          "type": "tell",
+          "sender": "alice",
+          "receiver": "bob",
+          "message": "tellHello"
+        }
+      },
+      "log": "Send tell message to bob: tellHello"
+    }
+  },
+  {
+    "timestamp": 1694706272314,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "sayHello",
+              "type": "achieve",
+              "plan": {
+                "label": "p__24",
+                "trigger": "sayHello",
+                "context": "",
+                "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": ".send(bob,achieve,achieveHello)"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 sayHello created, state: running\n\tcurrent step: .send(bob,achieve,achieveHello)"
+    }
+  },
+  {
+    "timestamp": 1694706272320,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".send(bob,tell,tellHello)",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/alice.asl:6"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "sayHello",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__24",
+                  "trigger": "sayHello",
+                  "context": "",
+                  "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+                },
+                "unifier": "{}",
+                "currentStep": {
+                  "value": ".send(bob,achieve,achieveHello)"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .send(bob,tell,tellHello) finished"
+    }
+  },
+  {
+    "timestamp": 1694706272323,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 4
+      },
+      "log": "New reasoning cycle started: 4"
+    }
+  },
+  {
+    "timestamp": 1694706272331,
+    "message": {
+      "type": "SendMessage",
+      "event": {
+        "messageInfo": {
+          "id": "mid3",
+          "type": "achieve",
+          "sender": "alice",
+          "receiver": "bob",
+          "message": "achieveHello"
+        }
+      },
+      "log": "Send achieve message to bob: achieveHello"
+    }
+  },
+  {
+    "timestamp": 1694706272333,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "sayHello",
+              "type": "achieve",
+              "plan": {
+                "label": "p__24",
+                "trigger": "sayHello",
+                "context": "",
+                "body": ".print(\"say hello to bob\"); .send(bob,signal,signalHello); .send(bob,tell,tellHello); .send(bob,achieve,achieveHello)"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": null
+              },
+              "isFinished": true
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 sayHello created, state: running\n\tcurrent step: finished"
+    }
+  },
+  {
+    "timestamp": 1694706272341,
+    "message": {
+      "type": "GoalRemoved",
+      "event": {
+        "result": "achieved",
+        "goalInfo": {
+          "goalFunctor": "sayHello",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 2,
+              "state": "running",
+              "intendedMeansInfo": []
+            }
+          }
+        },
+        "goalStates": "finished",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal sayHello removed because the goal is achieved"
+    }
+  },
+  {
+    "timestamp": 1694706272347,
+    "message": {
+      "type": "IntentionRemoved",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": []
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 removed , state: running"
+    }
+  },
+  {
+    "timestamp": 1694706272350,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".send(bob,achieve,achieveHello)",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/alice.asl:7"
+        },
+        "intentionInfo": {
+          "value": null
+        }
+      },
+      "log": "Internal action .send(bob,achieve,achieveHello) finished"
+    }
+  },
+  {
+    "timestamp": 1694706272407,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 5
+      },
+      "log": "New reasoning cycle started: 5"
+    }
+  },
+  {
+    "timestamp": 1694706272559,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 6
+      },
+      "log": "New reasoning cycle started: 6"
+    }
+  },
+  {
+    "timestamp": 1694706272812,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 7
+      },
+      "log": "New reasoning cycle started: 7"
+    }
+  },
+  {
+    "timestamp": 1694706273165,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 8
+      },
+      "log": "New reasoning cycle started: 8"
+    }
+  },
+  {
+    "timestamp": 1694706273884,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 9
+      },
+      "log": "New reasoning cycle started: 9"
+    }
+  },
+  {
+    "timestamp": 1694706274761,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 10
+      },
+      "log": "New reasoning cycle started: 10"
+    }
+  },
+  {
+    "timestamp": 1694706275583,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 11
+      },
+      "log": "New reasoning cycle started: 11"
+    }
+  },
+  {
+    "timestamp": 1694706276341,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 12
+      },
+      "log": "New reasoning cycle started: 12"
+    }
+  },
+  {
+    "timestamp": 1694706277197,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 13
+      },
+      "log": "New reasoning cycle started: 13"
+    }
+  },
+  {
+    "timestamp": 1694706278148,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 14
+      },
+      "log": "New reasoning cycle started: 14"
+    }
+  },
+  {
+    "timestamp": 1694706279199,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 15
+      },
+      "log": "New reasoning cycle started: 15"
+    }
+  },
+  {
+    "timestamp": 1694706280250,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 16
+      },
+      "log": "New reasoning cycle started: 16"
+    }
+  }
+]

@@ -1,0 +1,547 @@
+[
+  {
+    "timestamp": 1694697127264,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__18",
+          "trigger": "order(Product,Qtd)[source(Ag)]",
+          "context": "",
+          "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+        }
+      },
+      "log": "Plan order(Product,Qtd)[source(Ag)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127268,
+    "message": {
+      "type": "BeliefFromSrcAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "last_order_id(1)",
+          "functor": "last_order_id",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "1"
+            ]
+          }
+        }
+      },
+      "log": "Added belief last_order_id(1) from source: [self]"
+    }
+  },
+  {
+    "timestamp": 1694697127270,
+    "message": {
+      "type": "BeliefAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "last_order_id(1)",
+          "functor": "last_order_id",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "1"
+            ]
+          }
+        }
+      },
+      "log": "Added belief last_order_id(1)"
+    }
+  },
+  {
+    "timestamp": 1694697127273,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellStructure",
+          "trigger": "kqml_received(Sender,tell,NS::Content,_45)",
+          "context": "(.literal(Content) \u0026 (.ground(Content) \u0026 (not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))))",
+          "body": "++NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tell,NS::Content,_45)(.literal(Content) \u0026 (.ground(Content) \u0026 (not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)))) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127275,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList",
+          "trigger": "kqml_received(Sender,tell,Content,_46)",
+          "context": ".list(Content)",
+          "body": "!add_all_kqml_received(Sender,Content)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tell,Content,_46).list(Content) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127277,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList1",
+          "trigger": "add_all_kqml_received(_47,[])",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan add_all_kqml_received(_47,[]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127279,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList2",
+          "trigger": "add_all_kqml_received(Sender,[NS::H|T])",
+          "context": "(.literal(H) \u0026 .ground(H))",
+          "body": ".add_nested_source(H,Sender,CA); ++NS::CA; !add_all_kqml_received(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_received(Sender,[NS::H|T])(.literal(H) \u0026 .ground(H)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127281,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList3",
+          "trigger": "add_all_kqml_received(Sender,[_48|T])",
+          "context": "",
+          "body": "!add_all_kqml_received(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_received(Sender,[_48|T]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127283,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnTell",
+          "trigger": "kqml_received(Sender,untell,NS::Content,_49)",
+          "context": ".add_nested_source(Content,Sender,CA)",
+          "body": "--NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,untell,NS::Content,_49).add_nested_source(Content,Sender,CA) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127285,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieve",
+          "trigger": "kqml_received(Sender,achieve,NS::Content,_50)",
+          "context": "(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))",
+          "body": "!!NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,achieve,NS::Content,_50)(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127287,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList",
+          "trigger": "kqml_received(Sender,achieve,Content,_51)",
+          "context": ".list(Content)",
+          "body": "!add_all_kqml_achieve(Sender,Content)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,achieve,Content,_51).list(Content) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127289,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList1",
+          "trigger": "add_all_kqml_achieve(_52,[])",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan add_all_kqml_achieve(_52,[]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127291,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList2",
+          "trigger": "add_all_kqml_achieve(Sender,[NS::H|T])",
+          "context": "",
+          "body": ".add_nested_source(H,Sender,CA); !!NS::CA; !add_all_kqml_achieve(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_achieve(Sender,[NS::H|T]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127293,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnAchieve",
+          "trigger": "kqml_received(_53,unachieve,NS::Content,_54)",
+          "context": "",
+          "body": ".drop_desire(NS::Content)"
+        }
+      },
+      "log": "Plan kqml_received(_53,unachieve,NS::Content,_54) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127295,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne1d",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)",
+          "context": "kqml::bel_no_source_self(NS,Content,Ans)",
+          "body": ".send(Sender,tell,NS::Ans,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId)kqml::bel_no_source_self(NS,Content,Ans) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127298,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne1c",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)",
+          "context": "",
+          "body": ".add_nested_source(Content,Sender,CA); ?NS::CA; .remove_source_annot(CA,CA2); .send(Sender,tell,NS::CA2,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127300,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne2",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)[error(test_goal_failed)]",
+          "context": "",
+          "body": ".send(Sender,untell,NS::Content,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId)[error(test_goal_failed)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127303,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskAll2",
+          "trigger": "kqml_received(Sender,askAll,NS::Content,MsgId)",
+          "context": "",
+          "body": ".findall(NS::Ans,kqml::bel_no_source_self(NS,Content,Ans),List); .send(Sender,tell,List,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askAll,NS::Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127307,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellHow",
+          "trigger": "kqml_received(Sender,tellHow,Content,_56)",
+          "context": "",
+          "body": ".remove_source_annot(Content,ContentAn); .add_plan(ContentAn,Sender)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tellHow,Content,_56) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127309,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnTellHow",
+          "trigger": "kqml_received(Sender,untellHow,Content,_57)",
+          "context": "",
+          "body": ".remove_plan(Content,Sender)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,untellHow,Content,_57) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127311,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskHow",
+          "trigger": "kqml_received(Sender,askHow,Content,MsgId)",
+          "context": "",
+          "body": ".relevant_plans(Content,ListOfPlans); .remove_source_annot(ListOfPlans,ListOfPlansAn); .send(Sender,tellHow,ListOfPlansAn,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askHow,Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127313,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedSignal",
+          "trigger": "kqml_received(Sender,signal,NS::Content,_58)",
+          "context": "(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))",
+          "body": ".signal({ +NS::CA },type_signal)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,signal,NS::Content,_58)(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127316,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlError",
+          "trigger": "kqml_received(_59_Sender,_60_Per,_61_Content,_62_MsgId)[error(EID),error_msg(EMsg)]",
+          "context": "",
+          "body": ".print(\"Communication error -- \",EID,\": \",EMsg)"
+        }
+      },
+      "log": "Plan kqml_received(_59_Sender,_60_Per,_61_Content,_62_MsgId)[error(EID),error_msg(EMsg)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127320,
+    "message": {
+      "type": "BeliefFromSrcAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "kqml::clear_source_self([],[])",
+          "functor": "clear_source_self",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "[]",
+              "[]"
+            ]
+          }
+        }
+      },
+      "log": "Added belief kqml::clear_source_self([],[]) from source: [self]"
+    }
+  },
+  {
+    "timestamp": 1694697127322,
+    "message": {
+      "type": "BeliefAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "kqml::clear_source_self([],[])",
+          "functor": "clear_source_self",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "[]",
+              "[]"
+            ]
+          }
+        }
+      },
+      "log": "Added belief kqml::clear_source_self([],[])"
+    }
+  },
+  {
+    "timestamp": 1694697127351,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 1
+      },
+      "log": "New reasoning cycle started: 1"
+    }
+  },
+  {
+    "timestamp": 1694697127424,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 2
+      },
+      "log": "New reasoning cycle started: 2"
+    }
+  },
+  {
+    "timestamp": 1694697127578,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 3
+      },
+      "log": "New reasoning cycle started: 3"
+    }
+  },
+  {
+    "timestamp": 1694697127831,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 4
+      },
+      "log": "New reasoning cycle started: 4"
+    }
+  },
+  {
+    "timestamp": 1694697128186,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 5
+      },
+      "log": "New reasoning cycle started: 5"
+    }
+  },
+  {
+    "timestamp": 1694697128642,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 6
+      },
+      "log": "New reasoning cycle started: 6"
+    }
+  },
+  {
+    "timestamp": 1694697129198,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 7
+      },
+      "log": "New reasoning cycle started: 7"
+    }
+  },
+  {
+    "timestamp": 1694697129849,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 8
+      },
+      "log": "New reasoning cycle started: 8"
+    }
+  },
+  {
+    "timestamp": 1694697130601,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 9
+      },
+      "log": "New reasoning cycle started: 9"
+    }
+  },
+  {
+    "timestamp": 1694697131452,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 10
+      },
+      "log": "New reasoning cycle started: 10"
+    }
+  },
+  {
+    "timestamp": 1694697132404,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 11
+      },
+      "log": "New reasoning cycle started: 11"
+    }
+  },
+  {
+    "timestamp": 1694697133459,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 12
+      },
+      "log": "New reasoning cycle started: 12"
+    }
+  }
+]

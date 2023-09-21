@@ -1,0 +1,1878 @@
+[
+  {
+    "timestamp": 1694697127157,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__11",
+          "trigger": "get(beer)",
+          "context": "",
+          "body": ".send(robot,achieve,has(owner,beer))"
+        }
+      },
+      "log": "Plan get(beer) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127161,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__12",
+          "trigger": "has(owner,beer)",
+          "context": "",
+          "body": "!drink(beer)"
+        }
+      },
+      "log": "Plan has(owner,beer) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127162,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__13",
+          "trigger": "has(owner,beer)",
+          "context": "",
+          "body": "!get(beer)"
+        }
+      },
+      "log": "Plan has(owner,beer) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127164,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__14",
+          "trigger": "drink(beer)",
+          "context": "has(owner,beer)",
+          "body": "sip(beer); !drink(beer)"
+        }
+      },
+      "log": "Plan drink(beer)has(owner,beer) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127166,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__15",
+          "trigger": "drink(beer)",
+          "context": "not (has(owner,beer))",
+          "body": ""
+        }
+      },
+      "log": "Plan drink(beer)not (has(owner,beer)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127173,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__16",
+          "trigger": "check_bored",
+          "context": "",
+          "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+        }
+      },
+      "log": "Plan check_bored added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127176,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "p__17",
+          "trigger": "msg(M)[source(Ag)]",
+          "context": "",
+          "body": ".print(\"Message from \",Ag,\": \",M); -msg(M)"
+        }
+      },
+      "log": "Plan msg(M)[source(Ag)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127188,
+    "message": {
+      "type": "GoalCreated",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "get(beer)",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "pending",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal get(beer) created"
+    }
+  },
+  {
+    "timestamp": 1694697127190,
+    "message": {
+      "type": "GoalCreated",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "check_bored",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "pending",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal check_bored created"
+    }
+  },
+  {
+    "timestamp": 1694697127194,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellStructure",
+          "trigger": "kqml_received(Sender,tell,NS::Content,_27)",
+          "context": "(.literal(Content) \u0026 (.ground(Content) \u0026 (not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))))",
+          "body": "++NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tell,NS::Content,_27)(.literal(Content) \u0026 (.ground(Content) \u0026 (not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)))) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127196,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList",
+          "trigger": "kqml_received(Sender,tell,Content,_28)",
+          "context": ".list(Content)",
+          "body": "!add_all_kqml_received(Sender,Content)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tell,Content,_28).list(Content) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127198,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList1",
+          "trigger": "add_all_kqml_received(_29,[])",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan add_all_kqml_received(_29,[]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127200,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList2",
+          "trigger": "add_all_kqml_received(Sender,[NS::H|T])",
+          "context": "(.literal(H) \u0026 .ground(H))",
+          "body": ".add_nested_source(H,Sender,CA); ++NS::CA; !add_all_kqml_received(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_received(Sender,[NS::H|T])(.literal(H) \u0026 .ground(H)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127203,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellList3",
+          "trigger": "add_all_kqml_received(Sender,[_30|T])",
+          "context": "",
+          "body": "!add_all_kqml_received(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_received(Sender,[_30|T]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127205,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnTell",
+          "trigger": "kqml_received(Sender,untell,NS::Content,_31)",
+          "context": ".add_nested_source(Content,Sender,CA)",
+          "body": "--NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,untell,NS::Content,_31).add_nested_source(Content,Sender,CA) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127208,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieve",
+          "trigger": "kqml_received(Sender,achieve,NS::Content,_32)",
+          "context": "(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))",
+          "body": "!!NS::CA"
+        }
+      },
+      "log": "Plan kqml_received(Sender,achieve,NS::Content,_32)(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127210,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList",
+          "trigger": "kqml_received(Sender,achieve,Content,_33)",
+          "context": ".list(Content)",
+          "body": "!add_all_kqml_achieve(Sender,Content)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,achieve,Content,_33).list(Content) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127211,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList1",
+          "trigger": "add_all_kqml_achieve(_34,[])",
+          "context": "",
+          "body": ""
+        }
+      },
+      "log": "Plan add_all_kqml_achieve(_34,[]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127213,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAchieveList2",
+          "trigger": "add_all_kqml_achieve(Sender,[NS::H|T])",
+          "context": "",
+          "body": ".add_nested_source(H,Sender,CA); !!NS::CA; !add_all_kqml_achieve(Sender,T)"
+        }
+      },
+      "log": "Plan add_all_kqml_achieve(Sender,[NS::H|T]) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127216,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnAchieve",
+          "trigger": "kqml_received(_35,unachieve,NS::Content,_36)",
+          "context": "",
+          "body": ".drop_desire(NS::Content)"
+        }
+      },
+      "log": "Plan kqml_received(_35,unachieve,NS::Content,_36) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127220,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne1d",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)",
+          "context": "kqml::bel_no_source_self(NS,Content,Ans)",
+          "body": ".send(Sender,tell,NS::Ans,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId)kqml::bel_no_source_self(NS,Content,Ans) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127223,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne1c",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)",
+          "context": "",
+          "body": ".add_nested_source(Content,Sender,CA); ?NS::CA; .remove_source_annot(CA,CA2); .send(Sender,tell,NS::CA2,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127225,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskOne2",
+          "trigger": "kqml_received(Sender,askOne,NS::Content,MsgId)[error(test_goal_failed)]",
+          "context": "",
+          "body": ".send(Sender,untell,NS::Content,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askOne,NS::Content,MsgId)[error(test_goal_failed)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127227,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskAll2",
+          "trigger": "kqml_received(Sender,askAll,NS::Content,MsgId)",
+          "context": "",
+          "body": ".findall(NS::Ans,kqml::bel_no_source_self(NS,Content,Ans),List); .send(Sender,tell,List,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askAll,NS::Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127231,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedTellHow",
+          "trigger": "kqml_received(Sender,tellHow,Content,_38)",
+          "context": "",
+          "body": ".remove_source_annot(Content,ContentAn); .add_plan(ContentAn,Sender)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,tellHow,Content,_38) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127233,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedUnTellHow",
+          "trigger": "kqml_received(Sender,untellHow,Content,_39)",
+          "context": "",
+          "body": ".remove_plan(Content,Sender)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,untellHow,Content,_39) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127236,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedAskHow",
+          "trigger": "kqml_received(Sender,askHow,Content,MsgId)",
+          "context": "",
+          "body": ".relevant_plans(Content,ListOfPlans); .remove_source_annot(ListOfPlans,ListOfPlansAn); .send(Sender,tellHow,ListOfPlansAn,MsgId)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,askHow,Content,MsgId) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127239,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlReceivedSignal",
+          "trigger": "kqml_received(Sender,signal,NS::Content,_40)",
+          "context": "(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA))",
+          "body": ".signal({ +NS::CA },type_signal)"
+        }
+      },
+      "log": "Plan kqml_received(Sender,signal,NS::Content,_40)(not (.list(Content)) \u0026 .add_nested_source(Content,Sender,CA)) added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127242,
+    "message": {
+      "type": "PlanAdded",
+      "event": {
+        "planInfo": {
+          "label": "kqmlError",
+          "trigger": "kqml_received(_41_Sender,_42_Per,_43_Content,_44_MsgId)[error(EID),error_msg(EMsg)]",
+          "context": "",
+          "body": ".print(\"Communication error -- \",EID,\": \",EMsg)"
+        }
+      },
+      "log": "Plan kqml_received(_41_Sender,_42_Per,_43_Content,_44_MsgId)[error(EID),error_msg(EMsg)] added to the plan library"
+    }
+  },
+  {
+    "timestamp": 1694697127245,
+    "message": {
+      "type": "BeliefFromSrcAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "kqml::clear_source_self([],[])",
+          "functor": "clear_source_self",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "[]",
+              "[]"
+            ]
+          }
+        }
+      },
+      "log": "Added belief kqml::clear_source_self([],[]) from source: [self]"
+    }
+  },
+  {
+    "timestamp": 1694697127248,
+    "message": {
+      "type": "BeliefAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "kqml::clear_source_self([],[])",
+          "functor": "clear_source_self",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "[]",
+              "[]"
+            ]
+          }
+        }
+      },
+      "log": "Added belief kqml::clear_source_self([],[])"
+    }
+  },
+  {
+    "timestamp": 1694697127354,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 1
+      },
+      "log": "New reasoning cycle started: 1"
+    }
+  },
+  {
+    "timestamp": 1694697127361,
+    "message": {
+      "type": "SelectPlanEvent",
+      "event": {
+        "event": "get(beer)[source(self)]",
+        "planOptions": [
+          {
+            "label": "p__11",
+            "trigger": "get(beer)",
+            "context": "",
+            "body": ".send(robot,achieve,has(owner,beer))"
+          }
+        ],
+        "selectedPlan": {
+          "label": "p__11",
+          "trigger": "get(beer)",
+          "context": "",
+          "body": ".send(robot,achieve,has(owner,beer))"
+        }
+      },
+      "log": "Plan options for get(beer)[source(self)] are: \n\tget(beer) \u003c- .send(robot,achieve,has(owner,beer)).\nThe plan selected for get(beer)[source(self)] is \tget(beer) \u003c- .send(robot,achieve,has(owner,beer))."
+    }
+  },
+  {
+    "timestamp": 1694697127369,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "get(beer)",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Plan get(beer) selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1694697127407,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 1,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "get",
+              "type": "achieve",
+              "plan": {
+                "label": "p__11",
+                "trigger": "get(beer)",
+                "context": "",
+                "body": ".send(robot,achieve,has(owner,beer))"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": ".send(robot,achieve,has(owner,beer))"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 1 get created, state: undefined\n\tcurrent step: .send(robot,achieve,has(owner,beer))"
+    }
+  },
+  {
+    "timestamp": 1694697127416,
+    "message": {
+      "type": "SendMessage",
+      "event": {
+        "messageInfo": {
+          "id": "mid1",
+          "type": "achieve",
+          "sender": "owner",
+          "receiver": "robot",
+          "message": "has(owner,beer)"
+        }
+      },
+      "log": "Send achieve message to robot: has(owner,beer)"
+    }
+  },
+  {
+    "timestamp": 1694697127430,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 1,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "get",
+              "type": "achieve",
+              "plan": {
+                "label": "p__11",
+                "trigger": "get(beer)",
+                "context": "",
+                "body": ".send(robot,achieve,has(owner,beer))"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": null
+              },
+              "isFinished": true
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 1 get created, state: undefined\n\tcurrent step: finished"
+    }
+  },
+  {
+    "timestamp": 1694697127439,
+    "message": {
+      "type": "GoalRemoved",
+      "event": {
+        "result": "achieved",
+        "goalInfo": {
+          "goalFunctor": "get(beer)",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 1,
+              "state": "undefined",
+              "intendedMeansInfo": []
+            }
+          }
+        },
+        "goalStates": "finished",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal get(beer) removed because the goal is achieved"
+    }
+  },
+  {
+    "timestamp": 1694697127457,
+    "message": {
+      "type": "IntentionRemoved",
+      "event": {
+        "intentionInfo": {
+          "id": 1,
+          "state": "undefined",
+          "intendedMeansInfo": []
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 1 removed , state: undefined"
+    }
+  },
+  {
+    "timestamp": 1694697127464,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".send(robot,achieve,has(owner,beer))",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/owner.asl:7"
+        },
+        "intentionInfo": {
+          "value": null
+        }
+      },
+      "log": "Internal action .send(robot,achieve,has(owner,beer)) finished"
+    }
+  },
+  {
+    "timestamp": 1694697127467,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 2
+      },
+      "log": "New reasoning cycle started: 2"
+    }
+  },
+  {
+    "timestamp": 1694697127470,
+    "message": {
+      "type": "SelectPlanEvent",
+      "event": {
+        "event": "check_bored[source(self)]",
+        "planOptions": [
+          {
+            "label": "p__16",
+            "trigger": "check_bored",
+            "context": "",
+            "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+          }
+        ],
+        "selectedPlan": {
+          "label": "p__16",
+          "trigger": "check_bored",
+          "context": "",
+          "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+        }
+      },
+      "log": "Plan options for check_bored[source(self)] are: \n\tcheck_bored \u003c- .random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored.\nThe plan selected for check_bored[source(self)] is \tcheck_bored \u003c- .random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored."
+    }
+  },
+  {
+    "timestamp": 1694697127473,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "check_bored",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 1,
+              "state": "undefined",
+              "intendedMeansInfo": []
+            }
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Plan check_bored selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1694697127476,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 check_bored created, state: undefined\n\tcurrent step: .random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697127482,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{X\u003d0.39229848772404496}",
+              "currentStep": {
+                "value": ".wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 check_bored created, state: undefined\n\tcurrent step: .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697127490,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".random(X)",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/owner.asl:22"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "undefined",
+            "intendedMeansInfo": [
+              {
+                "trigger": "check_bored",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__16",
+                  "trigger": "check_bored",
+                  "context": "",
+                  "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "unifier": "{X\u003d0.39229848772404496}",
+                "currentStep": {
+                  "value": ".wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .random(X) finished"
+    }
+  },
+  {
+    "timestamp": 1694697127495,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 3
+      },
+      "log": "New reasoning cycle started: 3"
+    }
+  },
+  {
+    "timestamp": 1694697127505,
+    "message": {
+      "type": "IntentionWaiting",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{X\u003d0.39229848772404496}",
+              "currentStep": {
+                "value": ".wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": {
+            "reason": "wait(2)[time(3961)]",
+            "functor": {
+              "value": "wait"
+            },
+            "terms": {
+              "value": [
+                "2"
+              ]
+            }
+          }
+        }
+      },
+      "log": "Intention 2 check_bored waiting with reason: wait(2)[time(3961)], state: running\n\tcurrent step: .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697127512,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".wait(((X*5000)+2000))",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/owner.asl:22"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "check_bored",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__16",
+                  "trigger": "check_bored",
+                  "context": "",
+                  "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "unifier": "{X\u003d0.39229848772404496}",
+                "currentStep": {
+                  "value": ".wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .wait(((X*5000)+2000)) finished"
+    }
+  },
+  {
+    "timestamp": 1694697127565,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 4
+      },
+      "log": "New reasoning cycle started: 4"
+    }
+  },
+  {
+    "timestamp": 1694697127720,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 5
+      },
+      "log": "New reasoning cycle started: 5"
+    }
+  },
+  {
+    "timestamp": 1694697127972,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 6
+      },
+      "log": "New reasoning cycle started: 6"
+    }
+  },
+  {
+    "timestamp": 1694697128326,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 7
+      },
+      "log": "New reasoning cycle started: 7"
+    }
+  },
+  {
+    "timestamp": 1694697128778,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 8
+      },
+      "log": "New reasoning cycle started: 8"
+    }
+  },
+  {
+    "timestamp": 1694697129331,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 9
+      },
+      "log": "New reasoning cycle started: 9"
+    }
+  },
+  {
+    "timestamp": 1694697129983,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 10
+      },
+      "log": "New reasoning cycle started: 10"
+    }
+  },
+  {
+    "timestamp": 1694697130735,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 11
+      },
+      "log": "New reasoning cycle started: 11"
+    }
+  },
+  {
+    "timestamp": 1694697131476,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 12
+      },
+      "log": "New reasoning cycle started: 12"
+    }
+  },
+  {
+    "timestamp": 1694697131477,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{X\u003d0.39229848772404496}",
+              "currentStep": {
+                "value": ".send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 check_bored created, state: running\n\tcurrent step: .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697131479,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "check_bored",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Plan check_bored selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1694697131480,
+    "message": {
+      "type": "IntentionWaiting",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{X\u003d0.39229848772404496}",
+              "currentStep": {
+                "value": ".send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": {
+            "reason": "waiting ask",
+            "functor": {
+              "value": "waiting_ask"
+            },
+            "terms": {
+              "value": null
+            }
+          }
+        }
+      },
+      "log": "Intention 2 check_bored waiting with reason: waiting ask, state: running\n\tcurrent step: .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697131481,
+    "message": {
+      "type": "SendMessage",
+      "event": {
+        "messageInfo": {
+          "id": "samid3",
+          "type": "askOne",
+          "sender": "owner",
+          "receiver": "robot",
+          "message": "time(_26)"
+        }
+      },
+      "log": "Send askOne message to robot: time(_26)"
+    }
+  },
+  {
+    "timestamp": 1694697131489,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".send(robot,askOne,time(_26),R)",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/owner.asl:23"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "check_bored",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__16",
+                  "trigger": "check_bored",
+                  "context": "",
+                  "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "unifier": "{X\u003d0.39229848772404496}",
+                "currentStep": {
+                  "value": ".send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .send(robot,askOne,time(_26),R) finished"
+    }
+  },
+  {
+    "timestamp": 1694697131642,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 13
+      },
+      "log": "New reasoning cycle started: 13"
+    }
+  },
+  {
+    "timestamp": 1694697131655,
+    "message": {
+      "type": "MailBoxMessages",
+      "event": {
+        "messages": [
+          {
+            "id": "mid4",
+            "type": "tell",
+            "sender": "robot",
+            "receiver": "owner",
+            "message": "time(\"15:12:11\")"
+          }
+        ]
+      },
+      "log": "Messages in mailbox: \n\ttell message from robot: time(\"15:12:11\")"
+    }
+  },
+  {
+    "timestamp": 1694697131657,
+    "message": {
+      "type": "SelectedMessage",
+      "event": {
+        "selected": {
+          "id": "mid4",
+          "type": "tell",
+          "sender": "robot",
+          "receiver": "owner",
+          "message": "time(\"15:12:11\")"
+        }
+      },
+      "log": "Selected Message: time(\"15:12:11\")"
+    }
+  },
+  {
+    "timestamp": 1694697131670,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{R\u003dtime(\"15:12:11\")[source(robot)], X\u003d0.39229848772404496}",
+              "currentStep": {
+                "value": ".print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 check_bored created, state: running\n\tcurrent step: .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697131672,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "check_bored",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 2,
+              "state": "running",
+              "intendedMeansInfo": [
+                {
+                  "trigger": "check_bored",
+                  "type": "achieve",
+                  "plan": {
+                    "label": "p__16",
+                    "trigger": "check_bored",
+                    "context": "",
+                    "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                  },
+                  "unifier": "{R\u003dtime(\"15:12:11\")[source(robot)], X\u003d0.39229848772404496}",
+                  "currentStep": {
+                    "value": ".print(R); !check_bored"
+                  },
+                  "isFinished": false
+                }
+              ]
+            }
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": {
+            "reason": "ask answer(\"samid3\")",
+            "functor": {
+              "value": "ask_answer"
+            },
+            "terms": {
+              "value": [
+                "\"samid3\""
+              ]
+            }
+          }
+        }
+      },
+      "log": "Plan check_bored selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1694697131674,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{R\u003dtime(\"15:12:11\")[source(robot)], X\u003d0.39229848772404496}",
+              "currentStep": {
+                "value": "!check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 check_bored created, state: running\n\tcurrent step: !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697131675,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".print(R)",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/owner.asl:24"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "check_bored",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__16",
+                  "trigger": "check_bored",
+                  "context": "",
+                  "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "unifier": "{R\u003dtime(\"15:12:11\")[source(robot)], X\u003d0.39229848772404496}",
+                "currentStep": {
+                  "value": "!check_bored"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .print(R) finished"
+    }
+  },
+  {
+    "timestamp": 1694697131676,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 14
+      },
+      "log": "New reasoning cycle started: 14"
+    }
+  },
+  {
+    "timestamp": 1694697131678,
+    "message": {
+      "type": "GoalCreated",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "check_bored",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 2,
+              "state": "running",
+              "intendedMeansInfo": [
+                {
+                  "trigger": "check_bored",
+                  "type": "achieve",
+                  "plan": {
+                    "label": "p__16",
+                    "trigger": "check_bored",
+                    "context": "",
+                    "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                  },
+                  "unifier": "{R\u003dtime(\"15:12:11\")[source(robot)], X\u003d0.39229848772404496}",
+                  "currentStep": {
+                    "value": "!check_bored"
+                  },
+                  "isFinished": false
+                }
+              ]
+            }
+          }
+        },
+        "goalStates": "pending",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal check_bored (sub-goal of check_bored) created"
+    }
+  },
+  {
+    "timestamp": 1694697131680,
+    "message": {
+      "type": "ExecutedDeed",
+      "event": {
+        "deedInfo": {
+          "term": "check_bored",
+          "type": "achieve",
+          "srcInfo": "file:src/agt/owner.asl:25"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "check_bored",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__16",
+                  "trigger": "check_bored",
+                  "context": "",
+                  "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "unifier": "{R\u003dtime(\"15:12:11\")[source(robot)], X\u003d0.39229848772404496}",
+                "currentStep": {
+                  "value": "!check_bored"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Deed check_bored of type achieve executed - from file:src/agt/owner.asl:25"
+    }
+  },
+  {
+    "timestamp": 1694697131681,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 15
+      },
+      "log": "New reasoning cycle started: 15"
+    }
+  },
+  {
+    "timestamp": 1694697131682,
+    "message": {
+      "type": "SelectPlanEvent",
+      "event": {
+        "event": "check_bored[source(self)]",
+        "planOptions": [
+          {
+            "label": "p__16",
+            "trigger": "check_bored",
+            "context": "",
+            "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+          }
+        ],
+        "selectedPlan": {
+          "label": "p__16",
+          "trigger": "check_bored",
+          "context": "",
+          "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+        }
+      },
+      "log": "Plan options for check_bored[source(self)] are: \n\tcheck_bored \u003c- .random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored.\nThe plan selected for check_bored[source(self)] is \tcheck_bored \u003c- .random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored."
+    }
+  },
+  {
+    "timestamp": 1694697131684,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "check_bored",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 2,
+              "state": "running",
+              "intendedMeansInfo": [
+                {
+                  "trigger": "check_bored",
+                  "type": "achieve",
+                  "plan": {
+                    "label": "p__16",
+                    "trigger": "check_bored",
+                    "context": "",
+                    "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                  },
+                  "unifier": "{R\u003dtime(\"15:12:11\")[source(robot)], X\u003d0.39229848772404496}",
+                  "currentStep": {
+                    "value": "!check_bored"
+                  },
+                  "isFinished": false
+                }
+              ]
+            }
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Plan check_bored selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1694697131686,
+    "message": {
+      "type": "GoalRemoved",
+      "event": {
+        "result": "achieved",
+        "goalInfo": {
+          "goalFunctor": "check_bored",
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 2,
+              "state": "running",
+              "intendedMeansInfo": [
+                {
+                  "trigger": "check_bored",
+                  "type": "achieve",
+                  "plan": {
+                    "label": "p__16",
+                    "trigger": "check_bored",
+                    "context": "",
+                    "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                  },
+                  "unifier": "{R\u003dtime(\"15:12:11\")[source(robot)], X\u003d0.39229848772404496}",
+                  "currentStep": {
+                    "value": "!check_bored"
+                  },
+                  "isFinished": false
+                }
+              ]
+            }
+          }
+        },
+        "goalStates": "finished",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal check_bored removed because the goal is achieved"
+    }
+  },
+  {
+    "timestamp": 1694697131689,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{}",
+              "currentStep": {
+                "value": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 check_bored created, state: running\n\tcurrent step: .random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697131691,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{X\u003d0.7756524402083597}",
+              "currentStep": {
+                "value": ".wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 2 check_bored created, state: running\n\tcurrent step: .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697131692,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".random(X)",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/owner.asl:22"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "check_bored",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__16",
+                  "trigger": "check_bored",
+                  "context": "",
+                  "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "unifier": "{X\u003d0.7756524402083597}",
+                "currentStep": {
+                  "value": ".wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .random(X) finished"
+    }
+  },
+  {
+    "timestamp": 1694697131693,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 16
+      },
+      "log": "New reasoning cycle started: 16"
+    }
+  },
+  {
+    "timestamp": 1694697131695,
+    "message": {
+      "type": "IntentionWaiting",
+      "event": {
+        "intentionInfo": {
+          "id": 2,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "check_bored",
+              "type": "achieve",
+              "plan": {
+                "label": "p__16",
+                "trigger": "check_bored",
+                "context": "",
+                "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "unifier": "{X\u003d0.7756524402083597}",
+              "currentStep": {
+                "value": ".wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+              },
+              "isFinished": false
+            }
+          ]
+        },
+        "reasonInfo": {
+          "value": {
+            "reason": "wait(2)[time(5878)]",
+            "functor": {
+              "value": "wait"
+            },
+            "terms": {
+              "value": [
+                "2"
+              ]
+            }
+          }
+        }
+      },
+      "log": "Intention 2 check_bored waiting with reason: wait(2)[time(5878)], state: running\n\tcurrent step: .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+    }
+  },
+  {
+    "timestamp": 1694697131698,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".wait(((X*5000)+2000))",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/owner.asl:22"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 2,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "check_bored",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__16",
+                  "trigger": "check_bored",
+                  "context": "",
+                  "body": ".random(X); .wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "unifier": "{X\u003d0.7756524402083597}",
+                "currentStep": {
+                  "value": ".wait(((X*5000)+2000)); .send(robot,askOne,time(_26),R); .print(R); !check_bored"
+                },
+                "isFinished": false
+              }
+            ]
+          }
+        }
+      },
+      "log": "Internal action .wait(((X*5000)+2000)) finished"
+    }
+  },
+  {
+    "timestamp": 1694697131849,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 17
+      },
+      "log": "New reasoning cycle started: 17"
+    }
+  },
+  {
+    "timestamp": 1694697132102,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 18
+      },
+      "log": "New reasoning cycle started: 18"
+    }
+  },
+  {
+    "timestamp": 1694697132454,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 19
+      },
+      "log": "New reasoning cycle started: 19"
+    }
+  },
+  {
+    "timestamp": 1694697132906,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 20
+      },
+      "log": "New reasoning cycle started: 20"
+    }
+  },
+  {
+    "timestamp": 1694697133457,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 21
+      },
+      "log": "New reasoning cycle started: 21"
+    }
+  },
+  {
+    "timestamp": 1694697134113,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 22
+      },
+      "log": "New reasoning cycle started: 22"
+    }
+  }
+]
