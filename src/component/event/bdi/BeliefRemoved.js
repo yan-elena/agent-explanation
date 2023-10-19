@@ -11,7 +11,7 @@ function BDIBeliefRemoved(props) {
     const beliefDeed = props.log[props.log.indexOf(props.event) + 3]
     let beliefAdded = getCycleEvents(props.log, props.log.indexOf(props.event)).find(e => e.message.type === "BeliefAdded" && e.message.event.beliefInfo.functor === beliefEvent.functor);
     const intention = props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(belief));
-    let reason
+    let reason = ""
 
     if (intention) {
         const intentionInfo = intention.message.event.intentionInfo
