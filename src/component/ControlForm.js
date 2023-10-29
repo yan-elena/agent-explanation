@@ -23,8 +23,8 @@ function ControlForm(props) {
             <Col sm={5}>
                 <Form.Label>Select the level:</Form.Label>
                 <Form.Select value={props.level} onChange={e => props.selectLevel(e.target.value)}>
-                    <option value="JASON">Jason Level</option>
-                    <option value="BDI">BDI Level</option>
+                    <option value="JASON">Implementation Level</option>
+                    <option value="BDI">Design Level</option>
                 </Form.Select>
             </Col>
 

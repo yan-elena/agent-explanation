@@ -42,10 +42,8 @@ function App() {
           <PageLocation agent={selectedAgent}/>
           <Routes className="content">
               <Route path="/agents" element={<HomePage files={files} loadAgentLog={loadAgentLog}/>}/>
-              <Route path="/agents/:agentName/" exact element={<AgentEventsPage agent={selectedAgent} filter={""} level={"JASON"}/>}/>
-              <Route path="/agents/:agentName/beliefs" exact element={<AgentEventsPage agent={selectedAgent} filter={"belief"} level={"BDI"}/>}/>
-              <Route path="/agents/:agentName/desires" exact element={<AgentEventsPage agent={selectedAgent} filter={"desire"} level={"BDI"}/>}/>
-              <Route path="/agents/:agentName/intentions" exact element={<AgentEventsPage agent={selectedAgent} filter={"intention"} level={"BDI"}/>}/>
+              <Route path="/agents/:agentName/implementation" exact element={<AgentEventsPage agent={selectedAgent} filter={""} level={"JASON"}/>}/>
+              <Route path="/agents/:agentName/design" exact element={<AgentEventsPage agent={selectedAgent} filter={""} level={"BDI"}/>}/>
               <Route path="/" exact element={<UploadLogPage setLogFiles={setLogFiles}/>}/>
           </Routes>
       </div>

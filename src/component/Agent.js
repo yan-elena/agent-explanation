@@ -16,10 +16,8 @@ function Agent(props) {
 
             <Col className="mt-5 ms-3 me-3">
                 <ListGroup>
-                    <ListGroupItem  href={"#/agents/" + props.name} onClick={() => props.loadAgentLog(props.name)} action>Complete narrative</ListGroupItem >
-                    <ListGroupItem  href={"#/agents/" + props.name + "/beliefs"} onClick={() => props.loadAgentLog(props.name)} action>Belief narrative</ListGroupItem >
-                    <ListGroupItem  href={"#/agents/" + props.name + "/desires"} onClick={() => props.loadAgentLog(props.name)} action>Desire narrative</ListGroupItem >
-                    <ListGroupItem  href={"#/agents/" + props.name + "/intentions"} onClick={() => props.loadAgentLog(props.name)} action>Intention narrative</ListGroupItem >
+                    <ListGroupItem  href={"#/agents/" + props.name + "/implementation"} onClick={() => props.loadAgentLog(props.name)} action>Implementation Level</ListGroupItem >
+                    <ListGroupItem  href={"#/agents/" + props.name + "/design"} onClick={() => props.loadAgentLog(props.name)} action>Design Level</ListGroupItem >
                 </ListGroup>
             </Col>
         </Row>
