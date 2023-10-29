@@ -651,6 +651,23 @@
   {
     "timestamp": 1694697127439,
     "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".send(robot,achieve,has(owner,beer))",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/owner.asl:7"
+        },
+        "intentionInfo": {
+          "value": null
+        }
+      },
+      "log": "Internal action .send(robot,achieve,has(owner,beer)) finished"
+    }
+  },
+  {
+    "timestamp": 1694697127457,
+    "message": {
       "type": "GoalRemoved",
       "event": {
         "result": "achieved",
@@ -678,7 +695,7 @@
     }
   },
   {
-    "timestamp": 1694697127457,
+    "timestamp": 1694697127464,
     "message": {
       "type": "IntentionRemoved",
       "event": {
@@ -692,23 +709,6 @@
         }
       },
       "log": "Intention 1 removed , state: undefined"
-    }
-  },
-  {
-    "timestamp": 1694697127464,
-    "message": {
-      "type": "InternalActionFinished",
-      "event": {
-        "deedInfo": {
-          "term": ".send(robot,achieve,has(owner,beer))",
-          "type": "internalAction",
-          "srcInfo": "file:src/agt/owner.asl:7"
-        },
-        "intentionInfo": {
-          "value": null
-        }
-      },
-      "log": "Internal action .send(robot,achieve,has(owner,beer)) finished"
     }
   },
   {
