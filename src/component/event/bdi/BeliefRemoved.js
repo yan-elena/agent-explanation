@@ -15,7 +15,7 @@ function BDIBeliefRemoved(props) {
 
     if (intention) {
         const intentionInfo = intention.message.event.intentionInfo
-        reason = " because of intention " + intentionInfo.intendedMeansInfo[0].trigger + "/" + intentionInfo.id
+        reason = " because of intention " + intentionInfo.id + " " + intentionInfo.intendedMeansInfo[0].trigger
     }
 
     if (!beliefAdded && !(beliefDeed && beliefDeed.message.type === "ExecutedDeed" && beliefDeed.message.event.deedInfo.type === "delAddBel" && beliefDeed.message.event.deedInfo.term.includes(beliefEvent.functor))) {

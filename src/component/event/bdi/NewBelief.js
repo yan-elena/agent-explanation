@@ -22,10 +22,10 @@ function NewBelief(props) {
             if (beliefDeed) {
                 const intentionInfo = beliefDeed.message.event.intentionInfo.value
                 if (intentionInfo) {
-                    intention = intentionInfo.intendedMeansInfo[0].trigger + "/" + intentionInfo.id
+                    intention = intentionInfo.id + " " + intentionInfo.intendedMeansInfo[0].trigger
                 } else {
                     const intentionEvent = props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(belief)).message.event.intentionInfo;
-                    intention = intentionEvent.intendedMeansInfo[0].trigger + "/" + intentionEvent.id
+                    intention = intentionEvent.id + " " + intentionEvent.intendedMeansInfo[0].trigger
                 }
                 reason = " because of intention " + intention
             } else {

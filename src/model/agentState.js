@@ -26,13 +26,13 @@ export function getIntentionReason(desire, intentionInfo) {
             } else if (agentState.speechAct.tell.includes(parent)) {
                 reason = " created from " + parent + " message"
             } else if (agentState.speechAct.achieve.includes(parent)) {
-                reason = " created from intention " + parent + "/" + id
+                reason = " created from intention " + id + " " + parent
             } else if (agentState.belief.self.includes(parent)) {
                 reason = " formed from the belief " + parent
             } else if (agentState.belief.percept.includes(parent)) {
                 reason = " created from the perception of " + parent
             } else if (agentState.intention[id] && agentState.intention[id].includes(parent)) {
-                reason = " created from intention " + parent + "/" + id
+                reason = " created from intention " + id + " " + parent
 
             }
         }

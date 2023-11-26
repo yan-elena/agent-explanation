@@ -15,10 +15,10 @@ function DesireCommitted(props) {
         const body = selectedPlan.body ? "Plan body: " + selectedPlan.body : ""
         const im = intention.message.event.intentionInfo.intendedMeansInfo
         const id = intention.message.event.intentionInfo.id
-        const description = "I committed to desire " + desire + context + ", and it became a new intention " + im[0].trigger + "/" + id
+        const description = "I committed to desire " + desire + context + ", and it became a new intention " + id + " " + im[0].trigger
 
         let reason = getIntentionReason(desire, intention.message.event.intentionInfo)
-        let parentDesire = reason ? ["Intention " + im[0].trigger + "/" + id + " is an intention" + reason, <br/>] : []
+        let parentDesire = reason ? ["Intention " + id + " " + im[0].trigger + " is an intention" + reason, <br/>] : []
 
         if (agentState.intention[id]) {
             agentState.intention[id].push(desire)

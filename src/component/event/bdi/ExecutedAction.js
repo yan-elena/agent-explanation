@@ -45,7 +45,7 @@ function ExecutedAction(props) {
             break;
     }
 
-    intention = "intention " + intentionTrigger + "/" + intentionId
+    intention = "intention " + intentionId + " " + intentionTrigger
     description = description + deed.term + " because of " + intention
     info = info + deed.type
 
