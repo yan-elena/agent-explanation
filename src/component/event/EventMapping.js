@@ -33,7 +33,7 @@ import ExecutedAction from "./bdi/ExecutedAction";
 import BDIBeliefRemoved from "./bdi/BeliefRemoved";
 import NewBelief from "./bdi/NewBelief";
 
-const EventComponents = {
+const EventMapping = {
     ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedAction/>},
     ExternalActionFinished: {JASON: <ExternalActionFinished/>, BDI: <ExecutedAction/>},
     ExternalActionTriggered: {JASON: <ExternalActionTriggered/>, BDI: <></>},
@@ -64,4 +64,4 @@ const EventComponents = {
     SendMessage: {JASON: <SendMessage/>, BDI: <SendMessage/>}
 };
 
-export default EventComponents;
+export default EventMapping;

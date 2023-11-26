@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { MDBContainer } from "mdb-react-ui-kit";
-import EventComponents from "../component/event/EventComponents";
+import EventMapping from "../component/event/EventMapping";
 import ControlForm from "../component/ControlForm";
 import {resetState} from "../model/agentState";
 
@@ -24,7 +24,7 @@ function AgentEventsPage(props) {
                 <ul className="timeline">
                     {props.agent && props.agent.log.map((event, i) => (
                         <li className="timeline-item mb-5" key={event.timestamp + "_" + i}>
-                            {React.cloneElement(EventComponents[event.message.type][selectedLevel], {log: props.agent.log, event: event, filter: filter, level: selectedLevel})}
+                            {React.cloneElement(EventMapping[event.message.type][selectedLevel], {log: props.agent.log, event: event, filter: filter, level: selectedLevel})}
                         </li>
                     ))}
                 </ul>
