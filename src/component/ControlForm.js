@@ -1,8 +1,18 @@
 import React from "react";
 import Form from 'react-bootstrap/Form';
 import {Col} from "react-bootstrap";
+import {useLocation, useNavigate} from "react-router-dom";
+import {Level} from "../model/Level";
 
 function ControlForm(props) {
+
+    const navigate = useNavigate();
+    const location = useLocation()
+    function selectLevel(ev) {
+        const level = ev.target.value
+        navigate(location.pathname.replace(/[^/]*$/, level))
+        props.selectLevel(level)
+    }
 
     return (
         <Form.Group className="row m-4" controlId="formBasicSelect">
@@ -22,9 +32,9 @@ function ControlForm(props) {
             <Col sm={1}/>
             <Col sm={5}>
                 <Form.Label>Select the level:</Form.Label>
-                <Form.Select value={props.level} onChange={e => props.selectLevel(e.target.value)}>
-                    <option value="JASON">Implementation Level</option>
-                    <option value="BDI">Design Level</option>
+                <Form.Select value={props.level} onChange={selectLevel}>
+                    <option value={Level.IMPLEMENTATION}>{Level.IMPLEMENTATION} level</option>
+                    <option value={Level.DESIGN}>{Level.DESIGN} level</option>
                 </Form.Select>
             </Col>
 

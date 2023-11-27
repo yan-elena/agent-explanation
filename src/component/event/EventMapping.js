@@ -1,67 +1,66 @@
-import PlanAdded from "./jason/planEvent/PlanAdded";
-import ExecutedDeed from "./jason/actionEvent/ExecutedDeed";
-import ExternalActionFinished from "./jason/actionEvent/ExternalActionFinished";
-import ExternalActionTriggered from "./jason/actionEvent/ExternalActionTriggered";
-import InternalActionFinished from "./jason/actionEvent/InternalActionFinished";
-import BeliefFromSrcAdded from "./jason/beliefEvent/BeliefFromSrcAdded";
-import BeliefAdded from "./jason/beliefEvent/BeliefAdded";
-import BeliefFromSrcRemoved from "./jason/beliefEvent/BeliefFromSrcRemoved";
-import BeliefRemoved from "./jason/beliefEvent/BeliefRemoved";
-import GoalCreated from "./jason/goalEvent/GoalCreated";
-import GoalRemoved from "./jason/goalEvent/GoalRemoved";
-import GoalSuspended from "./jason/goalEvent/GoalSuspended";
-import IntentionCreated from "./jason/intentionEvent/IntentionCreated";
-import IntentionRemoved from "./jason/intentionEvent/IntentionRemoved";
-import IntentionSuspended from "./jason/intentionEvent/IntentionSuspended";
-import IntentionUpdated from "./jason/intentionEvent/IntentionUpdated";
-import IntentionWaiting from "./jason/intentionEvent/IntentionWaiting";
-import NewPercept from "./jason/perceptEvent/NewPercept";
-import PlanRemoved from "./jason/planEvent/PlanRemoved";
-import SelectPlanEvent from "./jason/planEvent/SelectPlanEvent";
-import ReasoningCycleStarted from "./jason/reasoningCycleEvent/ReasoningCycleStarted";
-import NewAgentSignal from "./jason/signalEvent/NewAgentSignal";
-import NewArtifactSignal from "./jason/signalEvent/NewArtifactSignal";
-import MailBoxMessages from "./jason/speechActMessageEvent/MailBoxMessages";
-import NewSpeechActMessage from "./jason/speechActMessageEvent/NewSpeechActMessage";
-import SelectedMessage from "./jason/speechActMessageEvent/SelectedMessage";
-import SendMessage from "./jason/speechActMessageEvent/SendMessage";
-import PlanSelected from "./jason/goalEvent/PlanSelected";
-import NewDesire from "./bdi/NewDesire";
-import DesireCommitted from "./bdi/DesireCommitted";
-import DesireRemoved from "./bdi/DesireRemoved";
-import ExecutedAction from "./bdi/ExecutedAction";
-import BDIBeliefRemoved from "./bdi/BeliefRemoved";
-import NewBelief from "./bdi/NewBelief";
+import PlanAdded from "./implementation/planEvent/PlanAdded";
+import ExecutedDeed from "./implementation/actionEvent/ExecutedDeed";
+import ExternalActionFinished from "./implementation/actionEvent/ExternalActionFinished";
+import ExternalActionTriggered from "./implementation/actionEvent/ExternalActionTriggered";
+import InternalActionFinished from "./implementation/actionEvent/InternalActionFinished";
+import BeliefFromSrcAdded from "./implementation/beliefEvent/BeliefFromSrcAdded";
+import BeliefAdded from "./implementation/beliefEvent/BeliefAdded";
+import BeliefFromSrcRemoved from "./implementation/beliefEvent/BeliefFromSrcRemoved";
+import BeliefRemoved from "./implementation/beliefEvent/BeliefRemoved";
+import GoalCreated from "./implementation/goalEvent/GoalCreated";
+import GoalRemoved from "./implementation/goalEvent/GoalRemoved";
+import GoalSuspended from "./implementation/goalEvent/GoalSuspended";
+import IntentionCreated from "./implementation/intentionEvent/IntentionCreated";
+import IntentionRemoved from "./implementation/intentionEvent/IntentionRemoved";
+import IntentionSuspended from "./implementation/intentionEvent/IntentionSuspended";
+import IntentionUpdated from "./implementation/intentionEvent/IntentionUpdated";
+import IntentionWaiting from "./implementation/intentionEvent/IntentionWaiting";
+import NewPercept from "./implementation/perceptEvent/NewPercept";
+import PlanRemoved from "./implementation/planEvent/PlanRemoved";
+import SelectPlanEvent from "./implementation/planEvent/SelectPlanEvent";
+import ReasoningCycleStarted from "./implementation/reasoningCycleEvent/ReasoningCycleStarted";
+import NewAgentSignal from "./implementation/signalEvent/NewAgentSignal";
+import NewArtifactSignal from "./implementation/signalEvent/NewArtifactSignal";
+import MailBoxMessages from "./implementation/speechActMessageEvent/MailBoxMessages";
+import NewSpeechActMessage from "./implementation/speechActMessageEvent/NewSpeechActMessage";
+import SelectedMessage from "./implementation/speechActMessageEvent/SelectedMessage";
+import SendMessage from "./implementation/speechActMessageEvent/SendMessage";
+import PlanSelected from "./implementation/goalEvent/PlanSelected";
+import NewDesire from "./design/NewDesire";
+import DesireCommitted from "./design/DesireCommitted";
+import DesireRemoved from "./design/DesireRemoved";
+import ExecutedAction from "./design/ExecutedAction";
+import NewBelief from "./design/NewBelief";
 
 const EventMapping = {
-    ExecutedDeed: {JASON: <ExecutedDeed/>, BDI: <ExecutedAction/>},
-    ExternalActionFinished: {JASON: <ExternalActionFinished/>, BDI: <ExecutedAction/>},
-    ExternalActionTriggered: {JASON: <ExternalActionTriggered/>, BDI: <></>},
-    InternalActionFinished: {JASON: <InternalActionFinished/>, BDI: <ExecutedAction/>},
-    BeliefAdded: {JASON: <BeliefAdded/>, BDI: <NewBelief/>},
-    BeliefFromSrcAdded: {JASON: <BeliefFromSrcAdded/>, BDI: <></>},
-    BeliefFromSrcRemoved: {JASON: <BeliefFromSrcRemoved/>, BDI: <></>},
-    BeliefRemoved: {JASON: <BeliefRemoved/>, BDI: <BDIBeliefRemoved/>},
-    GoalCreated: {JASON: <GoalCreated/>, BDI: <NewDesire/>},
-    GoalRemoved: {JASON: <GoalRemoved/>, BDI: <DesireRemoved/>},
-    GoalSuspended: {JASON: <GoalSuspended/>, BDI: <></>},
-    PlanSelected: {JASON: <PlanSelected/>, BDI: <></>},
-    IntentionCreated: {JASON: <IntentionCreated/>, BDI: <></>},
-    IntentionRemoved: {JASON: <IntentionRemoved/>, BDI: <></>},
-    IntentionSuspended: {JASON: <IntentionSuspended/>, BDI: <></>},
-    IntentionUpdated: {JASON: <IntentionUpdated/>, BDI: <></>},
-    IntentionWaiting: {JASON: <IntentionWaiting/>, BDI: <></>},
-    NewPercept: {JASON: <NewPercept/>, BDI: <></>},
-    PlanAdded: {JASON: <PlanAdded/>, BDI: <></>},
-    PlanRemoved: {JASON: <PlanRemoved/>, BDI: <></>},
-    SelectPlanEvent: {JASON: <SelectPlanEvent/>, BDI: <DesireCommitted/>},
-    ReasoningCycleStarted: {JASON: <ReasoningCycleStarted/>, BDI:  <></>},
-    NewAgentSignal: {JASON: <NewAgentSignal/>, BDI: <></>},
-    NewArtifactSignal: {JASON: <NewArtifactSignal/>, BDI: <NewArtifactSignal/>},
-    MailBoxMessages: {JASON: <MailBoxMessages/>, BDI: <></>},
-    NewSpeechActMessage: {JASON: <NewSpeechActMessage/>, BDI: <NewSpeechActMessage/>},
-    SelectedMessage: {JASON: <SelectedMessage/>, BDI: <></>},
-    SendMessage: {JASON: <SendMessage/>, BDI: <SendMessage/>}
+    ExecutedDeed: {implementation: <ExecutedDeed/>, design: <ExecutedAction/>},
+    ExternalActionFinished: {implementation: <ExternalActionFinished/>, design: <ExecutedAction/>},
+    ExternalActionTriggered: {implementation: <ExternalActionTriggered/>, design: <></>},
+    InternalActionFinished: {implementation: <InternalActionFinished/>, design: <ExecutedAction/>},
+    BeliefAdded: {implementation: <BeliefAdded/>, design: <NewBelief/>},
+    BeliefFromSrcAdded: {implementation: <BeliefFromSrcAdded/>, design: <></>},
+    BeliefFromSrcRemoved: {implementation: <BeliefFromSrcRemoved/>, design: <></>},
+    BeliefRemoved: {implementation: <BeliefRemoved/>, design: <designBeliefRemoved/>},
+    GoalCreated: {implementation: <GoalCreated/>, design: <NewDesire/>},
+    GoalRemoved: {implementation: <GoalRemoved/>, design: <DesireRemoved/>},
+    GoalSuspended: {implementation: <GoalSuspended/>, design: <></>},
+    PlanSelected: {implementation: <PlanSelected/>, design: <></>},
+    IntentionCreated: {implementation: <IntentionCreated/>, design: <></>},
+    IntentionRemoved: {implementation: <IntentionRemoved/>, design: <></>},
+    IntentionSuspended: {implementation: <IntentionSuspended/>, design: <></>},
+    IntentionUpdated: {implementation: <IntentionUpdated/>, design: <></>},
+    IntentionWaiting: {implementation: <IntentionWaiting/>, design: <></>},
+    NewPercept: {implementation: <NewPercept/>, design: <></>},
+    PlanAdded: {implementation: <PlanAdded/>, design: <></>},
+    PlanRemoved: {implementation: <PlanRemoved/>, design: <></>},
+    SelectPlanEvent: {implementation: <SelectPlanEvent/>, design: <DesireCommitted/>},
+    ReasoningCycleStarted: {implementation: <ReasoningCycleStarted/>, design:  <></>},
+    NewAgentSignal: {implementation: <NewAgentSignal/>, design: <></>},
+    NewArtifactSignal: {implementation: <NewArtifactSignal/>, design: <NewArtifactSignal/>},
+    MailBoxMessages: {implementation: <MailBoxMessages/>, design: <></>},
+    NewSpeechActMessage: {implementation: <NewSpeechActMessage/>, design: <NewSpeechActMessage/>},
+    SelectedMessage: {implementation: <SelectedMessage/>, design: <></>},
+    SendMessage: {implementation: <SendMessage/>, design: <SendMessage/>}
 };
 
 export default EventMapping;

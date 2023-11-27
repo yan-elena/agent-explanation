@@ -6,6 +6,7 @@ import AgentEventsPage from "./pages/AgentEventsPage";
 import NavBar from "./component/NavBar";
 import {useEffect, useState} from "react";
 import PageLocation from "./component/PageLocation";
+import {Level} from "./model/Level";
 
 function App() {
     const navigate = useNavigate();
@@ -42,8 +43,8 @@ function App() {
           <PageLocation agent={selectedAgent}/>
           <Routes className="content">
               <Route path="/agents" element={<HomePage files={files} loadAgentLog={loadAgentLog}/>}/>
-              <Route path="/agents/:agentName/implementation" exact element={<AgentEventsPage agent={selectedAgent} filter={""} level={"JASON"}/>}/>
-              <Route path="/agents/:agentName/design" exact element={<AgentEventsPage agent={selectedAgent} filter={""} level={"BDI"}/>}/>
+              <Route path="/agents/:agentName/implementation" exact element={<AgentEventsPage agent={selectedAgent} filter={""} level={Level.IMPLEMENTATION}/>}/>
+              <Route path="/agents/:agentName/design" exact element={<AgentEventsPage agent={selectedAgent} filter={""} level={Level.DESIGN}/>}/>
               <Route path="/" exact element={<UploadLogPage setLogFiles={setLogFiles}/>}/>
           </Routes>
       </div>
