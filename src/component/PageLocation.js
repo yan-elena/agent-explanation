@@ -11,7 +11,7 @@ function PageLocation(props) {
             <Breadcrumb className="m-1">
                 <Breadcrumb.Item href="#/">Home</Breadcrumb.Item>
                 {pathname.map((path, idx) => (
-                    <Breadcrumb.Item href={"#/" + pathname.slice(0, idx + 1).join("/").toLowerCase()} key={idx} active={path.toLowerCase() === props.agent.name || idx === pathname.length - 1}>{path}</Breadcrumb.Item>
+                    <Breadcrumb.Item href={"#/" + pathname.slice(0, idx + 1).join("/").toLowerCase()} key={idx} active={(props.agent && path.toLowerCase() === props.agent.name) || idx === pathname.length - 1}>{path}</Breadcrumb.Item>
                 ))}
             </Breadcrumb>
         );
