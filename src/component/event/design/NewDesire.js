@@ -1,6 +1,7 @@
 import React from "react";
 import Event from "../Event";
 import {agentState} from "../../../model/agentState";
+import {Level} from "../../../model/Level";
 
 function NewDesire(props) {
     const eventType = "New Desire"
@@ -34,7 +35,7 @@ function NewDesire(props) {
     }
 
     return (
-        <Event type={eventType} description={description + reason} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
+        <Event type={eventType} description={description + reason} info={info} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN}/>
     )
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Event from "../Event";
 import {agentState, getIntentionReason} from "../../../model/agentState";
+import {Level} from "../../../model/Level";
 
 function DesireRemoved(props) {
     const functor = props.event.message.event.goalInfo.goalFunctor
@@ -37,7 +38,7 @@ function DesireRemoved(props) {
     }
 
     return (
-        <Event type={type} description={description} info={[...parentDesire, info]} timestamp={props.event.timestamp} filter={props.filter}/>
+        <Event type={type} description={description} info={[...parentDesire, info]} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN}/>
     )
 }
 

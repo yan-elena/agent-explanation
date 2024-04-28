@@ -9,7 +9,7 @@ function NewSpeechActMessage(props) {
         return (
             <div>
                 <Event type={props.event.message.type.replace(/\B([A-Z])\B/g, ' $1')}
-                       description={props.event.message.log} timestamp={props.event.timestamp} filter={props.filter}/>
+                       description={props.event.message.log} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.IMPLEMENTATION}/>
             </div>
         )
     } else {

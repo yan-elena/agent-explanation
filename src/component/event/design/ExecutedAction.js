@@ -1,5 +1,6 @@
 import React from "react";
 import Event from "../Event";
+import {Level} from "../../../model/Level";
 
 function ExecutedAction(props) {
 
@@ -52,7 +53,7 @@ function ExecutedAction(props) {
     if (deed.type !== "achieve" && !deed.type.includes("Bel")) {
         return (
             <Event type={type} description={description} info={info} timestamp={props.event.timestamp}
-                   filter={props.filter}/>
+                   filter={props.filter} log={props.log} level={Level.DESIGN}/>
         )
     }
 }

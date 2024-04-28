@@ -1,5 +1,6 @@
 import React from "react";
 import Event from "../../Event";
+import {Level} from "../../../../model/Level";
 
 function GoalCreated(props) {
     const type = "Goal Created"
@@ -12,7 +13,7 @@ function GoalCreated(props) {
 
     return (
         <div>
-            <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter}/>
+            <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.IMPLEMENTATION}/>
         </div>
     )
 }

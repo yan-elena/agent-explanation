@@ -1,6 +1,7 @@
 import React from "react";
 import Event from "../Event";
 import {getCycleEvents} from "../../../model/agentState";
+import {Level} from "../../../model/Level";
 
 function BDIBeliefRemoved(props) {
 
@@ -20,7 +21,7 @@ function BDIBeliefRemoved(props) {
 
     if (!beliefAdded && !(beliefDeed && beliefDeed.message.type === "ExecutedDeed" && beliefDeed.message.event.deedInfo.type === "delAddBel" && beliefDeed.message.event.deedInfo.term.includes(beliefEvent.functor))) {
         return (
-            <Event type={type} description={description + reason} timestamp={props.event.timestamp} filter={props.filter}/>
+            <Event type={type} description={description + reason} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN}/>
         )
     }
 }
