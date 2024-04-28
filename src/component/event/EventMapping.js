@@ -31,6 +31,7 @@ import DesireCommitted from "./design/DesireCommitted";
 import DesireRemoved from "./design/DesireRemoved";
 import ExecutedAction from "./design/ExecutedAction";
 import NewBelief from "./design/NewBelief";
+import SelectPlan from "./design/SelectPlan";
 
 const EventMapping = {
     ExecutedDeed: {implementation: <ExecutedDeed/>, design: <ExecutedAction/>},
@@ -45,7 +46,7 @@ const EventMapping = {
     GoalRemoved: {implementation: <GoalRemoved/>, design: <DesireRemoved/>},
     GoalSuspended: {implementation: <GoalSuspended/>, design: <></>},
     PlanSelected: {implementation: <PlanSelected/>, design: <></>},
-    IntentionCreated: {implementation: <IntentionCreated/>, design: <></>},
+    IntentionCreated: {implementation: <IntentionCreated/>, design: <DesireCommitted/>},
     IntentionRemoved: {implementation: <IntentionRemoved/>, design: <></>},
     IntentionSuspended: {implementation: <IntentionSuspended/>, design: <></>},
     IntentionUpdated: {implementation: <IntentionUpdated/>, design: <></>},
@@ -53,7 +54,7 @@ const EventMapping = {
     NewPercept: {implementation: <NewPercept/>, design: <></>},
     PlanAdded: {implementation: <PlanAdded/>, design: <></>},
     PlanRemoved: {implementation: <PlanRemoved/>, design: <></>},
-    SelectPlanEvent: {implementation: <SelectPlanEvent/>, design: <DesireCommitted/>},
+    SelectPlanEvent: {implementation: <SelectPlanEvent/>, design: <SelectPlan/>},
     ReasoningCycleStarted: {implementation: <ReasoningCycleStarted/>, design:  <></>},
     NewAgentSignal: {implementation: <NewAgentSignal/>, design: <></>},
     NewArtifactSignal: {implementation: <NewArtifactSignal/>, design: <NewArtifactSignal/>},
