@@ -12,7 +12,7 @@ function DesireCommitted(props) {
     const selectedPlan = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "SelectPlanEvent" && e.message.event.selectedPlan.trigger === desire)
     const planSelected = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "PlanSelected" && e.message.event.goalInfo.goalFunctor === desire)
 
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).filter(e => e.message.log.includes(desire))
+    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === desire)
 
     if (selectedPlan && planSelected) {
         const context = selectedPlan.context ? " because I believe " + selectedPlan.context.replace("&", "and").replace("|", "or") : ""
