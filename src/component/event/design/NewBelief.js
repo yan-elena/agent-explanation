@@ -16,8 +16,6 @@ function NewBelief(props) {
     let reason
     let info
     let intention
-    let explanation = []
-
 
     switch (String(source)) {
         case "self":
@@ -28,7 +26,6 @@ function NewBelief(props) {
                 } else {
                     const intentionEvent = props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(belief)).message.event.intentionInfo;
                     intention = intentionEvent.id + " " + intentionEvent.intendedMeansInfo[0].trigger
-                    explanation.push(intentionEvent)
                 }
                 reason = " because of intention " + intention
             } else {
@@ -66,7 +63,7 @@ function NewBelief(props) {
     }
 
     return (
-        <Event type={eventType} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter} explanation={explanation} log={props.log} level={Level.DESIGN}/>
+        <Event type={eventType} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN}/>
     )
 }
 
