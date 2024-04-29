@@ -51,7 +51,7 @@ function Event(props) {
                 <p className="text-muted fw-bold my-2">{highlightMatchingText("Event type: " + props.type, filter)}</p>
                 <p className="text-muted my-1">{props.info && (Array.isArray(props.info) ? [props.info.map(info => highlightMatchingText(info, filter))] : highlightMatchingText(props.info, filter))}</p>
                 <p className="text-muted my-1">{highlightMatchingText("Timestamp: " + props.timestamp, filter)}</p>
-                {props.explanation && props.explanation.length > 0 ? <Button variant="outline-primary" size="sm" onClick={handleShow}>View explanation</Button> : <></>}
+                {props.explanation ? <Button variant="outline-primary" size="sm" onClick={handleShow}>View explanation</Button> : <></>}
             </div>
         )
     } else {

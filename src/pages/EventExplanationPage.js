@@ -8,22 +8,18 @@ function EventExplanationPage(props) {
         return (
             <Modal show={props.show} onHide={props.handleClose} size="lg">
                 <Modal.Header>
-                    <h6 className="fw-bold">Explanation of the event: "{props.event}"</h6>
+                    <h5 className="">Explanation of the event: "{props.event}"</h5>
                 </Modal.Header>
                 <Modal.Body>
-                    <MDBContainer xs={12} className="my-5">
-                        <ul className="timeline">
-                            {props.explanation.map((event, i) => (
-                                <li className="timeline-item mb-5" key={event.timestamp + "_" + i}>
-                                    {React.cloneElement(EventMapping[event.message.type][props.level], {
-                                        log: props.log,
-                                        event: event,
-                                        filter: "",
-                                        level: props.level
-                                    })}
-                                </li>
-                            ))}
-                        </ul>
+                    <MDBContainer xs={12}>
+                            <div>
+                                {React.cloneElement(EventMapping[props.explanation.message.type][props.level], {
+                                    log: props.log,
+                                    event: props.explanation,
+                                    filter: "",
+                                    level: props.level
+                                })}
+                            </div>
                     </MDBContainer>
                 </Modal.Body>
             </Modal>
