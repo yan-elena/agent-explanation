@@ -5,9 +5,8 @@ import {Modal} from "react-bootstrap";
 
 function EventExplanationPage(props) {
     if (props.explanation) {
-        console.log(props.explanation[0])
         return (
-            <Modal show={props.show} onHide={props.handleClose}>
+            <Modal show={props.show} onHide={props.handleClose} size="lg">
                 <Modal.Header>
                     <h6 className="fw-bold">Explanation of the event: "{props.event}"</h6>
                 </Modal.Header>
