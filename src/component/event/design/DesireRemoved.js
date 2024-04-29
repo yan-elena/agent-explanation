@@ -9,12 +9,12 @@ function DesireRemoved(props) {
     const result = props.event.message.event.result
     const info = "Result: " + result + ", state: " + props.event.message.event.goalStates
 
+    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === functor)
+
     let id
     let type
     let description
     let parentDesire = []
-
-
 
     if (intention) {
         id = intention.id
@@ -38,7 +38,7 @@ function DesireRemoved(props) {
     }
 
     return (
-        <Event type={type} description={description} info={[...parentDesire, info]} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN}/>
+        <Event type={type} description={description} info={[...parentDesire, info]} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN} explanation={explanation}/>
     )
 }
 

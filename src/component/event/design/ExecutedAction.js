@@ -5,22 +5,14 @@ import {Level} from "../../../model/Level";
 function ExecutedAction(props) {
 
     const type = "Executed action"
-    const intentionInfo = props.event.message.event.intentionInfo.value
     const deed = props.event.message.event.deedInfo
     let description
     let info = "Type: "
-    let intentionTrigger
-    let intentionId
-    let intention
+    const intentionInfo = props.event.message.event.intentionInfo.value ? props.event.message.event.intentionInfo.value : props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(deed.term)).message.event.intentionInfo
+    const intentionId = intentionInfo.id
+    const intentionTrigger = intentionInfo.intendedMeansInfo[0]
 
-    if (intentionInfo) {
-        intentionId = intentionInfo.id
-        intentionTrigger = intentionInfo.intendedMeansInfo[0].trigger
-    } else {
-        const intention = props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(deed.term)).message.event.intentionInfo;
-        intentionId = intention.id
-        intentionTrigger = intention.intendedMeansInfo[0].trigger
-    }
+    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intentionId)
 
     switch (deed.type) {
         case "addBel":
@@ -46,14 +38,14 @@ function ExecutedAction(props) {
             break;
     }
 
-    intention = "intention " + intentionId + " " + intentionTrigger
+    const intention = "intention " + intentionId + " " + intentionTrigger.plan.trigger
     description = description + deed.term + " because of " + intention
     info = info + deed.type
 
     if (deed.type !== "achieve" && !deed.type.includes("Bel")) {
         return (
             <Event type={type} description={description} info={info} timestamp={props.event.timestamp}
-                   filter={props.filter} log={props.log} level={Level.DESIGN}/>
+                   filter={props.filter} log={props.log} level={Level.DESIGN} explanation={explanation}/>
         )
     }
 }

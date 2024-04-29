@@ -14,6 +14,7 @@ function NewDesire(props) {
 
     let description = "I have a new desire " + functor
     let reason = " because it is an initial desire"
+    let explanation
     if (intention) {
         let im = intention.intendedMeansInfo
         if (im.length > 0) {
@@ -26,7 +27,8 @@ function NewDesire(props) {
                 reason = " because it is formed on the addition of a belief " + parent
             } else if (agentState.belief.percept.includes(parent)) {
                 reason = " because it is created from the perception of " + parent
-            } else {
+            } else { // parent-goal
+                explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intention.id)
                 reason = " because it is created from " + parent
             }
         }
@@ -35,7 +37,7 @@ function NewDesire(props) {
     }
 
     return (
-        <Event type={eventType} description={description + reason} info={info} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN}/>
+        <Event type={eventType} description={description + reason} info={info} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN} explanation={explanation}/>
     )
 }
 
