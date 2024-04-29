@@ -1,12 +1,12 @@
 export const agentState = {
-    intention: {},
+    intention: [],
     desire: {},
     speechAct: {tell: [], achieve: [], signal: []},
     belief: {self: [], percept: [], others: []}
 }
 
 export function resetState() {
-    agentState.intention = {}
+    agentState.intention = []
     agentState.belief = {self: [], percept: [], others: []}
     agentState.speechAct = {tell: [], achieve: [], signal: []}
     agentState.desire = {}
@@ -31,7 +31,7 @@ export function getIntentionReason(desire, intentionInfo) {
                 reason = " formed from the belief " + parent
             } else if (agentState.belief.percept.includes(parent)) {
                 reason = " created from the perception of " + parent
-            } else if (agentState.intention[id] && agentState.intention[id].includes(parent)) {
+            } else if (agentState.intention.includes(id + " " + parent)) {
                 reason = " created from intention " + id + " " + parent
 
             }
