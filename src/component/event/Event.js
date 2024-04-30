@@ -9,10 +9,7 @@ function Event(props) {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const handleShow = () => {
-        console.log(props.explanation)
-        setShow(true)
-    }
+    const handleShow = () => setShow(true)
 
     const description = [];
      const highlightMatchingText = (text, matchingText) => {

@@ -13,7 +13,6 @@ import GoalSuspended from "./implementation/goalEvent/GoalSuspended";
 import IntentionCreated from "./implementation/intentionEvent/IntentionCreated";
 import IntentionRemoved from "./implementation/intentionEvent/IntentionRemoved";
 import IntentionSuspended from "./implementation/intentionEvent/IntentionSuspended";
-import IntentionUpdated from "./implementation/intentionEvent/IntentionUpdated";
 import IntentionWaiting from "./implementation/intentionEvent/IntentionWaiting";
 import NewPercept from "./implementation/perceptEvent/NewPercept";
 import PlanRemoved from "./implementation/planEvent/PlanRemoved";
@@ -50,7 +49,6 @@ const EventMapping = {
     IntentionCreated: {implementation: <IntentionCreated/>, design: <DesireCommitted/>},
     IntentionRemoved: {implementation: <IntentionRemoved/>, design: <></>},
     IntentionSuspended: {implementation: <IntentionSuspended/>, design: <></>},
-    IntentionUpdated: {implementation: <IntentionUpdated/>, design: <></>},
     IntentionWaiting: {implementation: <IntentionWaiting/>, design: <></>},
     NewPercept: {implementation: <NewPercept/>, design: <></>},
     PlanAdded: {implementation: <PlanAdded/>, design: <></>},
