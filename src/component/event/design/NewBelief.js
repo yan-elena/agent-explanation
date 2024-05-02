@@ -34,10 +34,15 @@ function NewBelief(props) {
             agentState.belief.self.push(functor)
             break;
         case "percept":
-            const percept = props.log.slice(props.log.indexOf(props.event)).find(e => e.message.type === "NewPercept" && e.message.event.perceptInfo.functor === belief).message.event.perceptInfo;
-            reason = " because I perceived it" + (percept.artifactName ? " from " +  percept.artifactName : "")
-            info = percept.perceptType ? "Percept type: " + percept.perceptType : ""
-            agentState.belief.percept.push(functor)
+            const percept = props.log.slice(props.log.indexOf(props.event)).find(e => e.message.type === "NewPercept" && e.message.event.perceptInfo.functor === belief)
+            if (percept) {
+                const p = percept.message.event.perceptInfo;
+                reason = " because I perceived it" + (p.artifactName ? " from " +  p.artifactName : "")
+                info = p.perceptType ? "Percept type: " + p.perceptType : ""
+                agentState.belief.percept.push(functor)
+            } else {
+                reason = ""
+            }
             break;
         case "":
             reason = ""
