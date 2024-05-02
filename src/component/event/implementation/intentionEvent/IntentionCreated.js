@@ -21,5 +21,6 @@ function IntentionCreated(props) {
             </div>
         )
     }
+}
 
 export default IntentionCreated;
