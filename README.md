@@ -1,6 +1,6 @@
 # Narrative Generator Component
 
-This repository contains a prototype implementation of the **Narrative Generator** for our research project _A Multi-Level Explainability Framework for BDI Multi Agent Systems_. You access directly the deployed web application **[here](https://yan-elena.github.io/agent-explanation/)** without installing anything.
+This repository contains a prototype implementation of the **Narrative Generator** for our research project _A Multi-Level Explainability Framework for BDI Multi Agent Systems_. You can access directly the deployed web application **[here](https://yan-elena.github.io/agent-explanation/)** without installing anything.
 
 ## A Multi-Level Explainability Framework for Engineering and Understanding BDI Agent Systems
 
@@ -13,7 +13,9 @@ The primary levels of abstraction identified in this study are as follows:
 
 ## Usage
 
-Following the instructions presented in the **[Logger Component](https://github.com/yan-elena/agent-logging)** to generate the `log files` of your JaCaMo project.
+Try it out at **[https://yan-elena.github.io/agent-explanation](https://yan-elena.github.io/agent-explanation/)**.
+
+Following the instructions presented in the **[Logger Component](https://github.com/yan-elena/agent-logging)** to generate the `log files` of your Jason or JaCaMo project.
 Once you have the log files, you can upload them to the Home Page.
 
 <img src="https://github.com/yan-elena/agent-explanation/assets/78790594/2f3ba3c4-bd31-41ea-bd5f-ff588ee9824f" width=50%>
