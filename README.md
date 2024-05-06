@@ -15,14 +15,14 @@ The primary levels of abstraction identified in this study are as follows:
 
 1a. Try it out at **[https://yan-elena.github.io/agent-explanation](https://yan-elena.github.io/agent-explanation/)** without installing anything.
 
-1b. Or to use it locally, you need [Node.js](https://nodejs.org/en) and follow the instructions below.
+1b. If you wish to use it locally, you need [Node.js](https://nodejs.org/en) installed. Then you can follow the instructions below.
 Install all dependencies required with:
 
 ```
 npm install
 ```
 
-Start the React development server with:
+Start the react development dashboard with:
 
 ```
 npm start
