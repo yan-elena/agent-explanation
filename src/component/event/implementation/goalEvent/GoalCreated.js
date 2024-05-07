@@ -10,10 +10,16 @@ function GoalCreated(props) {
     const info = "State: " + state
 
     let description = "Goal " + functor + " created"
+    const intention = props.event.message.event.goalInfo.intention.value
+    let explanation
+    if (intention) {
+        explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.split("(")[0] === intention.intendedMeansInfo[0].trigger)
+        description += " from " + intention.trigger
+    }
 
     return (
         <div>
-            <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.IMPLEMENTATION}/>
+            <Event type={type} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.IMPLEMENTATION} explanation={explanation}/>
         </div>
     )
 }
