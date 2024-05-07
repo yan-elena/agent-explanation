@@ -5,10 +5,11 @@ import {Level} from "../../../../model/Level";
 function ExecutedDeed(props) {
 
     const deed = props.event.message.event.deedInfo
+    const intention = props.event.message.event.intentionInfo.value
     const type = "Executed deed"
     let description = "Deed "  + deed.term + " executed"
-    let info = "Type: " + deed.type
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && props.event.message.event.intentionInfo.value && e.message.event.goalInfo.intention.value.id === props.event.message.event.intentionInfo.value.id)
+    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && intention && e.message.event.goalInfo.goalFunctor === intention.trigger)
+    const info = "Type: " + deed.type + (intention ? ", Intention: " + intention.id + " " + intention.trigger : "")
 
     return (
         <div>
