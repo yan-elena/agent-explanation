@@ -18,7 +18,7 @@ export function getIntentionReason(desire, intentionInfo) {
     let reason = ""
 
     if (im.length > 0) {
-        let parent = im[0].trigger !== desire ? im[0].trigger : (im[1] ? im[1].trigger : "")
+        let parent = intentionInfo.trigger
 
         if (parent) {
             if (agentState.speechAct.signal.includes(parent)) {

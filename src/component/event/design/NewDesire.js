@@ -1,6 +1,5 @@
 import React from "react";
 import Event from "../Event";
-import {agentState} from "../../../model/agentState";
 import {Level} from "../../../model/Level";
 
 function NewDesire(props) {
@@ -13,27 +12,33 @@ function NewDesire(props) {
     const info = "State: " + state
 
     let description = "I have a new desire " + functor
-    let reason = " because it is an initial desire"
+    let reason = ""
     let explanation
-    if (intention) {
-        let im = intention.intendedMeansInfo
-        if (im.length > 0) {
-            const parent = im[0].trigger
-            if (agentState.speechAct.signal.includes(parent)) {
-                reason = " because it is created from the signal " + parent
-            } else if (agentState.speechAct.tell.includes(parent)) {
-                reason = " because it is created from " + parent + " tell message"
-            } else if (agentState.belief.self.includes(parent)) {
-                reason = " because it is formed on the addition of a belief " + parent
-            } else if (agentState.belief.percept.includes(parent)) {
-                reason = " because it is created from the perception of " + parent
-            } else { // parent-goal
-                explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intention.id)
-                reason = " because it is created from " + parent
+
+    if (source) {
+        if (source.includes("self")) {
+            if (intention) {
+                let im = intention.intendedMeansInfo
+                if (im.length > 0) {
+                    const parent = im[0].trigger
+                    const type = im[0].type
+
+                    if (type === "belief") {
+                        reason = " because I believe " + parent
+                    } else if (type === "achieve") {
+                        explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intention.id)
+                        reason = " because it is created from " + parent
+                    }
+                } else {
+                    reason = " because it is an initial desire "
+                }
+            }
+        } else { //speech act message
+            const speechAct = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "NewSpeechActMessage" && e.message.event.message.sender === source[0] && e.message.event.message.message === goalInfo.goalFunctor)
+            if (speechAct) {
+                reason = " because I received a " + speechAct.message.event.message.type + " message " + speechAct.message.event.message.message + " from the agent " + speechAct.message.event.message.sender
             }
         }
-    } else if (source && source !== "self" && agentState.speechAct.achieve.includes(functor)) {
-        reason = " created from agent " + source + " by an achieved message "
     }
 
     return (

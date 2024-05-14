@@ -31,7 +31,7 @@ function DesireRemoved(props) {
     let intentionInfo = "intention " + id + " " + functor.split('(')[0]
     if (result === "achieved") {
         type = "Desire satisfied";
-        description = "I have satisfied my desire " + functor + " because its " + intentionInfo + " has finished"
+        description = "I have satisfied my desire " + functor + " because its " + intentionInfo + " finished"
     } else if (result === "failed") {
         type = "Desire dropped";
         description = "I gave up desire " + functor + "  because its " + intentionInfo + " failed"
