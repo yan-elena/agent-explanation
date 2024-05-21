@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": 1694697127264,
+    "timestamp": 1715089220146,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -15,9 +15,9 @@
     }
   },
   {
-    "timestamp": 1694697127268,
+    "timestamp": 1715089220153,
     "message": {
-      "type": "BeliefFromSrcAdded",
+      "type": "BeliefAdded",
       "event": {
         "beliefInfo": {
           "literal": "last_order_id(1)",
@@ -42,34 +42,7 @@
     }
   },
   {
-    "timestamp": 1694697127270,
-    "message": {
-      "type": "BeliefAdded",
-      "event": {
-        "beliefInfo": {
-          "literal": "last_order_id(1)",
-          "functor": "last_order_id",
-          "operator": "+",
-          "perceptType": {
-            "value": null
-          },
-          "source": {
-            "value": [
-              "self"
-            ]
-          },
-          "terms": {
-            "value": [
-              "1"
-            ]
-          }
-        }
-      },
-      "log": "Added belief last_order_id(1)"
-    }
-  },
-  {
-    "timestamp": 1694697127273,
+    "timestamp": 1715089220160,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -84,7 +57,7 @@
     }
   },
   {
-    "timestamp": 1694697127275,
+    "timestamp": 1715089220161,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -99,7 +72,7 @@
     }
   },
   {
-    "timestamp": 1694697127277,
+    "timestamp": 1715089220162,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -114,7 +87,7 @@
     }
   },
   {
-    "timestamp": 1694697127279,
+    "timestamp": 1715089220164,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -129,7 +102,7 @@
     }
   },
   {
-    "timestamp": 1694697127281,
+    "timestamp": 1715089220167,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -144,7 +117,7 @@
     }
   },
   {
-    "timestamp": 1694697127283,
+    "timestamp": 1715089220169,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -159,7 +132,7 @@
     }
   },
   {
-    "timestamp": 1694697127285,
+    "timestamp": 1715089220170,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -174,7 +147,7 @@
     }
   },
   {
-    "timestamp": 1694697127287,
+    "timestamp": 1715089220173,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -189,7 +162,7 @@
     }
   },
   {
-    "timestamp": 1694697127289,
+    "timestamp": 1715089220176,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -204,7 +177,7 @@
     }
   },
   {
-    "timestamp": 1694697127291,
+    "timestamp": 1715089220178,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -219,7 +192,7 @@
     }
   },
   {
-    "timestamp": 1694697127293,
+    "timestamp": 1715089220180,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -234,7 +207,7 @@
     }
   },
   {
-    "timestamp": 1694697127295,
+    "timestamp": 1715089220181,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -249,7 +222,7 @@
     }
   },
   {
-    "timestamp": 1694697127298,
+    "timestamp": 1715089220182,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -264,7 +237,7 @@
     }
   },
   {
-    "timestamp": 1694697127300,
+    "timestamp": 1715089220183,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -279,7 +252,7 @@
     }
   },
   {
-    "timestamp": 1694697127303,
+    "timestamp": 1715089220186,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -294,7 +267,7 @@
     }
   },
   {
-    "timestamp": 1694697127307,
+    "timestamp": 1715089220188,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -309,7 +282,7 @@
     }
   },
   {
-    "timestamp": 1694697127309,
+    "timestamp": 1715089220189,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -324,7 +297,7 @@
     }
   },
   {
-    "timestamp": 1694697127311,
+    "timestamp": 1715089220193,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -339,7 +312,7 @@
     }
   },
   {
-    "timestamp": 1694697127313,
+    "timestamp": 1715089220194,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -354,7 +327,7 @@
     }
   },
   {
-    "timestamp": 1694697127316,
+    "timestamp": 1715089220197,
     "message": {
       "type": "PlanAdded",
       "event": {
@@ -369,9 +342,9 @@
     }
   },
   {
-    "timestamp": 1694697127320,
+    "timestamp": 1715089220200,
     "message": {
-      "type": "BeliefFromSrcAdded",
+      "type": "BeliefAdded",
       "event": {
         "beliefInfo": {
           "literal": "kqml::clear_source_self([],[])",
@@ -397,13 +370,537 @@
     }
   },
   {
-    "timestamp": 1694697127322,
+    "timestamp": 1715089220209,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 1
+      },
+      "log": "New reasoning cycle started: 1"
+    }
+  },
+  {
+    "timestamp": 1715089220274,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 2
+      },
+      "log": "New reasoning cycle started: 2"
+    }
+  },
+  {
+    "timestamp": 1715089220432,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 3
+      },
+      "log": "New reasoning cycle started: 3"
+    }
+  },
+  {
+    "timestamp": 1715089220684,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 4
+      },
+      "log": "New reasoning cycle started: 4"
+    }
+  },
+  {
+    "timestamp": 1715089221038,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 5
+      },
+      "log": "New reasoning cycle started: 5"
+    }
+  },
+  {
+    "timestamp": 1715089221503,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 6
+      },
+      "log": "New reasoning cycle started: 6"
+    }
+  },
+  {
+    "timestamp": 1715089222062,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 7
+      },
+      "log": "New reasoning cycle started: 7"
+    }
+  },
+  {
+    "timestamp": 1715089222718,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 8
+      },
+      "log": "New reasoning cycle started: 8"
+    }
+  },
+  {
+    "timestamp": 1715089223473,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 9
+      },
+      "log": "New reasoning cycle started: 9"
+    }
+  },
+  {
+    "timestamp": 1715089224330,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 10
+      },
+      "log": "New reasoning cycle started: 10"
+    }
+  },
+  {
+    "timestamp": 1715089225289,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 11
+      },
+      "log": "New reasoning cycle started: 11"
+    }
+  },
+  {
+    "timestamp": 1715089226343,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 12
+      },
+      "log": "New reasoning cycle started: 12"
+    }
+  },
+  {
+    "timestamp": 1715089227402,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 13
+      },
+      "log": "New reasoning cycle started: 13"
+    }
+  },
+  {
+    "timestamp": 1715089228458,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 14
+      },
+      "log": "New reasoning cycle started: 14"
+    }
+  },
+  {
+    "timestamp": 1715089229266,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 15
+      },
+      "log": "New reasoning cycle started: 15"
+    }
+  },
+  {
+    "timestamp": 1715089229281,
+    "message": {
+      "type": "MailBoxMessages",
+      "event": {
+        "messages": [
+          {
+            "id": "mid10",
+            "type": "achieve",
+            "sender": "robot",
+            "receiver": "supermarket",
+            "message": "order(beer,5)"
+          }
+        ]
+      },
+      "log": "Messages in mailbox: \n\tachieve message from robot: order(beer,5)"
+    }
+  },
+  {
+    "timestamp": 1715089229288,
+    "message": {
+      "type": "SelectedMessage",
+      "event": {
+        "selected": {
+          "id": "mid10",
+          "type": "achieve",
+          "sender": "robot",
+          "receiver": "supermarket",
+          "message": "order(beer,5)"
+        }
+      },
+      "log": "Selected Message: order(beer,5)"
+    }
+  },
+  {
+    "timestamp": 1715089229288,
+    "message": {
+      "type": "NewSpeechActMessage",
+      "event": {
+        "message": {
+          "id": "mid10",
+          "type": "achieve",
+          "sender": "robot",
+          "receiver": "supermarket",
+          "message": "order(beer,5)"
+        }
+      },
+      "log": "New speech act message [achieve] from robot: order(beer,5)"
+    }
+  },
+  {
+    "timestamp": 1715089229298,
+    "message": {
+      "type": "GoalCreated",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "order(beer,5)",
+          "source": {
+            "value": [
+              "robot"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "pending",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal order(beer,5) created"
+    }
+  },
+  {
+    "timestamp": 1715089229305,
+    "message": {
+      "type": "SelectPlanEvent",
+      "event": {
+        "event": "order(beer,5)[source(robot)]",
+        "planOptions": [
+          {
+            "label": "p__18",
+            "trigger": "order(Product,Qtd)[source(Ag)]",
+            "context": "",
+            "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+          }
+        ],
+        "selectedPlan": {
+          "label": "p__18",
+          "trigger": "order(Product,Qtd)[source(Ag)]",
+          "context": "",
+          "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+        }
+      },
+      "log": "Plan options for order(beer,5)[source(robot)] are: \n\t@p__18 order(Product,Qtd)[source(Ag)] \u003c- ?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId)).\nThe plan selected for order(beer,5)[source(robot)] is @p__18"
+    }
+  },
+  {
+    "timestamp": 1715089229313,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "order(beer,5)",
+          "source": {
+            "value": [
+              "robot"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Plan order(beer,5) selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1715089229327,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 13,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer}",
+              "currentStep": {
+                "value": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 13 order(Product,Qtd)[source(Ag)] created, state: undefined\n\tcurrent step: ?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089229334,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 13,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, N\u003d1}",
+              "currentStep": {
+                "value": "(OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 13 order(Product,Qtd)[source(Ag)] created, state: undefined\n\tcurrent step: (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089229342,
+    "message": {
+      "type": "ExecutedDeed",
+      "event": {
+        "deedInfo": {
+          "term": "last_order_id(N)",
+          "type": "test",
+          "srcInfo": "file:src/agt/supermarket.asl:5"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 13,
+            "state": "undefined",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, N\u003d1}",
+                "currentStep": {
+                  "value": "(OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        }
+      },
+      "log": "Deed last_order_id(N) of type test executed - from file:src/agt/supermarket.asl:5"
+    }
+  },
+  {
+    "timestamp": 1715089229348,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 16
+      },
+      "log": "New reasoning cycle started: 16"
+    }
+  },
+  {
+    "timestamp": 1715089229349,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 13,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+              "currentStep": {
+                "value": "-+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 13 order(Product,Qtd)[source(Ag)] created, state: undefined\n\tcurrent step: -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089229350,
+    "message": {
+      "type": "ExecutedDeed",
+      "event": {
+        "deedInfo": {
+          "term": "(OrderId \u003d (N+1))",
+          "type": "constraint",
+          "srcInfo": "file:src/agt/supermarket.asl:6"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 13,
+            "state": "undefined",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+                "currentStep": {
+                  "value": "-+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        }
+      },
+      "log": "Deed (OrderId \u003d (N+1)) of type constraint executed - from file:src/agt/supermarket.asl:6"
+    }
+  },
+  {
+    "timestamp": 1715089229361,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 17
+      },
+      "log": "New reasoning cycle started: 17"
+    }
+  },
+  {
+    "timestamp": 1715089229368,
+    "message": {
+      "type": "BeliefFromSrcRemoved",
+      "event": {
+        "beliefInfo": {
+          "literal": "last_order_id(1)",
+          "functor": "last_order_id",
+          "operator": "-",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "1"
+            ]
+          }
+        }
+      },
+      "log": "Removed  source: [self] from belief last_order_id(1)"
+    }
+  },
+  {
+    "timestamp": 1715089229376,
+    "message": {
+      "type": "BeliefRemoved",
+      "event": {
+        "beliefInfo": {
+          "literal": "last_order_id(1)",
+          "functor": "last_order_id",
+          "operator": "-",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "1"
+            ]
+          }
+        }
+      },
+      "log": "Removed belief last_order_id(1)"
+    }
+  },
+  {
+    "timestamp": 1715089229378,
     "message": {
       "type": "BeliefAdded",
       "event": {
         "beliefInfo": {
-          "literal": "kqml::clear_source_self([],[])",
-          "functor": "clear_source_self",
+          "literal": "last_order_id(2)",
+          "functor": "last_order_id",
           "operator": "+",
           "perceptType": {
             "value": null
@@ -415,133 +912,2571 @@
           },
           "terms": {
             "value": [
-              "[]",
-              "[]"
+              "2"
             ]
           }
         }
       },
-      "log": "Added belief kqml::clear_source_self([],[])"
+      "log": "Added belief last_order_id(2) from source: [self]"
     }
   },
   {
-    "timestamp": 1694697127351,
+    "timestamp": 1715089229378,
     "message": {
-      "type": "ReasoningCycleStarted",
+      "type": "ExecutedDeed",
       "event": {
-        "cycleNumber": 1
+        "deedInfo": {
+          "term": "last_order_id(OrderId)",
+          "type": "delAddBel",
+          "srcInfo": "file:src/agt/supermarket.asl:7"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 13,
+            "state": "undefined",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, _69\u003d1, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+                "currentStep": {
+                  "value": "-+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        }
       },
-      "log": "New reasoning cycle started: 1"
+      "log": "Deed last_order_id(OrderId) of type delAddBel executed - from file:src/agt/supermarket.asl:7"
     }
   },
   {
-    "timestamp": 1694697127424,
+    "timestamp": 1715089229379,
     "message": {
       "type": "ReasoningCycleStarted",
       "event": {
-        "cycleNumber": 2
+        "cycleNumber": 18
       },
-      "log": "New reasoning cycle started: 2"
+      "log": "New reasoning cycle started: 18"
     }
   },
   {
-    "timestamp": 1694697127578,
+    "timestamp": 1715089229379,
     "message": {
-      "type": "ReasoningCycleStarted",
+      "type": "IntentionCreated",
       "event": {
-        "cycleNumber": 3
+        "intentionInfo": {
+          "id": 13,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, _69\u003d1, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+              "currentStep": {
+                "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
       },
-      "log": "New reasoning cycle started: 3"
+      "log": "Intention 13 order(Product,Qtd)[source(Ag)] created, state: running\n\tcurrent step: deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
     }
   },
   {
-    "timestamp": 1694697127831,
+    "timestamp": 1715089229382,
     "message": {
-      "type": "ReasoningCycleStarted",
+      "type": "IntentionWaiting",
       "event": {
-        "cycleNumber": 4
+        "intentionInfo": {
+          "id": 13,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, _69\u003d1, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+              "currentStep": {
+                "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": {
+            "reason": "action(deliver(beer,5))",
+            "functor": {
+              "value": "action"
+            },
+            "terms": {
+              "value": [
+                "deliver(beer,5)"
+              ]
+            }
+          }
+        }
       },
-      "log": "New reasoning cycle started: 4"
+      "log": "Intention 13 order(Product,Qtd)[source(Ag)] waiting to execute action deliver(beer,5), state: running\n\tcurrent step: deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
     }
   },
   {
-    "timestamp": 1694697128186,
+    "timestamp": 1715089229384,
     "message": {
-      "type": "ReasoningCycleStarted",
+      "type": "ExternalActionTriggered",
       "event": {
-        "cycleNumber": 5
+        "action": {
+          "term": "deliver(beer,5)",
+          "source": "file:src/agt/supermarket.asl:8",
+          "intention": {
+            "id": 13,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, _69\u003d1, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+                "currentStep": {
+                  "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        },
+        "intentionInfo": {
+          "id": 13,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, _69\u003d1, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+              "currentStep": {
+                "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        }
       },
-      "log": "New reasoning cycle started: 5"
+      "log": "Execute action deliver(beer,5) from file:src/agt/supermarket.asl:8"
     }
   },
   {
-    "timestamp": 1694697128642,
+    "timestamp": 1715089229384,
     "message": {
-      "type": "ReasoningCycleStarted",
+      "type": "ExternalActionFinished",
       "event": {
-        "cycleNumber": 6
+        "deedInfo": {
+          "term": "deliver(Product,Qtd)",
+          "type": "action",
+          "srcInfo": "file:src/agt/supermarket.asl:8"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 13,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, _69\u003d1, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+                "currentStep": {
+                  "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        }
       },
-      "log": "New reasoning cycle started: 6"
+      "log": "Action deliver(Product,Qtd) finished"
     }
   },
   {
-    "timestamp": 1694697129198,
+    "timestamp": 1715089229546,
     "message": {
       "type": "ReasoningCycleStarted",
       "event": {
-        "cycleNumber": 7
+        "cycleNumber": 19
       },
-      "log": "New reasoning cycle started: 7"
+      "log": "New reasoning cycle started: 19"
     }
   },
   {
-    "timestamp": 1694697129849,
+    "timestamp": 1715089229800,
     "message": {
       "type": "ReasoningCycleStarted",
       "event": {
-        "cycleNumber": 8
+        "cycleNumber": 20
       },
-      "log": "New reasoning cycle started: 8"
+      "log": "New reasoning cycle started: 20"
     }
   },
   {
-    "timestamp": 1694697130601,
+    "timestamp": 1715089230158,
     "message": {
       "type": "ReasoningCycleStarted",
       "event": {
-        "cycleNumber": 9
+        "cycleNumber": 21
       },
-      "log": "New reasoning cycle started: 9"
+      "log": "New reasoning cycle started: 21"
     }
   },
   {
-    "timestamp": 1694697131452,
+    "timestamp": 1715089230614,
     "message": {
       "type": "ReasoningCycleStarted",
       "event": {
-        "cycleNumber": 10
+        "cycleNumber": 22
       },
-      "log": "New reasoning cycle started: 10"
+      "log": "New reasoning cycle started: 22"
     }
   },
   {
-    "timestamp": 1694697132404,
+    "timestamp": 1715089231168,
     "message": {
       "type": "ReasoningCycleStarted",
       "event": {
-        "cycleNumber": 11
+        "cycleNumber": 23
       },
-      "log": "New reasoning cycle started: 11"
+      "log": "New reasoning cycle started: 23"
     }
   },
   {
-    "timestamp": 1694697133459,
+    "timestamp": 1715089231824,
     "message": {
       "type": "ReasoningCycleStarted",
       "event": {
-        "cycleNumber": 12
+        "cycleNumber": 24
       },
-      "log": "New reasoning cycle started: 12"
+      "log": "New reasoning cycle started: 24"
+    }
+  },
+  {
+    "timestamp": 1715089232580,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 25
+      },
+      "log": "New reasoning cycle started: 25"
+    }
+  },
+  {
+    "timestamp": 1715089233433,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 26
+      },
+      "log": "New reasoning cycle started: 26"
+    }
+  },
+  {
+    "timestamp": 1715089233490,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 27
+      },
+      "log": "New reasoning cycle started: 27"
+    }
+  },
+  {
+    "timestamp": 1715089233492,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 13,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, _69\u003d1, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+              "currentStep": {
+                "value": ".send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 13 order(Product,Qtd)[source(Ag)] created, state: running\n\tcurrent step: .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089233498,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "order(beer,5)",
+          "source": {
+            "value": [
+              "robot"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": {
+            "reason": "action executed(deliver(beer,5))",
+            "functor": {
+              "value": "action_executed"
+            },
+            "terms": {
+              "value": [
+                "deliver(beer,5)"
+              ]
+            }
+          }
+        }
+      },
+      "log": "Plan order(beer,5) selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1715089233501,
+    "message": {
+      "type": "SendMessage",
+      "event": {
+        "messageInfo": {
+          "id": "mid17",
+          "type": "tell",
+          "sender": "supermarket",
+          "receiver": "robot",
+          "message": "delivered(beer,5,2)"
+        }
+      },
+      "log": "Send tell message to robot: delivered(beer,5,2)"
+    }
+  },
+  {
+    "timestamp": 1715089233509,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 13,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, _69\u003d1, Ag\u003drobot, Product\u003dbeer, OrderId\u003d2, N\u003d1}",
+              "currentStep": {
+                "value": null
+              },
+              "isFinished": true
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 13 order(Product,Qtd)[source(Ag)] created, state: running\n\tcurrent step: finished"
+    }
+  },
+  {
+    "timestamp": 1715089233519,
+    "message": {
+      "type": "GoalRemoved",
+      "event": {
+        "result": "achieved",
+        "goalInfo": {
+          "goalFunctor": "order(beer,5)",
+          "source": {
+            "value": [
+              "robot"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 13,
+              "state": "running",
+              "intendedMeansInfo": [],
+              "trigger": ""
+            }
+          }
+        },
+        "goalStates": "finished",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal order(beer,5) removed because the goal is achieved"
+    }
+  },
+  {
+    "timestamp": 1715089233528,
+    "message": {
+      "type": "IntentionRemoved",
+      "event": {
+        "intentionInfo": {
+          "id": 13,
+          "state": "running",
+          "intendedMeansInfo": [],
+          "trigger": ""
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 13 removed , state: running"
+    }
+  },
+  {
+    "timestamp": 1715089233536,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".send(Ag,tell,delivered(Product,Qtd,OrderId))",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/supermarket.asl:9"
+        },
+        "intentionInfo": {
+          "value": null
+        }
+      },
+      "log": "Internal action .send(Ag,tell,delivered(Product,Qtd,OrderId)) finished"
+    }
+  },
+  {
+    "timestamp": 1715089233696,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 28
+      },
+      "log": "New reasoning cycle started: 28"
+    }
+  },
+  {
+    "timestamp": 1715089233953,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 29
+      },
+      "log": "New reasoning cycle started: 29"
+    }
+  },
+  {
+    "timestamp": 1715089234316,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 30
+      },
+      "log": "New reasoning cycle started: 30"
+    }
+  },
+  {
+    "timestamp": 1715089234772,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 31
+      },
+      "log": "New reasoning cycle started: 31"
+    }
+  },
+  {
+    "timestamp": 1715089235330,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 32
+      },
+      "log": "New reasoning cycle started: 32"
+    }
+  },
+  {
+    "timestamp": 1715089235994,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 33
+      },
+      "log": "New reasoning cycle started: 33"
+    }
+  },
+  {
+    "timestamp": 1715089236753,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 34
+      },
+      "log": "New reasoning cycle started: 34"
+    }
+  },
+  {
+    "timestamp": 1715089237605,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 35
+      },
+      "log": "New reasoning cycle started: 35"
+    }
+  },
+  {
+    "timestamp": 1715089238565,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 36
+      },
+      "log": "New reasoning cycle started: 36"
+    }
+  },
+  {
+    "timestamp": 1715089239625,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 37
+      },
+      "log": "New reasoning cycle started: 37"
+    }
+  },
+  {
+    "timestamp": 1715089240681,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 38
+      },
+      "log": "New reasoning cycle started: 38"
+    }
+  },
+  {
+    "timestamp": 1715089241734,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 39
+      },
+      "log": "New reasoning cycle started: 39"
+    }
+  },
+  {
+    "timestamp": 1715089242791,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 40
+      },
+      "log": "New reasoning cycle started: 40"
+    }
+  },
+  {
+    "timestamp": 1715089243849,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 41
+      },
+      "log": "New reasoning cycle started: 41"
+    }
+  },
+  {
+    "timestamp": 1715089244913,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 42
+      },
+      "log": "New reasoning cycle started: 42"
+    }
+  },
+  {
+    "timestamp": 1715089245971,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 43
+      },
+      "log": "New reasoning cycle started: 43"
+    }
+  },
+  {
+    "timestamp": 1715089247028,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 44
+      },
+      "log": "New reasoning cycle started: 44"
+    }
+  },
+  {
+    "timestamp": 1715089248080,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 45
+      },
+      "log": "New reasoning cycle started: 45"
+    }
+  },
+  {
+    "timestamp": 1715089249144,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 46
+      },
+      "log": "New reasoning cycle started: 46"
+    }
+  },
+  {
+    "timestamp": 1715089250210,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 47
+      },
+      "log": "New reasoning cycle started: 47"
+    }
+  },
+  {
+    "timestamp": 1715089251272,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 48
+      },
+      "log": "New reasoning cycle started: 48"
+    }
+  },
+  {
+    "timestamp": 1715089252333,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 49
+      },
+      "log": "New reasoning cycle started: 49"
+    }
+  },
+  {
+    "timestamp": 1715089253391,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 50
+      },
+      "log": "New reasoning cycle started: 50"
+    }
+  },
+  {
+    "timestamp": 1715089254446,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 51
+      },
+      "log": "New reasoning cycle started: 51"
+    }
+  },
+  {
+    "timestamp": 1715089255506,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 52
+      },
+      "log": "New reasoning cycle started: 52"
+    }
+  },
+  {
+    "timestamp": 1715089256557,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 53
+      },
+      "log": "New reasoning cycle started: 53"
+    }
+  },
+  {
+    "timestamp": 1715089257619,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 54
+      },
+      "log": "New reasoning cycle started: 54"
+    }
+  },
+  {
+    "timestamp": 1715089258693,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 55
+      },
+      "log": "New reasoning cycle started: 55"
+    }
+  },
+  {
+    "timestamp": 1715089259750,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 56
+      },
+      "log": "New reasoning cycle started: 56"
+    }
+  },
+  {
+    "timestamp": 1715089260816,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 57
+      },
+      "log": "New reasoning cycle started: 57"
+    }
+  },
+  {
+    "timestamp": 1715089261882,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 58
+      },
+      "log": "New reasoning cycle started: 58"
+    }
+  },
+  {
+    "timestamp": 1715089262945,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 59
+      },
+      "log": "New reasoning cycle started: 59"
+    }
+  },
+  {
+    "timestamp": 1715089264003,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 60
+      },
+      "log": "New reasoning cycle started: 60"
+    }
+  },
+  {
+    "timestamp": 1715089265067,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 61
+      },
+      "log": "New reasoning cycle started: 61"
+    }
+  },
+  {
+    "timestamp": 1715089266123,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 62
+      },
+      "log": "New reasoning cycle started: 62"
+    }
+  },
+  {
+    "timestamp": 1715089267184,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 63
+      },
+      "log": "New reasoning cycle started: 63"
+    }
+  },
+  {
+    "timestamp": 1715089268250,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 64
+      },
+      "log": "New reasoning cycle started: 64"
+    }
+  },
+  {
+    "timestamp": 1715089269314,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 65
+      },
+      "log": "New reasoning cycle started: 65"
+    }
+  },
+  {
+    "timestamp": 1715089270372,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 66
+      },
+      "log": "New reasoning cycle started: 66"
+    }
+  },
+  {
+    "timestamp": 1715089271429,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 67
+      },
+      "log": "New reasoning cycle started: 67"
+    }
+  },
+  {
+    "timestamp": 1715089272500,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 68
+      },
+      "log": "New reasoning cycle started: 68"
+    }
+  },
+  {
+    "timestamp": 1715089273563,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 69
+      },
+      "log": "New reasoning cycle started: 69"
+    }
+  },
+  {
+    "timestamp": 1715089274619,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 70
+      },
+      "log": "New reasoning cycle started: 70"
+    }
+  },
+  {
+    "timestamp": 1715089275683,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 71
+      },
+      "log": "New reasoning cycle started: 71"
+    }
+  },
+  {
+    "timestamp": 1715089276756,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 72
+      },
+      "log": "New reasoning cycle started: 72"
+    }
+  },
+  {
+    "timestamp": 1715089277579,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 73
+      },
+      "log": "New reasoning cycle started: 73"
+    }
+  },
+  {
+    "timestamp": 1715089277603,
+    "message": {
+      "type": "MailBoxMessages",
+      "event": {
+        "messages": [
+          {
+            "id": "mid44",
+            "type": "achieve",
+            "sender": "robot",
+            "receiver": "supermarket",
+            "message": "order(beer,5)"
+          }
+        ]
+      },
+      "log": "Messages in mailbox: \n\tachieve message from robot: order(beer,5)"
+    }
+  },
+  {
+    "timestamp": 1715089277644,
+    "message": {
+      "type": "SelectedMessage",
+      "event": {
+        "selected": {
+          "id": "mid44",
+          "type": "achieve",
+          "sender": "robot",
+          "receiver": "supermarket",
+          "message": "order(beer,5)"
+        }
+      },
+      "log": "Selected Message: order(beer,5)"
+    }
+  },
+  {
+    "timestamp": 1715089277669,
+    "message": {
+      "type": "NewSpeechActMessage",
+      "event": {
+        "message": {
+          "id": "mid44",
+          "type": "achieve",
+          "sender": "robot",
+          "receiver": "supermarket",
+          "message": "order(beer,5)"
+        }
+      },
+      "log": "New speech act message [achieve] from robot: order(beer,5)"
+    }
+  },
+  {
+    "timestamp": 1715089277699,
+    "message": {
+      "type": "GoalCreated",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "order(beer,5)",
+          "source": {
+            "value": [
+              "robot"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "pending",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal order(beer,5) created"
+    }
+  },
+  {
+    "timestamp": 1715089277725,
+    "message": {
+      "type": "SelectPlanEvent",
+      "event": {
+        "event": "order(beer,5)[source(robot)]",
+        "planOptions": [
+          {
+            "label": "p__18",
+            "trigger": "order(Product,Qtd)[source(Ag)]",
+            "context": "",
+            "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+          }
+        ],
+        "selectedPlan": {
+          "label": "p__18",
+          "trigger": "order(Product,Qtd)[source(Ag)]",
+          "context": "",
+          "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+        }
+      },
+      "log": "Plan options for order(beer,5)[source(robot)] are: \n\t@p__18 order(Product,Qtd)[source(Ag)] \u003c- ?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId)).\nThe plan selected for order(beer,5)[source(robot)] is @p__18"
+    }
+  },
+  {
+    "timestamp": 1715089277750,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "order(beer,5)",
+          "source": {
+            "value": [
+              "robot"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Plan order(beer,5) selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1715089277779,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 40,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer}",
+              "currentStep": {
+                "value": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 40 order(Product,Qtd)[source(Ag)] created, state: undefined\n\tcurrent step: ?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089277820,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 40,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, N\u003d2}",
+              "currentStep": {
+                "value": "(OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 40 order(Product,Qtd)[source(Ag)] created, state: undefined\n\tcurrent step: (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089277845,
+    "message": {
+      "type": "ExecutedDeed",
+      "event": {
+        "deedInfo": {
+          "term": "last_order_id(N)",
+          "type": "test",
+          "srcInfo": "file:src/agt/supermarket.asl:5"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 40,
+            "state": "undefined",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, N\u003d2}",
+                "currentStep": {
+                  "value": "(OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        }
+      },
+      "log": "Deed last_order_id(N) of type test executed - from file:src/agt/supermarket.asl:5"
+    }
+  },
+  {
+    "timestamp": 1715089277845,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 74
+      },
+      "log": "New reasoning cycle started: 74"
+    }
+  },
+  {
+    "timestamp": 1715089277876,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 40,
+          "state": "undefined",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, N\u003d2}",
+              "currentStep": {
+                "value": "-+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 40 order(Product,Qtd)[source(Ag)] created, state: undefined\n\tcurrent step: -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089277901,
+    "message": {
+      "type": "ExecutedDeed",
+      "event": {
+        "deedInfo": {
+          "term": "(OrderId \u003d (N+1))",
+          "type": "constraint",
+          "srcInfo": "file:src/agt/supermarket.asl:6"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 40,
+            "state": "undefined",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, N\u003d2}",
+                "currentStep": {
+                  "value": "-+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        }
+      },
+      "log": "Deed (OrderId \u003d (N+1)) of type constraint executed - from file:src/agt/supermarket.asl:6"
+    }
+  },
+  {
+    "timestamp": 1715089277926,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 75
+      },
+      "log": "New reasoning cycle started: 75"
+    }
+  },
+  {
+    "timestamp": 1715089277931,
+    "message": {
+      "type": "BeliefFromSrcRemoved",
+      "event": {
+        "beliefInfo": {
+          "literal": "last_order_id(2)",
+          "functor": "last_order_id",
+          "operator": "-",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "2"
+            ]
+          }
+        }
+      },
+      "log": "Removed  source: [self] from belief last_order_id(2)"
+    }
+  },
+  {
+    "timestamp": 1715089277932,
+    "message": {
+      "type": "BeliefRemoved",
+      "event": {
+        "beliefInfo": {
+          "literal": "last_order_id(2)",
+          "functor": "last_order_id",
+          "operator": "-",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "2"
+            ]
+          }
+        }
+      },
+      "log": "Removed belief last_order_id(2)"
+    }
+  },
+  {
+    "timestamp": 1715089277934,
+    "message": {
+      "type": "BeliefAdded",
+      "event": {
+        "beliefInfo": {
+          "literal": "last_order_id(3)",
+          "functor": "last_order_id",
+          "operator": "+",
+          "perceptType": {
+            "value": null
+          },
+          "source": {
+            "value": [
+              "self"
+            ]
+          },
+          "terms": {
+            "value": [
+              "3"
+            ]
+          }
+        }
+      },
+      "log": "Added belief last_order_id(3) from source: [self]"
+    }
+  },
+  {
+    "timestamp": 1715089277934,
+    "message": {
+      "type": "ExecutedDeed",
+      "event": {
+        "deedInfo": {
+          "term": "last_order_id(OrderId)",
+          "type": "delAddBel",
+          "srcInfo": "file:src/agt/supermarket.asl:7"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 40,
+            "state": "undefined",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, _97\u003d2, N\u003d2}",
+                "currentStep": {
+                  "value": "-+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        }
+      },
+      "log": "Deed last_order_id(OrderId) of type delAddBel executed - from file:src/agt/supermarket.asl:7"
+    }
+  },
+  {
+    "timestamp": 1715089277935,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 76
+      },
+      "log": "New reasoning cycle started: 76"
+    }
+  },
+  {
+    "timestamp": 1715089277937,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 40,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, _97\u003d2, N\u003d2}",
+              "currentStep": {
+                "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 40 order(Product,Qtd)[source(Ag)] created, state: running\n\tcurrent step: deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089277939,
+    "message": {
+      "type": "IntentionWaiting",
+      "event": {
+        "intentionInfo": {
+          "id": 40,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, _97\u003d2, N\u003d2}",
+              "currentStep": {
+                "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": {
+            "reason": "action(deliver(beer,5))",
+            "functor": {
+              "value": "action"
+            },
+            "terms": {
+              "value": [
+                "deliver(beer,5)"
+              ]
+            }
+          }
+        }
+      },
+      "log": "Intention 40 order(Product,Qtd)[source(Ag)] waiting to execute action deliver(beer,5), state: running\n\tcurrent step: deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089277942,
+    "message": {
+      "type": "ExternalActionTriggered",
+      "event": {
+        "action": {
+          "term": "deliver(beer,5)",
+          "source": "file:src/agt/supermarket.asl:8",
+          "intention": {
+            "id": 40,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, _97\u003d2, N\u003d2}",
+                "currentStep": {
+                  "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        },
+        "intentionInfo": {
+          "id": 40,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, _97\u003d2, N\u003d2}",
+              "currentStep": {
+                "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        }
+      },
+      "log": "Execute action deliver(beer,5) from file:src/agt/supermarket.asl:8"
+    }
+  },
+  {
+    "timestamp": 1715089277943,
+    "message": {
+      "type": "ExternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": "deliver(Product,Qtd)",
+          "type": "action",
+          "srcInfo": "file:src/agt/supermarket.asl:8"
+        },
+        "intentionInfo": {
+          "value": {
+            "id": 40,
+            "state": "running",
+            "intendedMeansInfo": [
+              {
+                "trigger": "order",
+                "type": "achieve",
+                "plan": {
+                  "label": "p__18",
+                  "trigger": "order(Product,Qtd)[source(Ag)]",
+                  "context": "",
+                  "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, _97\u003d2, N\u003d2}",
+                "currentStep": {
+                  "value": "deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+                },
+                "isFinished": false
+              }
+            ],
+            "trigger": "order(Product,Qtd)[source(Ag)]"
+          }
+        }
+      },
+      "log": "Action deliver(Product,Qtd) finished"
+    }
+  },
+  {
+    "timestamp": 1715089278121,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 77
+      },
+      "log": "New reasoning cycle started: 77"
+    }
+  },
+  {
+    "timestamp": 1715089278402,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 78
+      },
+      "log": "New reasoning cycle started: 78"
+    }
+  },
+  {
+    "timestamp": 1715089278768,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 79
+      },
+      "log": "New reasoning cycle started: 79"
+    }
+  },
+  {
+    "timestamp": 1715089279239,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 80
+      },
+      "log": "New reasoning cycle started: 80"
+    }
+  },
+  {
+    "timestamp": 1715089279803,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 81
+      },
+      "log": "New reasoning cycle started: 81"
+    }
+  },
+  {
+    "timestamp": 1715089280468,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 82
+      },
+      "log": "New reasoning cycle started: 82"
+    }
+  },
+  {
+    "timestamp": 1715089281224,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 83
+      },
+      "log": "New reasoning cycle started: 83"
+    }
+  },
+  {
+    "timestamp": 1715089282053,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 84
+      },
+      "log": "New reasoning cycle started: 84"
+    }
+  },
+  {
+    "timestamp": 1715089282056,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 40,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, _97\u003d2, N\u003d2}",
+              "currentStep": {
+                "value": ".send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "isFinished": false
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 40 order(Product,Qtd)[source(Ag)] created, state: running\n\tcurrent step: .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+    }
+  },
+  {
+    "timestamp": 1715089282058,
+    "message": {
+      "type": "PlanSelected",
+      "event": {
+        "goalInfo": {
+          "goalFunctor": "order(beer,5)",
+          "source": {
+            "value": [
+              "robot"
+            ]
+          },
+          "intention": {
+            "value": null
+          }
+        },
+        "goalStates": "executing",
+        "reasonInfo": {
+          "value": {
+            "reason": "action executed(deliver(beer,5))",
+            "functor": {
+              "value": "action_executed"
+            },
+            "terms": {
+              "value": [
+                "deliver(beer,5)"
+              ]
+            }
+          }
+        }
+      },
+      "log": "Plan order(beer,5) selected, state: executing"
+    }
+  },
+  {
+    "timestamp": 1715089282060,
+    "message": {
+      "type": "SendMessage",
+      "event": {
+        "messageInfo": {
+          "id": "mid45",
+          "type": "tell",
+          "sender": "supermarket",
+          "receiver": "robot",
+          "message": "delivered(beer,5,3)"
+        }
+      },
+      "log": "Send tell message to robot: delivered(beer,5,3)"
+    }
+  },
+  {
+    "timestamp": 1715089282085,
+    "message": {
+      "type": "IntentionCreated",
+      "event": {
+        "intentionInfo": {
+          "id": 40,
+          "state": "running",
+          "intendedMeansInfo": [
+            {
+              "trigger": "order",
+              "type": "achieve",
+              "plan": {
+                "label": "p__18",
+                "trigger": "order(Product,Qtd)[source(Ag)]",
+                "context": "",
+                "body": "?last_order_id(N); (OrderId \u003d (N+1)); -+last_order_id(OrderId); deliver(Product,Qtd); .send(Ag,tell,delivered(Product,Qtd,OrderId))"
+              },
+              "unifier": "{Qtd\u003d5, Ag\u003drobot, Product\u003dbeer, OrderId\u003d3, _97\u003d2, N\u003d2}",
+              "currentStep": {
+                "value": null
+              },
+              "isFinished": true
+            }
+          ],
+          "trigger": "order(Product,Qtd)[source(Ag)]"
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 40 order(Product,Qtd)[source(Ag)] created, state: running\n\tcurrent step: finished"
+    }
+  },
+  {
+    "timestamp": 1715089282113,
+    "message": {
+      "type": "GoalRemoved",
+      "event": {
+        "result": "achieved",
+        "goalInfo": {
+          "goalFunctor": "order(beer,5)",
+          "source": {
+            "value": [
+              "robot"
+            ]
+          },
+          "intention": {
+            "value": {
+              "id": 40,
+              "state": "running",
+              "intendedMeansInfo": [],
+              "trigger": ""
+            }
+          }
+        },
+        "goalStates": "finished",
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Goal order(beer,5) removed because the goal is achieved"
+    }
+  },
+  {
+    "timestamp": 1715089282138,
+    "message": {
+      "type": "IntentionRemoved",
+      "event": {
+        "intentionInfo": {
+          "id": 40,
+          "state": "running",
+          "intendedMeansInfo": [],
+          "trigger": ""
+        },
+        "reasonInfo": {
+          "value": null
+        }
+      },
+      "log": "Intention 40 removed , state: running"
+    }
+  },
+  {
+    "timestamp": 1715089282163,
+    "message": {
+      "type": "InternalActionFinished",
+      "event": {
+        "deedInfo": {
+          "term": ".send(Ag,tell,delivered(Product,Qtd,OrderId))",
+          "type": "internalAction",
+          "srcInfo": "file:src/agt/supermarket.asl:9"
+        },
+        "intentionInfo": {
+          "value": null
+        }
+      },
+      "log": "Internal action .send(Ag,tell,delivered(Product,Qtd,OrderId)) finished"
+    }
+  },
+  {
+    "timestamp": 1715089282324,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 85
+      },
+      "log": "New reasoning cycle started: 85"
+    }
+  },
+  {
+    "timestamp": 1715089282588,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 86
+      },
+      "log": "New reasoning cycle started: 86"
+    }
+  },
+  {
+    "timestamp": 1715089282964,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 87
+      },
+      "log": "New reasoning cycle started: 87"
+    }
+  },
+  {
+    "timestamp": 1715089283432,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 88
+      },
+      "log": "New reasoning cycle started: 88"
+    }
+  },
+  {
+    "timestamp": 1715089283994,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 89
+      },
+      "log": "New reasoning cycle started: 89"
+    }
+  },
+  {
+    "timestamp": 1715089284674,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 90
+      },
+      "log": "New reasoning cycle started: 90"
+    }
+  },
+  {
+    "timestamp": 1715089285437,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 91
+      },
+      "log": "New reasoning cycle started: 91"
+    }
+  },
+  {
+    "timestamp": 1715089286318,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 92
+      },
+      "log": "New reasoning cycle started: 92"
+    }
+  },
+  {
+    "timestamp": 1715089287277,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 93
+      },
+      "log": "New reasoning cycle started: 93"
+    }
+  },
+  {
+    "timestamp": 1715089288352,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 94
+      },
+      "log": "New reasoning cycle started: 94"
+    }
+  },
+  {
+    "timestamp": 1715089289444,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 95
+      },
+      "log": "New reasoning cycle started: 95"
+    }
+  },
+  {
+    "timestamp": 1715089290510,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 96
+      },
+      "log": "New reasoning cycle started: 96"
+    }
+  },
+  {
+    "timestamp": 1715089291581,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 97
+      },
+      "log": "New reasoning cycle started: 97"
+    }
+  },
+  {
+    "timestamp": 1715089292646,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 98
+      },
+      "log": "New reasoning cycle started: 98"
+    }
+  },
+  {
+    "timestamp": 1715089293714,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 99
+      },
+      "log": "New reasoning cycle started: 99"
+    }
+  },
+  {
+    "timestamp": 1715089294768,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 100
+      },
+      "log": "New reasoning cycle started: 100"
+    }
+  },
+  {
+    "timestamp": 1715089295825,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 101
+      },
+      "log": "New reasoning cycle started: 101"
+    }
+  },
+  {
+    "timestamp": 1715089296901,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 102
+      },
+      "log": "New reasoning cycle started: 102"
+    }
+  },
+  {
+    "timestamp": 1715089297958,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 103
+      },
+      "log": "New reasoning cycle started: 103"
+    }
+  },
+  {
+    "timestamp": 1715089299025,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 104
+      },
+      "log": "New reasoning cycle started: 104"
+    }
+  },
+  {
+    "timestamp": 1715089300102,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 105
+      },
+      "log": "New reasoning cycle started: 105"
+    }
+  },
+  {
+    "timestamp": 1715089301155,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 106
+      },
+      "log": "New reasoning cycle started: 106"
+    }
+  },
+  {
+    "timestamp": 1715089302228,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 107
+      },
+      "log": "New reasoning cycle started: 107"
+    }
+  },
+  {
+    "timestamp": 1715089303306,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 108
+      },
+      "log": "New reasoning cycle started: 108"
+    }
+  },
+  {
+    "timestamp": 1715089304376,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 109
+      },
+      "log": "New reasoning cycle started: 109"
+    }
+  },
+  {
+    "timestamp": 1715089305450,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 110
+      },
+      "log": "New reasoning cycle started: 110"
+    }
+  },
+  {
+    "timestamp": 1715089306534,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 111
+      },
+      "log": "New reasoning cycle started: 111"
+    }
+  },
+  {
+    "timestamp": 1715089307612,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 112
+      },
+      "log": "New reasoning cycle started: 112"
+    }
+  },
+  {
+    "timestamp": 1715089308687,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 113
+      },
+      "log": "New reasoning cycle started: 113"
+    }
+  },
+  {
+    "timestamp": 1715089309750,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 114
+      },
+      "log": "New reasoning cycle started: 114"
+    }
+  },
+  {
+    "timestamp": 1715089310831,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 115
+      },
+      "log": "New reasoning cycle started: 115"
+    }
+  },
+  {
+    "timestamp": 1715089311918,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 116
+      },
+      "log": "New reasoning cycle started: 116"
+    }
+  },
+  {
+    "timestamp": 1715089312992,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 117
+      },
+      "log": "New reasoning cycle started: 117"
+    }
+  },
+  {
+    "timestamp": 1715089314061,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 118
+      },
+      "log": "New reasoning cycle started: 118"
+    }
+  },
+  {
+    "timestamp": 1715089315123,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 119
+      },
+      "log": "New reasoning cycle started: 119"
+    }
+  },
+  {
+    "timestamp": 1715089316197,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 120
+      },
+      "log": "New reasoning cycle started: 120"
+    }
+  },
+  {
+    "timestamp": 1715089317252,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 121
+      },
+      "log": "New reasoning cycle started: 121"
+    }
+  },
+  {
+    "timestamp": 1715089318309,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 122
+      },
+      "log": "New reasoning cycle started: 122"
+    }
+  },
+  {
+    "timestamp": 1715089319379,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 123
+      },
+      "log": "New reasoning cycle started: 123"
+    }
+  },
+  {
+    "timestamp": 1715089320465,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 124
+      },
+      "log": "New reasoning cycle started: 124"
+    }
+  },
+  {
+    "timestamp": 1715089321526,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 125
+      },
+      "log": "New reasoning cycle started: 125"
+    }
+  },
+  {
+    "timestamp": 1715089322587,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 126
+      },
+      "log": "New reasoning cycle started: 126"
+    }
+  },
+  {
+    "timestamp": 1715089323660,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 127
+      },
+      "log": "New reasoning cycle started: 127"
+    }
+  },
+  {
+    "timestamp": 1715089324735,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 128
+      },
+      "log": "New reasoning cycle started: 128"
+    }
+  },
+  {
+    "timestamp": 1715089325813,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 129
+      },
+      "log": "New reasoning cycle started: 129"
+    }
+  },
+  {
+    "timestamp": 1715089326883,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 130
+      },
+      "log": "New reasoning cycle started: 130"
+    }
+  },
+  {
+    "timestamp": 1715089327952,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 131
+      },
+      "log": "New reasoning cycle started: 131"
+    }
+  },
+  {
+    "timestamp": 1715089329039,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 132
+      },
+      "log": "New reasoning cycle started: 132"
+    }
+  },
+  {
+    "timestamp": 1715089330099,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 133
+      },
+      "log": "New reasoning cycle started: 133"
+    }
+  },
+  {
+    "timestamp": 1715089331161,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 134
+      },
+      "log": "New reasoning cycle started: 134"
+    }
+  },
+  {
+    "timestamp": 1715089332219,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 135
+      },
+      "log": "New reasoning cycle started: 135"
+    }
+  },
+  {
+    "timestamp": 1715089333295,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 136
+      },
+      "log": "New reasoning cycle started: 136"
+    }
+  },
+  {
+    "timestamp": 1715089334356,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 137
+      },
+      "log": "New reasoning cycle started: 137"
+    }
+  },
+  {
+    "timestamp": 1715089335441,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 138
+      },
+      "log": "New reasoning cycle started: 138"
+    }
+  },
+  {
+    "timestamp": 1715089336515,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 139
+      },
+      "log": "New reasoning cycle started: 139"
+    }
+  },
+  {
+    "timestamp": 1715089337594,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 140
+      },
+      "log": "New reasoning cycle started: 140"
+    }
+  },
+  {
+    "timestamp": 1715089338674,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 141
+      },
+      "log": "New reasoning cycle started: 141"
+    }
+  },
+  {
+    "timestamp": 1715089339773,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 142
+      },
+      "log": "New reasoning cycle started: 142"
+    }
+  },
+  {
+    "timestamp": 1715089340853,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 143
+      },
+      "log": "New reasoning cycle started: 143"
+    }
+  },
+  {
+    "timestamp": 1715089341929,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 144
+      },
+      "log": "New reasoning cycle started: 144"
+    }
+  },
+  {
+    "timestamp": 1715089342988,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 145
+      },
+      "log": "New reasoning cycle started: 145"
+    }
+  },
+  {
+    "timestamp": 1715089344079,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 146
+      },
+      "log": "New reasoning cycle started: 146"
+    }
+  },
+  {
+    "timestamp": 1715089345146,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 147
+      },
+      "log": "New reasoning cycle started: 147"
+    }
+  },
+  {
+    "timestamp": 1715089346228,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 148
+      },
+      "log": "New reasoning cycle started: 148"
+    }
+  },
+  {
+    "timestamp": 1715089347316,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 149
+      },
+      "log": "New reasoning cycle started: 149"
+    }
+  },
+  {
+    "timestamp": 1715089348386,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 150
+      },
+      "log": "New reasoning cycle started: 150"
+    }
+  },
+  {
+    "timestamp": 1715089349453,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 151
+      },
+      "log": "New reasoning cycle started: 151"
+    }
+  },
+  {
+    "timestamp": 1715089350509,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 152
+      },
+      "log": "New reasoning cycle started: 152"
+    }
+  },
+  {
+    "timestamp": 1715089351566,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 153
+      },
+      "log": "New reasoning cycle started: 153"
+    }
+  },
+  {
+    "timestamp": 1715089352649,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 154
+      },
+      "log": "New reasoning cycle started: 154"
+    }
+  },
+  {
+    "timestamp": 1715089353706,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 155
+      },
+      "log": "New reasoning cycle started: 155"
+    }
+  },
+  {
+    "timestamp": 1715089354760,
+    "message": {
+      "type": "ReasoningCycleStarted",
+      "event": {
+        "cycleNumber": 156
+      },
+      "log": "New reasoning cycle started: 156"
     }
   }
 ]
