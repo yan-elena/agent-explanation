@@ -36,24 +36,27 @@ Once you have the log files, you can upload them to the Home Page.
 
 3. At this point, you can select the level to inspect for each agent in the system.
 
-<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/ddfd0ca2-1475-4119-8c1a-c7ce318e5ed4" width=50%>
+<img src="https://github.com/yan-elena/domestic-robot-example/assets/78790594/954fe114-ba57-4b07-8e9b-8e6977c8f238" width=50%>
 
 ## Features
 
-**Narrative at Implementation Level**, which narrates every detail of the agent reasoning cycle:
+### Narrative at Implementation Level
+A detailed and technical level that follows Jason's operational semantics and reasoning cycle.
 
-<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/0bd9feb8-f056-4fae-bdbb-7925c5a48ab2" width=80%>
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/0bd9feb8-f056-4fae-bdbb-7925c5a48ab2" width=70%>
 
+### Narrative at Design Level
+A higher level that narrates the agent's decisions following its cognitive abstraction according to the Belief-Desire-Intention model.
 
-**Narrative at Design Level**, which narrates the agent's decisions following its cognitive abstraction according to the BDI model:
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/3d00b844-db84-485c-9494-d7199359208d" width=70%>
 
-<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/3d00b844-db84-485c-9494-d7199359208d" width=80%>
+### Explanation of a specific event
+Some events are associated with an explanation link to a previous event that caused it.
 
-**Explanation of a specific event**, some events are explained by a previous event that causes it :
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/8136e35b-8893-44d0-aa30-36d820cfca17" width=70%>
 
-<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/8136e35b-8893-44d0-aa30-36d820cfca17" width=80%>
-
-**Filtering function**, for visualise the entire life cycle of a particular event (e.g., goal or intention at the implementation level or desire at the design level)
+### Filter bar
+An interesting use of the filter bar is to visualise the entire life cycle of a particular event (e.g., goal or intention at the implementation level or desire at the design level).
 
 <img src="https://github.com/yan-elena/agent-explanation/assets/78790594/fcd2078f-c8ed-4aba-a428-df7f07493a57" width=80%>
 
