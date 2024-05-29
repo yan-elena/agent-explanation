@@ -9,12 +9,13 @@ function DesireCommitted(props) {
 
     const intention = props.event.message.event
     const desire = intention.intentionInfo.trigger
-    const selectedPlan = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "SelectPlanEvent" && e.message.event.selectedPlan.trigger === desire).message.event.selectedPlan
+    let selectedPlan = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "SelectPlanEvent" && e.message.event.selectedPlan.trigger === desire)
     const planSelected = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "PlanSelected" && e.message.event.goalInfo.goalFunctor === desire)
 
     const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === desire)
 
-    if (selectedPlan && planSelected) {
+    if (intention && selectedPlan && planSelected) {
+        selectedPlan = selectedPlan.message.event.selectedPlan
         const context = selectedPlan.context ? " because I believe " + selectedPlan.context.replace("&", "and").replace("|", "or") : ""
         const body = selectedPlan.body ? "Plan body: " + selectedPlan.body : ""
         const id = intention.intentionInfo.id
