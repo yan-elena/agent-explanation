@@ -60,7 +60,7 @@ const EventMapping = {
     MailBoxMessages: {implementation: <MailBoxMessages/>, design: <></>},
     NewSpeechActMessage: {implementation: <NewSpeechActMessage/>, design: <NewSpeechActMessage/>},
     SelectedMessage: {implementation: <SelectedMessage/>, design: <></>},
-    SendMessage: {implementation: <SendMessage/>, design: <SendMessage/>}
+    SendMessage: {implementation: <SendMessage/>, design: <ExecutedAction/>}
 };
 
 export default EventMapping;
