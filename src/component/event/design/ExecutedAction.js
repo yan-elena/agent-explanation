@@ -38,7 +38,7 @@ function ExecutedAction(props) {
             break;
     }
 
-    const intention = "intention " + intentionId + " " + intentionTrigger.plan.trigger
+    const intention = "intention int-" + intentionId + "-" + intentionTrigger.plan.trigger
     description = description + deed.term + " because of " + intention
     info = info + deed.type
 

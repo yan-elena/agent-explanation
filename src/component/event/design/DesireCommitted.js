@@ -19,10 +19,10 @@ function DesireCommitted(props) {
         const context = selectedPlan.context ? " because I believe " + selectedPlan.context.replace("&", "and").replace("|", "or") : ""
         const body = selectedPlan.body ? "Plan body: " + selectedPlan.body : ""
         const id = intention.intentionInfo.id
-        const description = "I committed to desire " + desire + context + ", and it became a new intention " + id + " " + intention.intentionInfo.trigger
+        const description = "I committed to desire " + desire + context + ", and it became a new intention int-" + id + "-" + intention.intentionInfo.trigger
 
         let reason = getIntentionReason(desire, intention.intentionInfo)
-        let parentDesire = reason ? ["Intention " + id + " " + desire + " is an intention " + reason, <br/>] : []
+        let parentDesire = reason ? ["Intention int-" + id + "-" + desire + " is an intention " + reason, <br/>] : []
 
         if (agentState.intention[id]) {
             agentState.intention[id].push(desire)

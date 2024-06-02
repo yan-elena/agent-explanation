@@ -17,7 +17,7 @@ function BDIBeliefRemoved(props) {
 
     if (intention) {
         const intentionInfo = intention.message.event.intentionInfo
-        reason = " because of intention " + intentionInfo.id + " " + intentionInfo.intendedMeansInfo[0].trigger
+        reason = " because of intention int-" + intentionInfo.id + "-" + intentionInfo.intendedMeansInfo[0].trigger
         explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intentionInfo.id)
     }
 

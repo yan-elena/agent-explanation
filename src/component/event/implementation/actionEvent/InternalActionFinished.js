@@ -8,7 +8,7 @@ function InternalActionFinished(props) {
     const intention = props.event.message.event.intentionInfo.value
     let description = "Internal action " + action.term + " finished"
     const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && intention && e.message.event.goalInfo.goalFunctor === intention.trigger)
-    const info = "Type: " + action.type + (intention ? ", Intention: " + intention.id + " " + intention.trigger : "")
+    const info = "Type: " + action.type + (intention ? ", Intention: int-" + intention.id + "-" + intention.trigger : "")
 
     return (
         <div>
