@@ -7,6 +7,7 @@ function ExecutedAction(props) {
     if (props.event.message.type === "SendMessage") {
         const message = props.event.message.event.messageInfo
         const description = "I sent a " + message.type + " message to " + message.receiver + ": " + message.message
+        const explanation = "" //todo
         return (
             <Event type={"Executed action"} description={description} info={""} timestamp={props.event.timestamp}
                    filter={props.filter} log={props.log} level={Level.DESIGN}/>
@@ -18,7 +19,8 @@ function ExecutedAction(props) {
         const intentionInfo = props.event.message.event.intentionInfo.value ? props.event.message.event.intentionInfo.value : props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(deed.term)).message.event.intentionInfo
         const intentionId = intentionInfo.id
         const intentionTrigger = intentionInfo.intendedMeansInfo[0]
-        const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intentionId)
+        //const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intentionId)
+        const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intentionTrigger.trigger))
 
         switch (deed.type) {
             case "addBel":
