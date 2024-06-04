@@ -20,13 +20,13 @@ function NewDesire(props) {
             if (intention) {
                 let im = intention.intendedMeansInfo
                 if (im.length > 0) {
-                    const parent = im[0].trigger
+                    const parent = im[0].plan.trigger
                     const type = im[0].type
 
                     if (type === "belief") {
                         reason = " because I believe " + parent
                     } else if (type === "achieve") {
-                        explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intention.id)
+                        explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(im[0].trigger))
                         reason = " because it is created from " + parent
                     }
                 } else {

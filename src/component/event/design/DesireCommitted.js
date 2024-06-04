@@ -16,8 +16,7 @@ function DesireCommitted(props) {
 
     if (source && source.includes("self")) {
         if (intention && intention.intendedMeansInfo.length > 0) {
-            console.log(intention.intendedMeansInfo)
-            parentDesire = "Goal " + goal + " is a goal created from " + intention.intendedMeansInfo[0].trigger
+            parentDesire = "Goal " + goal + " is a goal created from " + intention.intendedMeansInfo[0].plan.trigger
         }
     }
 
