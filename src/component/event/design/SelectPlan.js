@@ -15,8 +15,8 @@ function SelectPlan(props) {
     //
     //     }
     // } todo: check the type, because not all events for select plan are goal.
-    const goal = trigger.includes(")[") ? trigger.split(')[')[0]+")" : trigger
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === goal)
+    const goal = selectPlan.selectedPlan.trigger
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(selectPlan.event))]
 
     //description = description + goal + ") from: \n" + selectPlan.planOptions.map(p => "\t"+p.log).join("\n")
     const description = "I selected the plan @" + selectPlan.selectedPlan.label + " for " + (trigger.includes("error(no_applicable)") ? "the failure of" : "" ) + " goal " + goal
