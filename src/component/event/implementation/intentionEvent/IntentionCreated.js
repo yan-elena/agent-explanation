@@ -6,7 +6,7 @@ function IntentionCreated(props) {
 
     const im = props.event.message.event.intentionInfo.intendedMeansInfo
     const unifier = im[0].unifier
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === props.event.message.event.intentionInfo.trigger)
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === props.event.message.event.intentionInfo.trigger)]
 
     if (props.event.message.event.intentionInfo.state === "undefined") {
         return (

@@ -7,7 +7,7 @@ function ExternalActionFinished(props) {
     const intention = props.event.message.event.intentionInfo.value
     const type = "External Action Finished"
     let description = "External action "  + deed.term + " executed"
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && intention && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intention.id)
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && intention && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intention.id)]
     const info = "Type: external " + deed.type + (intention ? ", Intention: int-" + intention.id + "-" + intention.trigger : "")
 
     return (

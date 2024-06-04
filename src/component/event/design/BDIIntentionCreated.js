@@ -8,7 +8,7 @@ function BDIIntentionCreated(props) {
     const intention = event.message.event.intentionInfo
     const goal = intention.intendedMeansInfo[0].plan.trigger
     const id = "int-" + intention.id + "-" + goal
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intention.intendedMeansInfo[0].trigger))
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intention.intendedMeansInfo[0].trigger))]
     const selectPlan = props.log[props.log.indexOf(props.event)-1]
     const description = "I have a new intention " + id
 

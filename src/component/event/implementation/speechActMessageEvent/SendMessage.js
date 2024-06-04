@@ -5,7 +5,7 @@ import {Level} from "../../../../model/Level";
 function SendMessage(props) {
 
     const intention = props.event.message.event.intentionInfo.intendedMeansInfo[0].trigger
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intention))
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intention))]
 
     return (
         <div>

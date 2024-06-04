@@ -3,7 +3,7 @@ import Event from "../../Event";
 import {Level} from "../../../../model/Level";
 
 function SelectPlanEvent(props) {
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === props.event.message.event.event.split("[")[0])
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === props.event.message.event.event.split("[")[0])]
 
     return (
         <div>

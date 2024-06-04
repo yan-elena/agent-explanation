@@ -8,7 +8,7 @@ function ExecutedAction(props) {
         const message = props.event.message.event.messageInfo
         const description = "I sent a " + message.type + " message to " + message.receiver + ": " + message.message
         const intention = props.event.message.event.intentionInfo.intendedMeansInfo[0].trigger
-        const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intention))
+        const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intention))]
 
         return (
             <Event type={"Executed action"} description={description} info={""} timestamp={props.event.timestamp}
@@ -22,7 +22,7 @@ function ExecutedAction(props) {
         const intentionId = intentionInfo.id
         const intentionTrigger = intentionInfo.intendedMeansInfo[0]
         //const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === intentionId)
-        const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intentionTrigger.trigger))
+        const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(intentionTrigger.trigger))]
 
         switch (deed.type) {
             case "addBel":

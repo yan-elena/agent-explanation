@@ -9,7 +9,7 @@ function DesireRemoved(props) {
     const result = props.event.message.event.result
     const info = "Result: " + result + ", state: " + props.event.message.event.goalStates
 
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === functor)
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === functor)]
 
     let id
     let type

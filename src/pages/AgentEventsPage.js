@@ -23,7 +23,7 @@ function AgentEventsPage(props) {
             <MDBContainer xs={12} className="my-5">
                 <ul className="timeline">
                     {props.agent && props.agent.log.map((event, i) => (
-                        <li className="timeline-item mb-5" key={event.timestamp + "_" + i + 1}>
+                        <li className="timeline-item mb-5" key={event.timestamp + "_" + i++}>
                             {React.cloneElement(EventMapping[event.message.type][selectedLevel], {log: props.agent.log, event: event, filter: filter, level: selectedLevel})}
                         </li>
                     ))}

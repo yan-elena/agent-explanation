@@ -8,7 +8,7 @@ function ExecutedDeed(props) {
     const intention = props.event.message.event.intentionInfo.value
     const type = "Executed deed"
     let description = "Deed "  + deed.term + " executed"
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && intention && e.message.event.goalInfo.goalFunctor === intention.trigger)
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && intention && e.message.event.goalInfo.goalFunctor === intention.trigger)]
     const info = "Type: " + deed.type + (intention ? ", Intention: " + intention.id + " " + intention.trigger : "")
 
     return (

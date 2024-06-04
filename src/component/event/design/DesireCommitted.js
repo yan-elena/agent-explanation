@@ -11,7 +11,7 @@ function DesireCommitted(props) {
     const description = "I committed to desire " + goal + " and it becomes a goal"
     const source = goalInfo.source.value
     const intention = goalInfo.intention.value
-    const explanation = props.event
+    const explanation = [props.event]
     let parentDesire
 
     if (source && source.includes("self")) {

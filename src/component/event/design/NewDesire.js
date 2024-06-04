@@ -13,7 +13,7 @@ function NewDesire(props) {
 
     let description = "I have a new desire " + functor
     let reason = ""
-    let explanation
+    let explanation = []
 
     if (source) {
         if (source.includes("self")) {
@@ -26,7 +26,7 @@ function NewDesire(props) {
                     if (type === "belief") {
                         reason = " because I believe " + parent
                     } else if (type === "achieve") {
-                        explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(im[0].trigger))
+                        explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(im[0].trigger))]
                         reason = " because it is created from " + parent
                     }
                 } else {

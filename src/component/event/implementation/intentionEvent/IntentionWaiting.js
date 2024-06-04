@@ -3,7 +3,7 @@ import Event from "../../Event";
 import {Level} from "../../../../model/Level";
 
 function IntentionWaiting(props) {
-    const explanation = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === props.event.message.event.intentionInfo.id)
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.intention.value && e.message.event.goalInfo.intention.value.id === props.event.message.event.intentionInfo.id)]
 
     return (
         <div>
