@@ -1,6 +1,6 @@
 import React from "react";
 import Event from "../Event";
-import {agentState, getIntentionReason} from "../../../model/agentState";
+import {getIntentionReason} from "../../../model/agentState";
 import {Level} from "../../../model/Level";
 
 function DesireRemoved(props) {
@@ -24,17 +24,20 @@ function DesireRemoved(props) {
             let reason = getIntentionReason(functor, intention)
             parentDesire = reason ? ["Intention int-" + id + "-" + functor + " is an intention" + reason, <br/>] : []
         }
-    } else {
-        id = Object.keys(agentState.intention).find(key => agentState.intention[key].includes(functor))
     }
 
-    let intentionInfo = "intention int-" + id + "-" + functor.split('(')[0]
+    let intentionInfo = "intention int-" + id + "-" + functor.split(')[')[0]
     if (result === "achieved") {
-        type = "Desire satisfied";
+        type = "Desire Satisfied";
         description = "I have satisfied my desire " + functor + " because its " + intentionInfo + " finished"
     } else if (result === "failed") {
-        type = "Desire dropped";
-        description = "I gave up desire " + functor + "  because its " + intentionInfo + " failed"
+        type = "Goal Failed"; //todo: check
+        description = "I gave up the goal " + functor
+        if (intention) {
+            description += "  because its " + intentionInfo + " failed"
+        } else {
+            description += " because there was no applicable plan"
+        }
     }
 
     return (
