@@ -12,14 +12,16 @@ function EventExplanationPage(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <MDBContainer xs={12}>
-                            <div>
-                                {React.cloneElement(EventMapping[props.explanation.message.type][props.level], {
-                                    log: props.log,
-                                    event: props.explanation,
-                                    filter: "",
-                                    level: props.level
-                                })}
-                            </div>
+                            <ul className="timeline">
+                                <li className={"timeline-item mb-5"} key={props.explanation.timestamp}>
+                                    {React.cloneElement(EventMapping[props.explanation.message.type][props.level], {
+                                        log: props.log,
+                                        event: props.explanation,
+                                        filter: "",
+                                        level: props.level
+                                    })}
+                                </li>
+                            </ul>
                     </MDBContainer>
                 </Modal.Body>
             </Modal>
