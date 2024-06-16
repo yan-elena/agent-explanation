@@ -9,12 +9,11 @@ function GoalAchievedAndRemoved(props) {
     const result = props.event.message.event.result
     const info = "Result: " + result + ", state: " + props.event.message.event.goalStates
 
-    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor === functor)]
-
     let id
     let type
     let description
     let parentDesire = []
+    let explanation = []
 
     if (intention) {
         id = intention.id
@@ -24,6 +23,8 @@ function GoalAchievedAndRemoved(props) {
             let reason = getIntentionReason(functor, intention)
             parentDesire = reason ? ["Intention int-" + id + "-" + functor + " is an intention" + reason, <br/>] : []
         }
+        const intRemoved = props.log.slice(0, props.log.indexOf(props.event)+3).findLast(e => e.message.type === "IntentionRemoved" && e.message.event.intentionInfo.id === intention.id)
+        explanation = intRemoved !== undefined ? [intRemoved] : []
     }
 
     let intentionInfo = "int-" + id + "-" + functor.split(')[')[0]
