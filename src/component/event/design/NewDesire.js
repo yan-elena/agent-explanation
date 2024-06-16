@@ -11,7 +11,7 @@ function NewDesire(props) {
     const source = goalInfo.source.value
     const info = "State: " + state
 
-    let description = "I have a new desire " + functor
+    let description = "New goal adopted " + functor
     let reason = ""
     let explanation = []
 
@@ -24,21 +24,22 @@ function NewDesire(props) {
                     const type = im[0].type
 
                     if (type === "belief") {
-                        reason = " because I believe " + parent
+                        reason = " from " + parent
                     } else if (type === "achieve") {
                         explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(im[0].trigger))]
-                        reason = " because it is created from " + parent
+                        reason = " from " + parent
                     }
                 } else {
                     reason = " because it is an initial desire "
                 }
             }
-        } else { //speech act message
-            const speechAct = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "NewSpeechActMessage" && e.message.event.message.sender === source[0] && e.message.event.message.message === goalInfo.goalFunctor)
-            if (speechAct) {
-                reason = " because I received a " + speechAct.message.event.message.type + " message " + speechAct.message.event.message.message + " from the agent " + speechAct.message.event.message.sender
-            }
         }
+        // else { //speech act message
+        //     const speechAct = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "NewSpeechActMessage" && e.message.event.message.sender === source[0] && e.message.event.message.message === goalInfo.goalFunctor)
+        //     if (speechAct) {
+        //         reason = " because I received a " + speechAct.message.event.message.type + " message " + speechAct.message.event.message.message + " from the agent " + speechAct.message.event.message.sender
+        //     }
+        // }
     }
 
     return (
