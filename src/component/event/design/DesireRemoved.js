@@ -26,17 +26,18 @@ function DesireRemoved(props) {
         }
     }
 
-    let intentionInfo = "intention int-" + id + "-" + functor.split(')[')[0]
+    let intentionInfo = "int-" + id + "-" + functor.split(')[')[0]
     if (result === "achieved") {
-        type = "Desire Satisfied";
-        description = "I have satisfied my desire " + functor + " because its " + intentionInfo + " finished"
+        type = "Goal Achieved";
+        description = "The goal " + functor + " was achieved through intention " + intentionInfo
     } else if (result === "failed") {
-        type = "Goal Failed"; //todo: check
-        description = "I gave up the goal " + functor
+        type = "Goal Failed";
+        description = "The goal " + functor
         if (intention) {
-            description += "  because its " + intentionInfo + " failed"
+            description += "  was failed through intention" + intentionInfo
         } else {
-            description += " because there was no applicable plan"
+            type = "Goal Dropped"
+            description += " cannot be accomplished because there was no applicable plan"
         }
     }
 
