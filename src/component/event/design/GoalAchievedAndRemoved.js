@@ -3,7 +3,7 @@ import Event from "../Event";
 import {getIntentionReason} from "../../../model/agentState";
 import {Level} from "../../../model/Level";
 
-function DesireRemoved(props) {
+function GoalAchievedAndRemoved(props) {
     const functor = props.event.message.event.goalInfo.goalFunctor
     const intention = props.event.message.event.goalInfo.intention.value
     const result = props.event.message.event.result
@@ -46,4 +46,4 @@ function DesireRemoved(props) {
     )
 }
 
-export default DesireRemoved;
+export default GoalAchievedAndRemoved;

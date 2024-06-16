@@ -25,7 +25,7 @@ import NewSpeechActMessage from "./implementation/speechActMessageEvent/NewSpeec
 import SelectedMessage from "./implementation/speechActMessageEvent/SelectedMessage";
 import SendMessage from "./implementation/speechActMessageEvent/SendMessage";
 import PlanSelected from "./implementation/goalEvent/PlanSelected";
-import DesireRemoved from "./design/DesireRemoved";
+import GoalAchievedAndRemoved from "./design/GoalAchievedAndRemoved";
 import ActionExecuted from "./design/ActionExecuted";
 import NewBelief from "./design/NewBelief";
 import SelectPlan from "./design/SelectPlan";
@@ -43,7 +43,7 @@ const EventMapping = {
     BeliefFromSrcRemoved: {implementation: <BeliefFromSrcRemoved/>, design: <></>},
     BeliefRemoved: {implementation: <BeliefRemoved/>, design: <BDIBeliefRemoved/>},
     GoalCreated: {implementation: <GoalCreated/>, design: <NewGoal/>},
-    GoalRemoved: {implementation: <GoalRemoved/>, design: <DesireRemoved/>},
+    GoalRemoved: {implementation: <GoalRemoved/>, design: <GoalAchievedAndRemoved/>},
     GoalSuspended: {implementation: <GoalSuspended/>, design: <></>},
     PlanSelected: {implementation: <PlanSelected/>, design: <></>},
     IntentionCreated: {implementation: <IntentionCreated/>, design: <NewIntention/>},
