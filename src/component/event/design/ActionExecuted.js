@@ -7,7 +7,7 @@ function ActionExecuted(props) {
     if (props.event.message.type === "SendMessage") {
         const message = props.event.message.event.messageInfo
         const intendedMeansInfo = props.event.message.event.intentionInfo.intendedMeansInfo[0]
-        const description = "The action send message " + message.message + " to " + message.receiver + " was executed following the intention int-" + intendedMeansInfo.id + "-" + intendedMeansInfo.trigger
+        const description = "Action send message " + message.message + " to " + message.receiver + " was executed following the intention int-" + intendedMeansInfo.id + "-" + intendedMeansInfo.trigger
         const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(intendedMeansInfo.trigger))]
 
         return (
@@ -22,8 +22,8 @@ function ActionExecuted(props) {
         const intentionTrigger = intentionInfo.intendedMeansInfo[0]
         const explanation = [intention]
 
-        const int = "intention int-" + intentionId + "-" + intentionTrigger.plan.trigger
-        const description = "I executed action " + deed.term + " because of " + int
+        const int = "int-" + intentionId + "-" + intentionTrigger.plan.trigger
+        const description = "Action " + deed.term + " executed following the intention " + int
 
         if (deed.type !== "achieve" && !deed.type.includes("Bel")) {
             return (

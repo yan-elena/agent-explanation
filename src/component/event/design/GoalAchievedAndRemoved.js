@@ -29,12 +29,12 @@ function GoalAchievedAndRemoved(props) {
     let intentionInfo = "int-" + id + "-" + functor.split(')[')[0]
     if (result === "achieved") {
         type = "Goal Achieved";
-        description = "The goal " + functor + " was achieved through intention " + intentionInfo
+        description = "Goal " + functor + " achieved through intention " + intentionInfo
     } else if (result === "failed") {
         type = "Goal Failed";
-        description = "The goal " + functor
+        description = "Goal " + functor
         if (intention) {
-            description += "  was failed through intention" + intentionInfo
+            description += " failed through intention" + intentionInfo
         } else {
             type = "Goal Dropped"
             description += " cannot be accomplished because there was no applicable plan"
