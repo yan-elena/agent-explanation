@@ -28,7 +28,6 @@ import PlanSelected from "./implementation/goalEvent/PlanSelected";
 import GoalAchievedAndRemoved from "./design/GoalAchievedAndRemoved";
 import ActionExecuted from "./design/ActionExecuted";
 import NewBelief from "./design/NewBelief";
-import SelectPlan from "./design/SelectPlan";
 import BDIBeliefRemoved from "./design/BeliefRemoved";
 import NewIntention from "./design/NewIntention";
 import NewGoal from "./design/NewGoal";
@@ -53,12 +52,12 @@ const EventMapping = {
     NewPercept: {implementation: <NewPercept/>, design: <></>},
     PlanAdded: {implementation: <PlanAdded/>, design: <></>},
     PlanRemoved: {implementation: <PlanRemoved/>, design: <></>},
-    SelectPlanEvent: {implementation: <SelectPlanEvent/>, design: <SelectPlan/>},
+    SelectPlanEvent: {implementation: <SelectPlanEvent/>, design: <></>},
     ReasoningCycleStarted: {implementation: <ReasoningCycleStarted/>, design:  <></>},
     NewAgentSignal: {implementation: <NewAgentSignal/>, design: <></>},
-    NewArtifactSignal: {implementation: <NewArtifactSignal/>, design: <NewArtifactSignal/>},
+    NewArtifactSignal: {implementation: <NewArtifactSignal/>, design: <></>},
     MailBoxMessages: {implementation: <MailBoxMessages/>, design: <></>},
-    NewSpeechActMessage: {implementation: <NewSpeechActMessage/>, design: <NewSpeechActMessage/>},
+    NewSpeechActMessage: {implementation: <NewSpeechActMessage/>, design: <></>},
     SelectedMessage: {implementation: <SelectedMessage/>, design: <></>},
     SendMessage: {implementation: <SendMessage/>, design: <ActionExecuted/>}
 };
