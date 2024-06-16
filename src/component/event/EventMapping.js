@@ -31,6 +31,7 @@ import NewBelief from "./design/NewBelief";
 import BDIBeliefRemoved from "./design/BeliefRemoved";
 import NewIntention from "./design/NewIntention";
 import NewGoal from "./design/NewGoal";
+import IntentionAccomplishedFailed from "./design/IntentionAccomplishedFailed";
 
 const EventMapping = {
     ExecutedDeed: {implementation: <ExecutedDeed/>, design: <></>},
@@ -46,7 +47,7 @@ const EventMapping = {
     GoalSuspended: {implementation: <GoalSuspended/>, design: <></>},
     PlanSelected: {implementation: <PlanSelected/>, design: <></>},
     IntentionCreated: {implementation: <IntentionCreated/>, design: <NewIntention/>},
-    IntentionRemoved: {implementation: <IntentionRemoved/>, design: <></>},
+    IntentionRemoved: {implementation: <IntentionRemoved/>, design: <IntentionAccomplishedFailed/>},
     IntentionSuspended: {implementation: <IntentionSuspended/>, design: <></>},
     IntentionWaiting: {implementation: <IntentionWaiting/>, design: <></>},
     NewPercept: {implementation: <NewPercept/>, design: <></>},
