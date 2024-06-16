@@ -1,6 +1,6 @@
 import React from "react";
 import Event from "../Event";
-import {agentState, getCycleEvents} from "../../../model/agentState";
+import {getCycleEvents} from "../../../model/agentState";
 import {Level} from "../../../model/Level";
 
 function NewBelief(props) {
@@ -13,8 +13,7 @@ function NewBelief(props) {
     const beliefDeed = cycleEvents.find(e => e.message.type === "ExecutedDeed" && e.message.event.deedInfo.type.includes("Bel") && e.message.event.deedInfo.term.includes(functor));
     let eventType = "New Belief"
     let description
-    let reason
-    let info
+    let reason = ""
     let intention
 
     switch (String(source)) {
@@ -27,19 +26,14 @@ function NewBelief(props) {
                     const intentionEvent = props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(belief)).message.event.intentionInfo;
                     intention = intentionEvent.id + " " + intentionEvent.intendedMeansInfo[0].trigger
                 }
-                reason = " because of intention " + intention
-            } else {
-                reason = " because I noted it in my mind for future reference"
+                reason = " from " + intention
             }
-            agentState.belief.self.push(functor)
             break;
         case "percept":
             const percept = props.log.slice(props.log.indexOf(props.event)).find(e => e.message.type === "NewPercept" && e.message.event.perceptInfo.functor === belief)
             if (percept) {
                 const p = percept.message.event.perceptInfo;
-                reason = " because I perceived it" + (p.artifactName ? " from " +  p.artifactName : "")
-                info = p.perceptType ? "Percept type: " + p.perceptType : ""
-                agentState.belief.percept.push(functor)
+                reason = " from " + (p.artifactName ? " from " +  p.artifactName : "perception")
             } else {
                 reason = ""
             }
@@ -48,27 +42,22 @@ function NewBelief(props) {
             reason = ""
             break;
         default:
-            reason = " because " + source + " told me"
-            if (agentState.belief.others[source]) {
-                agentState.belief.others[source].push(functor)
-            } else {
-                agentState.belief.others[source] = [functor]
-            }
+            reason = " from " + source
             break;
     }
 
     let beliefRemoved = cycleEvents.find(e => e.message.type === "BeliefRemoved" && e.message.event.beliefInfo.functor === functor);
     if (beliefRemoved) {
         eventType = "Belief Updated"
-        description = "I updated the belief " + beliefRemoved.message.event.beliefInfo.literal + " to " + belief + " " + reason
+        description = "Belief updated from " + beliefRemoved.message.event.beliefInfo.literal + " to " + belief
     }
 
     if (!description) {
-        description = "I believe " + belief + reason
+        description = "New Belief " + belief + reason
     }
 
     return (
-        <Event type={eventType} description={description} info={info} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN}/>
+        <Event type={eventType} description={description} timestamp={props.event.timestamp} filter={props.filter} log={props.log} level={Level.DESIGN}/>
     )
 }
 
