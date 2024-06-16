@@ -26,7 +26,7 @@ import SelectedMessage from "./implementation/speechActMessageEvent/SelectedMess
 import SendMessage from "./implementation/speechActMessageEvent/SendMessage";
 import PlanSelected from "./implementation/goalEvent/PlanSelected";
 import DesireRemoved from "./design/DesireRemoved";
-import ExecutedAction from "./design/ExecutedAction";
+import ActionExecuted from "./design/ActionExecuted";
 import NewBelief from "./design/NewBelief";
 import SelectPlan from "./design/SelectPlan";
 import BDIBeliefRemoved from "./design/BeliefRemoved";
@@ -35,7 +35,7 @@ import NewGoal from "./design/NewGoal";
 
 const EventMapping = {
     ExecutedDeed: {implementation: <ExecutedDeed/>, design: <></>},
-    ExternalActionFinished: {implementation: <ExternalActionFinished/>, design: <ExecutedAction/>},
+    ExternalActionFinished: {implementation: <ExternalActionFinished/>, design: <ActionExecuted/>},
     ExternalActionTriggered: {implementation: <ExternalActionTriggered/>, design: <></>},
     InternalActionFinished: {implementation: <InternalActionFinished/>, design: <></>},
     BeliefAdded: {implementation: <BeliefAdded/>, design: <NewBelief/>},
@@ -60,7 +60,7 @@ const EventMapping = {
     MailBoxMessages: {implementation: <MailBoxMessages/>, design: <></>},
     NewSpeechActMessage: {implementation: <NewSpeechActMessage/>, design: <NewSpeechActMessage/>},
     SelectedMessage: {implementation: <SelectedMessage/>, design: <></>},
-    SendMessage: {implementation: <SendMessage/>, design: <ExecutedAction/>}
+    SendMessage: {implementation: <SendMessage/>, design: <ActionExecuted/>}
 };
 
 export default EventMapping;

@@ -2,8 +2,8 @@ import React from "react";
 import Event from "../Event";
 import {Level} from "../../../model/Level";
 
-function ExecutedAction(props) {
-    const type = "Action executed"
+function ActionExecuted(props) {
+    const type = "Action Executed"
     if (props.event.message.type === "SendMessage") {
         const message = props.event.message.event.messageInfo
         const intendedMeansInfo = props.event.message.event.intentionInfo.intendedMeansInfo[0]
@@ -34,4 +34,4 @@ function ExecutedAction(props) {
     }
 }
 
-export default ExecutedAction;
+export default ActionExecuted;
