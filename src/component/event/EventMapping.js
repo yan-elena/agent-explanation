@@ -34,10 +34,10 @@ import NewIntention from "./design/NewIntention";
 import NewGoal from "./design/NewGoal";
 
 const EventMapping = {
-    ExecutedDeed: {implementation: <ExecutedDeed/>, design: <ExecutedAction/>},
+    ExecutedDeed: {implementation: <ExecutedDeed/>, design: <></>},
     ExternalActionFinished: {implementation: <ExternalActionFinished/>, design: <ExecutedAction/>},
     ExternalActionTriggered: {implementation: <ExternalActionTriggered/>, design: <></>},
-    InternalActionFinished: {implementation: <InternalActionFinished/>, design: <ExecutedAction/>},
+    InternalActionFinished: {implementation: <InternalActionFinished/>, design: <></>},
     BeliefAdded: {implementation: <BeliefAdded/>, design: <NewBelief/>},
     BeliefFromSrcAdded: {implementation: <BeliefFromSrcAdded/>, design: <></>},
     BeliefFromSrcRemoved: {implementation: <BeliefFromSrcRemoved/>, design: <></>},
