@@ -2,8 +2,8 @@ import React from "react";
 import Event from "../Event";
 import {Level} from "../../../model/Level";
 
-function NewDesire(props) {
-    const eventType = "New Desire"
+function NewGoal(props) {
+    const eventType = "New Goal"
     const goalInfo = props.event.message.event.goalInfo
     const functor = goalInfo.goalFunctor
     const intention = goalInfo.intention.value
@@ -29,8 +29,6 @@ function NewDesire(props) {
                         explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalCreated" && e.message.event.goalInfo.goalFunctor.includes(im[0].trigger))]
                         reason = " from " + parent
                     }
-                } else {
-                    reason = " because it is an initial desire "
                 }
             }
         }
@@ -47,4 +45,4 @@ function NewDesire(props) {
     )
 }
 
-export default NewDesire;
+export default NewGoal;
