@@ -9,6 +9,7 @@ function IntentionAccomplishedFailed(props) {
     let type
 
     const goalRemoved = props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "GoalRemoved" && e.message.event.goalInfo.intention.value.id === id)
+    const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "ExternalActionFinished")]
 
     if (goalRemoved) {
         const goal = goalRemoved.message.event.goalInfo.goalFunctor
@@ -25,7 +26,7 @@ function IntentionAccomplishedFailed(props) {
 
         return (
             <Event type={type} description={description} timestamp={props.event.timestamp} filter={props.filter}
-                   log={props.log} level={Level.DESIGN} />
+                   log={props.log} level={Level.DESIGN} explanation={explanation} />
         )
     }
 }
