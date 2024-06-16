@@ -10,10 +10,12 @@ function ActionExecuted(props) {
         const description = "Action send message " + message.message + " to " + message.receiver + " was executed following the intention int-" + intendedMeansInfo.id + "-" + intendedMeansInfo.trigger
         const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(intendedMeansInfo.trigger))]
 
-        return (
-            <Event type={"Executed action"} description={description} info={""} timestamp={props.event.timestamp}
-                   filter={props.filter} log={props.log} level={Level.DESIGN} explanation={explanation}/>
-        )
+        if (!intendedMeansInfo.trigger.includes("kqml")) {
+            return (
+                <Event type={"Executed action"} description={description} info={""} timestamp={props.event.timestamp}
+                       filter={props.filter} log={props.log} level={Level.DESIGN} explanation={explanation}/>
+            )
+        }
     } else {
         const deed = props.event.message.event.deedInfo
         const intention = props.log.slice(0, props.log.indexOf(props.event)).find(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(deed.term))
@@ -25,7 +27,7 @@ function ActionExecuted(props) {
         const int = "int-" + intentionId + "-" + intentionTrigger.plan.trigger
         const description = "Action " + deed.term + " executed following the intention " + int
 
-        if (deed.type !== "achieve" && !deed.type.includes("Bel")) {
+        if (!int.includes("kqml") && deed.type !== "achieve" && !deed.type.includes("Bel")) {
             return (
                 <Event type={type} description={description} timestamp={props.event.timestamp}
                        filter={props.filter} log={props.log} level={Level.DESIGN} explanation={explanation}/>

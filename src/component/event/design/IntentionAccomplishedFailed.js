@@ -13,21 +13,24 @@ function IntentionAccomplishedFailed(props) {
 
     if (goalRemoved) {
         const goal = goalRemoved.message.event.goalInfo.goalFunctor
-        const im = goalRemoved.message.event.goalInfo.intention.value.intendedMeansInfo[0]
-        description += "int-" + id + "-" + goal
-        if (goalRemoved.message.event.result === "achieved") {
-            type = "Intention Accomplished"
-            description += " accomplished for goal "
-        } else {
-            type = "Intention Failed"
-            description += "failed to accomplish goal "
-        }
-        description += goal + (im ? " using plan " + im.plan.label : "")
 
-        return (
-            <Event type={type} description={description} timestamp={props.event.timestamp} filter={props.filter}
-                   log={props.log} level={Level.DESIGN} explanation={explanation} />
-        )
+        if (!goal.includes("kqml")) {
+            const im = goalRemoved.message.event.goalInfo.intention.value.intendedMeansInfo[0]
+            description += "int-" + id + "-" + goal
+            if (goalRemoved.message.event.result === "achieved") {
+                type = "Intention Accomplished"
+                description += " accomplished for goal "
+            } else {
+                type = "Intention Failed"
+                description += "failed to accomplish goal "
+            }
+            description += goal + (im ? " using plan " + im.plan.label : "")
+
+            return (
+                <Event type={type} description={description} timestamp={props.event.timestamp} filter={props.filter}
+                       log={props.log} level={Level.DESIGN} explanation={explanation}/>
+            )
+        }
     }
 }
 

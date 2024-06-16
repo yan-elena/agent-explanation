@@ -10,13 +10,15 @@ function NewIntention(props) {
     const id = "int-" + intention.id + "-" + goal
     const selectPlan = props.log.slice(props.log.indexOf(props.event)-5, props.log.indexOf(props.event)).findLast(e => e.message.type === "SelectPlanEvent" && e.message.event.selectedPlan.trigger.includes(goal))
 
-    if (selectPlan) {
-        const description = "New intention " + id + " for goal " + goal + " using plan " + selectPlan.message.event.selectedPlan.label
+    if (!goal.includes("kqml")) {
+        if (selectPlan) {
+            const description = "New intention " + id + " for goal " + goal + " using plan " + selectPlan.message.event.selectedPlan.label
 
-        return (
-            <Event type={type} description={description} timestamp={props.event.timestamp} filter={props.filter}
-                   log={props.log} level={Level.DESIGN}/>
-        )
+            return (
+                <Event type={type} description={description} timestamp={props.event.timestamp} filter={props.filter}
+                       log={props.log} level={Level.DESIGN}/>
+            )
+        }
     }
 }
 
