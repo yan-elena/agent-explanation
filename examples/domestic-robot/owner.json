@@ -647,41 +647,6 @@
     }
   },
   {
-    "timestamp": 1717513230944,
-    "message": {
-      "type": "IntentionCreated",
-      "event": {
-        "intentionInfo": {
-          "id": 1,
-          "state": "undefined",
-          "intendedMeansInfo": [
-            {
-              "trigger": "get",
-              "type": "achieve",
-              "plan": {
-                "label": "p__11",
-                "trigger": "get(beer)",
-                "context": "",
-                "body": ".send(robot,achieve,has(owner,beer))",
-                "log": "\t@p__11 get(beer) \u003c- .send(robot,achieve,has(owner,beer))."
-              },
-              "unifier": "{}",
-              "currentStep": {
-                "value": null
-              },
-              "isFinished": true
-            }
-          ],
-          "trigger": "get(beer)"
-        },
-        "reasonInfo": {
-          "value": null
-        }
-      },
-      "log": "Intention 1 get(beer) created, state: undefined\n\tcurrent step: finished"
-    }
-  },
-  {
     "timestamp": 1717513230947,
     "message": {
       "type": "GoalRemoved",
