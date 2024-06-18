@@ -12,7 +12,7 @@ function NewIntention(props) {
 
     if (!goal.includes("kqml")) {
         if (selectPlan) {
-            const description = "New intention " + id + " for goal " + goal + " using plan " + selectPlan.message.event.selectedPlan.label
+            const description = "New intention " + id + " created for goal " + goal + " using plan " + selectPlan.message.event.selectedPlan.label
 
             return (
                 <Event type={type} description={description} timestamp={props.event.timestamp} filter={props.filter}

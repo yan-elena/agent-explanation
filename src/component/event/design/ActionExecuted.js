@@ -6,13 +6,13 @@ function ActionExecuted(props) {
     const type = "Action Executed"
     if (props.event.message.type === "SendMessage") {
         const message = props.event.message.event.messageInfo
-        const intendedMeansInfo = props.event.message.event.intentionInfo.intendedMeansInfo[0]
-        const description = "Action send message " + message.message + " to " + message.receiver + " was executed following the intention int-" + intendedMeansInfo.id + "-" + intendedMeansInfo.trigger
-        const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "IntentionCreated" && e.message.event.intentionInfo.intendedMeansInfo[0].plan.body.includes(intendedMeansInfo.trigger))]
+        const intentionInfo = props.event.message.event.intentionInfo
+        const description = "Action send message " + message.message + " to " + message.receiver + " was executed following the intention int-" + intentionInfo.id + "-" + intentionInfo.trigger
+        const explanation = [props.log.slice(0, props.log.indexOf(props.event)).findLast(e => e.message.type === "IntentionCreated" && intentionInfo.id === props.event.message.event.intentionInfo.id )]
 
-        if (!intendedMeansInfo.trigger.includes("kqml")) {
+        if (!intentionInfo.trigger.includes("kqml")) {
             return (
-                <Event type={"Executed action"} description={description} info={""} timestamp={props.event.timestamp}
+                <Event type={type} description={description} info={""} timestamp={props.event.timestamp}
                        filter={props.filter} log={props.log} level={Level.DESIGN} explanation={explanation}/>
             )
         }
