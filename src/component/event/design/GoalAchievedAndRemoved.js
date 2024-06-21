@@ -29,7 +29,7 @@ function GoalAchievedAndRemoved(props) {
             explanation = intRemoved !== undefined ? [intRemoved] : []
         }
 
-        let intentionInfo = "int-" + id + "-" + functor.split(')[')[0]
+        let intentionInfo = "int-" + id
         if (result === "achieved") {
             type = "Goal Achieved";
             description = "Goal " + functor + " achieved through intention " + intentionInfo

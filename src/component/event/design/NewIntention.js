@@ -7,7 +7,7 @@ function NewIntention(props) {
     const type = "New Intention"
     const intention = event.message.event.intentionInfo
     const goal = intention.intendedMeansInfo[0].plan.trigger
-    const id = "int-" + intention.id + "-" + goal
+    const id = "int-" + intention.id
     const selectPlan = props.log.slice(props.log.indexOf(props.event)-5, props.log.indexOf(props.event)).findLast(e => e.message.type === "SelectPlanEvent" && e.message.event.selectedPlan.trigger.includes(goal))
 
     if (!goal.includes("kqml")) {
