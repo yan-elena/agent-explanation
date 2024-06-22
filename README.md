@@ -1,8 +1,8 @@
 # Narrative Generator Component
 
-This repository contains a prototype implementation of the **Narrative Generator** for our research project _A Multi-Level Explainability Framework for BDI Multi Agent Systems_. You can directly access the deployed web application **[here](https://yan-elena.github.io/agent-explanation/)**.
+This repository contains a prototype implementation of the **Narrative Generator** for our research project _A Multi-Level Explainability Framework for BDI Agents_. You can directly access the deployed web application **[here](https://yan-elena.github.io/agent-explanation/)**.
 
-## A Multi-Level Explainability Framework for Engineering and Understanding BDI Agent Systems
+## A Multi-Level Explainability Framework for Engineering and Understanding BDI Agents
 
 <img src="https://github.com/yan-elena/agent-logging/assets/78790594/054d9927-5c17-4694-9f7f-04e363161e1f" width=50%>
 
@@ -40,25 +40,21 @@ Once you have the log files, you can upload them to the Home Page.
 
 ## Features
 
-### Narrative at Implementation Level
+### Narrative at the Implementation Level
 A detailed and technical level that follows Jason's operational semantics and reasoning cycle.
 
-<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/0bd9feb8-f056-4fae-bdbb-7925c5a48ab2" width=70%>
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/11728883-60e6-4dc9-aa81-26cbe472cec2" width=50%>
 
-### Narrative at Design Level
+### Narrative at the Design Level
 A higher level that narrates the agent's decisions following its cognitive abstraction according to the Belief-Desire-Intention model.
 
-<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/3d00b844-db84-485c-9494-d7199359208d" width=70%>
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/e9131856-fcb1-4eb7-96d8-3254be392411" width=50%>
 
 ### Explanation of a specific event
-Some events are associated with an explanation link to a previous event that caused it.
+Some events are associated with an explanation of a previous event that caused it.
 
-<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/8136e35b-8893-44d0-aa30-36d820cfca17" width=70%>
+<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/eac6a6e1-23a4-4d9d-8c13-c0c0b2eb2126" width=70%>
 
-### Filter bar
-An interesting use of the filter bar is to visualise the entire life cycle of a particular event (e.g., goal or intention at the implementation level or desire at the design level).
-
-<img src="https://github.com/yan-elena/agent-explanation/assets/78790594/fcd2078f-c8ed-4aba-a428-df7f07493a57" width=80%>
 
 ## Examples
 You can also use the log files in the `/examples` folder generated for the `alice-bob` and `domestic-robot`[(repo)](https://github.com/yan-elena/domestic-robot-example) running examples to try our multi-level explainability framework.
