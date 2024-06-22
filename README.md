@@ -4,7 +4,7 @@ This repository contains a prototype implementation of the **Narrative Generator
 
 ## A Multi-Level Explainability Framework for Engineering and Understanding BDI Agents
 
-<img src="https://github.com/yan-elena/agent-logging/assets/78790594/054d9927-5c17-4694-9f7f-04e363161e1f" width=50%>
+<img src="https://github.com/user-attachments/files/15937276/agent-multi-level.pdf" width=50%>
 
 The primary levels of abstraction identified in this study are as follows:
 - The **Implementation Level**: a detailed narrative closely related to the Agent and Multi-Agent Systems for debugging and testing.
