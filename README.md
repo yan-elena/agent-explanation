@@ -4,7 +4,7 @@ This repository contains a prototype implementation of the **Narrative Generator
 
 ## A Multi-Level Explainability Framework for Engineering and Understanding BDI Agents
 
-<img src="https://github.com/user-attachments/files/15937276/agent-multi-level.pdf" width=50%>
+<img src="https://github.com/user-attachments/assets/69de5bc6-edee-4d47-a18b-ee5995800c3d" width=50%>
 
 The primary levels of abstraction identified in this study are as follows:
 - The **Implementation Level**: a detailed narrative closely related to the Agent and Multi-Agent Systems for debugging and testing.
@@ -15,8 +15,9 @@ The primary levels of abstraction identified in this study are as follows:
 
 1a. Try it out at **[https://yan-elena.github.io/agent-explanation](https://yan-elena.github.io/agent-explanation/)** without installing anything.
 
-1b. If you wish to use it locally, you need [Node.js](https://nodejs.org/en) installed. Then you can follow the instructions below.
-Install all dependencies required with:
+1b. If you wish to use it locally, you need to have [Node.js](https://nodejs.org/en) installed. Then you can follow the instructions below:
+
+Install all the required dependencies with:
 
 ```
 npm install
@@ -29,8 +30,7 @@ npm start
 ```
 Reach `http://localhost:3000/agent-explanation` from your browser to access the dashboard.
 
-2. Following the instructions presented in the **[Logger Component](https://github.com/yan-elena/agent-logging)** to generate the `log files` of your Jason or JaCaMo project.
-Once you have the log files, you can upload them to the Home Page.
+2. Following the instructions presented in the **[Logger Component](https://github.com/yan-elena/agent-logging)** to generate the `log files` of your Jason or JaCaMo project. Run your application and retrieve the log files, then you can upload them to the Home Page.
 
 <img src="https://github.com/yan-elena/agent-explanation/assets/78790594/2f3ba3c4-bd31-41ea-bd5f-ff588ee9824f" width=50%>
 
